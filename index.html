@@ -4,70 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Birding Legend</title>
+
 </head>
-<body class="bg-stone-900 min-h-screen flex flex-col items-center justify-center px-6">
+<body class="bg-stone-900 text-white min-h-screen flex flex-col items-center px-4 py-6">
 
-  <!-- Title -->
-  <h1 class="text-white text-5xl font-normal lowercase text-center mb-8 select-none">
-    Birding Legend
-  </h1>
-
-  <!-- Round Image -->
-  <div class="mb-10">
-    <img
-      src="/src/assets/images/about/eugene-birdinglegend.jpg"
-      alt="Eugene BirdingLegend"
-      class="w-60 h-60 rounded-full object-cover mx-auto"
-      loading="lazy"
-    />
+  <!-- Logo -->
+  <div class="mb-2">
+    <img src="/src/assets/images/about/birding-legend.png" alt="Birding Legend" class="h-14 object-contain" />
   </div>
 
-  <!-- Icons + Labels -->
-  <div class="flex justify-center gap-16 text-center max-w-lg w-full">
+  <!-- Profile Image -->
+  <img
+    src="/src/assets/images/about/eugene-birdinglegend.jpg"
+    alt="Eugene BirdingLegend"
+    class="w-24 h-24 rounded-full object-cover border-2 border-white mb-2"
+    loading="lazy"
+  />
 
-    <!-- Left: Countries Birded -->
-    <div class="flex flex-col items-center space-y-2">
-      <div class="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
-    <img
-      src="src/assets/images/about/earth-white.svg"
-      alt="Bird Icon"
-      class="w-10 h-10"
-      loading="lazy"
-    />
+  <!-- Bio Section -->
+  <div class="text-center space-y-0 mb-4">
+    <h1 class="text-lg font-semibold">Birding Legend | Eugene Booysen</h1>
+    <p class="text-xs text-gray-300">Birding, filming, and guiding across Africa 🇿🇦</p>
   </div>
-      <span class="text-white text-4xl">5</span>
+
+  <!-- Stats -->
+  <div class="flex justify-center gap-6 text-center mb-4">
+    <div class="flex flex-col items-center">
+      <img src="/src/assets/images/about/earth-white.svg" class="w-5 h-5 mb-1" alt="Countries" />
+      <p class="text-sm font-bold">5</p>
+      <p class="text-[10px] text-gray-300">Countries Birded</p>
     </div>
-
-<!-- Center: Birds Recorded -->
-<div class="flex flex-col items-center space-y-2">
-  <div class="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
-    <img
-      src="src/assets/images/about/bird-white.svg"
-      alt="Bird Icon"
-      class="w-10 h-10"
-      loading="lazy"
-    />
-  </div>
-  <span class="text-white text-4xl">242</span>
-</div>
-
-    <!-- Right: Placeholder for Bird-related Icon -->
-    <div class="flex flex-col items-center space-y-2">
-   <div class="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
-    <img
-      src="src/assets/images/about/calendar-check-white.svg"
-      alt="Bird Icon"
-      class="w-10 h-10"
-      loading="lazy"
-    />
-  </div>
-      <span class="text-white text-4xl">12</span>
+    <div class="flex flex-col items-center">
+      <img src="/src/assets/images/about/bird-white.svg" class="w-5 h-5 mb-1" alt="Birds" />
+      <p class="text-sm font-bold">242</p>
+      <p class="text-[10px] text-gray-300">Birds Recorded</p>
     </div>
-
+    <div class="flex flex-col items-center">
+      <img src="/src/assets/images/about/calendar-check-white.svg" class="w-5 h-5 mb-1" alt="Years" />
+      <p class="text-sm font-bold">12</p>
+      <p class="text-[10px] text-gray-300">Years Birding</p>
+    </div>
   </div>
 
-</body>
-</html>
+  <!-- Linktree Buttons -->
+  <div class="flex flex-col w-full max-w-sm space-y-3 mb-auto">
+    <a href="https://eugenesafaris.com" target="_blank" rel="noopener" class="bg-white text-stone-900 py-2 rounded-lg text-center font-medium hover:bg-gray-200 transition">Visit Eugene Safaris</a>
+    <a href="https://nyonisafaris.com" target="_blank" rel="noopener" class="bg-white text-stone-900 py-2 rounded-lg text-center font-medium hover:bg-gray-200 transition">Visit Nyoni Safaris</a>
+    <a href="/gear/" class="bg-white text-stone-900 py-2 rounded-lg text-center font-medium hover:bg-gray-200 transition">My Birding & Filming Gear</a>
+    <a href="/support/" class="bg-white text-stone-900 py-2 rounded-lg text-center font-medium hover:bg-gray-200 transition">Support My Work</a>
+    <a href="https://buymeacoffee.com/birdinglegend" target="_blank" rel="noopener" class="bg-yellow-400 text-black py-2 rounded-lg text-center font-medium hover:bg-yellow-500 transition">Buy Me a Coffee</a>
+    <a href="https://www.youtube.com/@BirdingLegend" target="_blank" rel="noopener" class="bg-red-600 text-white py-2 rounded-lg text-center font-medium hover:bg-red-700 transition">YouTube</a>
+    <a href="/contact/" class="bg-white text-stone-900 py-2 rounded-lg text-center font-medium hover:bg-gray-200 transition">Contact Me</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full flex items-center justify-center mt-6" style="height:30px;">
+    <div class="text-xs text-gray-400">Birding Legend © 2025</div>
+  </footer>
 
   <script type="module" src="/src/main.js"></script>
 </body>
