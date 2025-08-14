@@ -1,67 +1,121 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Birding Legend</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birding Legend</title>
+    <meta name="description" content="BirdingLegend - My birding adventures, gear, and blogs." />
+<script>
+  // set theme early to avoid FOUC
+  (function () {
+    const stored = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = stored ? stored : (systemDark ? 'dark' : 'light');
+    if (theme === 'dark') document.documentElement.classList.add('dark');
+  })();
+</script>
 
-</head>
-<body class="bg-stone-900 text-white min-h-screen flex flex-col items-center px-4 py-6">
+  </head>
+  <body class="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white font-sans antialiased">
+<!-- Header / Navbar -->
+<header id="siteHeader" class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-neutral-900/70 bg-white/90 dark:bg-neutral-900/90 border-b border-neutral-200 dark:border-neutral-800">
+  <!-- Main Bar -->
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="h-16 flex items-center justify-between">
+      <!-- Left: Logo -->
+      <a href="/" class="flex items-center gap-3">
+        <!-- Replace with your SVG or image -->
+        <div class="h-9 w-9 rounded-full bg-neutral-900 dark:bg-white"></div>
+        <span class="font-semibold tracking-tight text-neutral-900 dark:text-white">@birdinglegend</span>
+      </a>
 
-  <!-- Logo -->
-  <div class="mb-2">
-    <img src="/src/assets/images/about/birding-legend.png" alt="Birding Legend" class="h-14 object-contain" />
-  </div>
+   <!-- Right: Desktop Nav + Theme -->
+<nav class="hidden md:flex items-center gap-3">
+  <a href="/about/" class="text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors">About</a>
+  <a href="/blog/" class="text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors">Blog</a>
+  <a href="/contact/" class="inline-flex items-center gap-2 rounded-xl border border-neutral-300/70 dark:border-neutral-700 px-3 py-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+    Contact
+  </a>
 
-  <!-- Profile Image -->
-  <img
-    src="/src/assets/images/about/eugene-birdinglegend.jpg"
-    alt="Eugene BirdingLegend"
-    class="w-24 h-24 rounded-full object-cover border-2 border-white mb-2"
-    loading="lazy"
-  />
+  <!-- Theme toggle -->
+  <button id="themeToggle" class="ml-2 inline-flex items-center justify-center h-9 w-9 rounded-lg border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors" aria-label="Toggle dark mode">
+    <!-- Sun/Moon swap via CSS -->
+    <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0 4a1 1 0 0 1-1-1v-1.5a1 1 0 1 1 2 0V21a1 1 0 0 1-1 1Zm0-19a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1ZM3 13a1 1 0 1 1 0-2H4.5a1 1 0 1 1 0 2H3Zm16.5 0a1 1 0 1 1 0-2H21a1 1 0 1 1 0 2h-1.5ZM5.05 19.95a1 1 0 0 1 0-1.41l1.06-1.06a1 1 0 1 1 1.41 1.41L6.46 19.95a1 1 0 0 1-1.41 0Zm10.02-10.02a1 1 0 0 1 0-1.41l1.06-1.06a1 1 0 1 1 1.41 1.41l-1.06 1.06a1 1 0 0 1-1.41 0ZM5.05 4.05a1 1 0 0 1 1.41 0l1.06 1.06A1 1 0 1 1 6.11 6.52L5.05 5.46a1 1 0 0 1 0-1.41Zm12.02 12.02a1 1 0 0 1 1.41 0l1.06 1.06a1 1 0 1 1-1.41 1.41l-1.06-1.06a1 1 0 0 1 0-1.41Z"/>
+    </svg>
+    <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+    </svg>
+  </button>
+</nav>
 
-  <!-- Bio Section -->
-  <div class="text-center space-y-0 mb-4">
-    <h1 class="text-lg font-semibold">Birding Legend | Eugene Booysen</h1>
-    <p class="text-xs text-gray-300">Birding, filming, and guiding across Africa 🇿🇦</p>
-  </div>
-
-  <!-- Stats -->
-  <div class="flex justify-center gap-6 text-center mb-4">
-    <div class="flex flex-col items-center">
-      <img src="/src/assets/images/about/earth-white.svg" class="w-5 h-5 mb-1" alt="Countries" />
-      <p class="text-sm font-bold">5</p>
-      <p class="text-[10px] text-gray-300">Countries Birded</p>
+      <!-- Mobile: Burger -->
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-neutral-300 dark:border-neutral-700"
+        aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
-    <div class="flex flex-col items-center">
-      <img src="/src/assets/images/about/bird-white.svg" class="w-5 h-5 mb-1" alt="Birds" />
-      <p class="text-sm font-bold">242</p>
-      <p class="text-[10px] text-gray-300">Birds Recorded</p>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="/src/assets/images/about/calendar-check-white.svg" class="w-5 h-5 mb-1" alt="Years" />
-      <p class="text-sm font-bold">12</p>
-      <p class="text-[10px] text-gray-300">Years Birding</p>
-    </div>
   </div>
 
-  <!-- Linktree Buttons -->
-  <div class="flex flex-col w-full max-w-sm space-y-3 mb-auto">
-    <a href="https://eugenesafaris.com" target="_blank" rel="noopener" class="bg-white text-stone-900 py-2 rounded-lg text-center font-medium hover:bg-gray-200 transition">Visit Eugene Safaris</a>
-    <a href="https://nyonisafaris.com" target="_blank" rel="noopener" class="bg-white text-stone-900 py-2 rounded-lg text-center font-medium hover:bg-gray-200 transition">Visit Nyoni Safaris</a>
-    <a href="/gear/" class="bg-white text-stone-900 py-2 rounded-lg text-center font-medium hover:bg-gray-200 transition">My Birding & Filming Gear</a>
-    <a href="/support/" class="bg-white text-stone-900 py-2 rounded-lg text-center font-medium hover:bg-gray-200 transition">Support My Work</a>
-    <a href="https://buymeacoffee.com/birdinglegend" target="_blank" rel="noopener" class="bg-yellow-400 text-black py-2 rounded-lg text-center font-medium hover:bg-yellow-500 transition">Buy Me a Coffee</a>
-    <a href="https://www.youtube.com/@BirdingLegend" target="_blank" rel="noopener" class="bg-red-600 text-white py-2 rounded-lg text-center font-medium hover:bg-red-700 transition">YouTube</a>
-    <a href="/contact/" class="bg-white text-stone-900 py-2 rounded-lg text-center font-medium hover:bg-gray-200 transition">Contact Me</a>
+  <!-- Sub‑Nav (always visible) -->
+  <nav class="border-t border-neutral-200 dark:border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <ul class="flex items-center gap-4 overflow-x-auto no-scrollbar h-12">
+        <li><a href="/latest/" class="subnav-link aria-[current=page]:text-neutral-900 dark:aria-[current=page]:text-white">Latest</a></li>
+        <li><a href="/gear/" class="subnav-link">Gear</a></li>
+        <li><a href="/support/" class="subnav-link">Support</a></li>
+        <li><a href="/videos/" class="subnav-link">Videos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobileMenu" class="md:hidden origin-top scale-y-0 opacity-0 pointer-events-none transition-all duration-200 border-t border-neutral-200 dark:border-neutral-800">
+    <nav class="px-4 py-3 space-y-2">
+      <a href="/about/" class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">About</a>
+      <a href="/blog/" class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">Blog</a>
+      <a href="/contact/" class="block rounded-lg px-3 py-2 border border-neutral-300/70 dark:border-neutral-700">Contact</a>
+    </nav>
   </div>
+</header>
+<main class="min-h-[60vh]">
+  <section class="max-w-7xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold">Welcome to Birding Legend</h1>
+    <p class="mt-4 text-neutral-700 dark:text-neutral-300">
+      Starter content goes here.
+    </p>
+  </section>
+</main>
 
-  <!-- Footer -->
-  <footer class="w-full flex items-center justify-center mt-6" style="height:30px;">
-    <div class="text-xs text-gray-400">Birding Legend © 2025</div>
-  </footer>
+<!-- Tiny style helpers (optional) -->
+<style>
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-  <script type="module" src="/src/main.js"></script>
-</body>
+  .subnav-link{
+    display:inline-flex; align-items:center; height:100%;
+    padding:0 .25rem; gap:.5rem;
+    color: rgb(82 82 82); text-decoration:none; /* neutral-600 */
+  }
+  .subnav-link:hover{ color: rgb(23 23 23); }          /* neutral-900 */
+  .dark .subnav-link{ color: rgb(163 163 163); }       /* neutral-400 */
+  .dark .subnav-link:hover{ color: rgb(255 255 255); } /* white */
+</style>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 dark:border-neutral-800 py-6">
+      <div class="max-w-7xl mx-auto px-4 text-sm text-neutral-600 dark:text-neutral-400">
+        © <span id="year"></span> Birding Legend. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
