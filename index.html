@@ -14,6 +14,16 @@
     if (theme === 'dark') document.documentElement.classList.add('dark');
   })();
 </script>
+<style>
+  .subnav-link {
+    display:inline-flex; align-items:center; height:100%;
+    padding:0 .25rem; gap:.5rem; text-decoration:none;
+    color: rgb(82 82 82); /* neutral-600 */
+  }
+  .subnav-link:hover { color: rgb(23 23 23); } /* neutral-900 */
+  .dark .subnav-link { color: rgb(163 163 163); } /* neutral-400 */
+  .dark .subnav-link:hover { color: rgb(255 255 255); }
+</style>
 
   </head>
   <body class="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white font-sans antialiased">
@@ -22,12 +32,17 @@
   <!-- Main Bar -->
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="h-16 flex items-center justify-between">
-      <!-- Left: Logo -->
-      <a href="/" class="flex items-center gap-3">
-        <!-- Replace with your SVG or image -->
-        <div class="h-9 w-9 rounded-full bg-neutral-900 dark:bg-white"></div>
-        <span class="font-semibold tracking-tight text-neutral-900 dark:text-white">@birdinglegend</span>
-      </a>
+   <!-- Left: Logo -->
+<a href="/" class="flex items-center gap-3">
+  <img 
+    src="/src/assets/images/about/eugene-birdinglegend.jpg" 
+    alt="BirdingLegend logo" 
+    class="h-9 w-9 rounded-full object-cover border border-neutral-300 dark:border-neutral-700"
+    loading="lazy"
+    decoding="async"
+  >
+  <span class="font-semibold tracking-tight text-neutral-900 dark:text-white">@birdinglegend</span>
+</a>
 
    <!-- Right: Desktop Nav + Theme -->
 <nav class="hidden md:flex items-center gap-3">
@@ -36,17 +51,6 @@
   <a href="/contact/" class="inline-flex items-center gap-2 rounded-xl border border-neutral-300/70 dark:border-neutral-700 px-3 py-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
     Contact
   </a>
-
-  <!-- Theme toggle -->
-  <button id="themeToggle" class="ml-2 inline-flex items-center justify-center h-9 w-9 rounded-lg border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors" aria-label="Toggle dark mode">
-    <!-- Sun/Moon swap via CSS -->
-    <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0 4a1 1 0 0 1-1-1v-1.5a1 1 0 1 1 2 0V21a1 1 0 0 1-1 1Zm0-19a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1ZM3 13a1 1 0 1 1 0-2H4.5a1 1 0 1 1 0 2H3Zm16.5 0a1 1 0 1 1 0-2H21a1 1 0 1 1 0 2h-1.5ZM5.05 19.95a1 1 0 0 1 0-1.41l1.06-1.06a1 1 0 1 1 1.41 1.41L6.46 19.95a1 1 0 0 1-1.41 0Zm10.02-10.02a1 1 0 0 1 0-1.41l1.06-1.06a1 1 0 1 1 1.41 1.41l-1.06 1.06a1 1 0 0 1-1.41 0ZM5.05 4.05a1 1 0 0 1 1.41 0l1.06 1.06A1 1 0 1 1 6.11 6.52L5.05 5.46a1 1 0 0 1 0-1.41Zm12.02 12.02a1 1 0 0 1 1.41 0l1.06 1.06a1 1 0 1 1-1.41 1.41l-1.06-1.06a1 1 0 0 1 0-1.41Z"/>
-    </svg>
-    <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
-    </svg>
-  </button>
 </nav>
 
       <!-- Mobile: Burger -->
@@ -60,25 +64,28 @@
   </div>
 
   <!-- Sub‑Nav (always visible) -->
-  <nav class="border-t border-neutral-200 dark:border-neutral-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <ul class="flex items-center gap-4 overflow-x-auto no-scrollbar h-12">
-        <li><a href="/latest/" class="subnav-link aria-[current=page]:text-neutral-900 dark:aria-[current=page]:text-white">Latest</a></li>
-        <li><a href="/gear/" class="subnav-link">Gear</a></li>
-        <li><a href="/support/" class="subnav-link">Support</a></li>
-        <li><a href="/videos/" class="subnav-link">Videos</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="border-t border-neutral-200 dark:border-neutral-800">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <ul class="flex w-full flex-wrap justify-center items-center gap-4 h-12">
+      <li><a href="/latest/" class="subnav-link aria-[current=page]:text-neutral-900 dark:aria-[current=page]:text-white">Latest</a></li>
+      <li><a href="/gear/" class="subnav-link">Gear</a></li>
+      <li><a href="/support/" class="subnav-link">Support</a></li>
+      <li><a href="/videos/" class="subnav-link">Videos</a></li>
+    </ul>
+  </div>
+</nav>
+
 
   <!-- Mobile Menu Panel -->
   <div id="mobileMenu" class="md:hidden origin-top scale-y-0 opacity-0 pointer-events-none transition-all duration-200 border-t border-neutral-200 dark:border-neutral-800">
-    <nav class="px-4 py-3 space-y-2">
-      <a href="/about/" class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">About</a>
-      <a href="/blog/" class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">Blog</a>
-      <a href="/contact/" class="block rounded-lg px-3 py-2 border border-neutral-300/70 dark:border-neutral-700">Contact</a>
-    </nav>
-  </div>
+  <nav class="px-4 py-3 space-y-2">
+    <a href="/about/" class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">About</a>
+    <a href="/blog/" class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">Blog</a>
+    <a href="/contact/" class="block rounded-lg px-3 py-2 border border-neutral-300/70 dark:border-neutral-700">Contact</a>
+
+  </nav>
+</div>
+
 </header>
 <main class="min-h-[60vh]">
   <section class="max-w-7xl mx-auto px-4 py-8">
@@ -105,13 +112,20 @@
 </style>
 
 
-    <!-- Footer -->
-    <footer class="border-t border-neutral-200 dark:border-neutral-800 py-6">
-      <div class="max-w-7xl mx-auto px-4 text-sm text-neutral-600 dark:text-neutral-400">
-        © <span id="year"></span> Birding Legend. All rights reserved.
-      </div>
-    </footer>
+ <footer class="border-t border-neutral-200 dark:border-neutral-800 py-6">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
+    <div class="text-sm text-neutral-600 dark:text-neutral-400">
+      © <span id="year"></span> Birding Legend. All rights reserved.
+    </div>
 
+    <!-- Theme toggle in footer (right aligned) -->
+    <button id="themeToggleFooter"
+      class="inline-flex items-center justify-center h-9 w-9 rounded-full dark:border-neutral-700 hover:bg-neutral-50 hover:border hover:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:border dark:hover:border-neutral-200 transition-colors"
+      aria-label="Toggle dark mode">
+      <img id="themeIconFooter" src="/src/assets/icons/moon.svg" alt="Theme icon" class="h-5 w-5">
+    </button>
+  </div>
+</footer>
     <!-- Main JS -->
     <script type="module" src="/src/main.js"></script>
     <script>
