@@ -31,7 +31,7 @@
 <header id="siteHeader" class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-neutral-900/70 bg-white/90 dark:bg-neutral-900/90 border-b border-neutral-200 dark:border-neutral-800">
   <!-- Main Bar -->
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="h-16 flex items-center justify-between">
+    <div class="h-12 md:h-16 flex items-center justify-between">
    <!-- Left: Logo -->
 <a href="/" class="flex items-center gap-3">
   <img 
@@ -55,7 +55,7 @@
 
 
       <!-- Mobile: Burger -->
-      <button id="navToggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-neutral-300 dark:border-neutral-700"
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-full border border-neutral-300 dark:border-neutral-700"
         aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
@@ -64,26 +64,45 @@
     </div>
   </div>
 
+  <!-- Backdrop for mobile menu -->
+<div id="mobileBackdrop"
+     class="fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-opacity md:hidden"></div>
+
+
 <!-- Sub-Nav (always visible) -->
 <nav class="border-t border-neutral-200 dark:border-neutral-800">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <ul class="flex w-full flex-wrap justify-between sm:justify-center items-center gap-4 sm:gap-8 py-2 px-6">
-      <li><a href="/latest/" class="subnav-link aria-[current=page]:text-neutral-900 dark:aria-[current=page]:text-white">Latest</a></li>
-      <li><a href="/gear/" class="subnav-link">Gear</a></li>
-      <li><a href="/support/" class="subnav-link">Support</a></li>
-      <li><a href="/videos/" class="subnav-link">Videos</a></li>
+    <ul
+      class="flex w-full items-center h-12
+             gap-4 sm:gap-8
+             overflow-x-auto no-scrollbar
+             flex-nowrap sm:flex-wrap
+             justify-between sm:justify-center px-4"
+    >
+      <li><a href="/latest/"  class="subnav-link aria-[current=page]:text-neutral-900 dark:aria-[current=page]:text-white">Latest</a></li>
+      <li><a href="/gear/"    class="subnav-link">Gear</a></li>
+       <li><a href="/archive/" class="subnav-link">Archive</a></li>
+      <li><a href="/linktree/" class="subnav-link">Support</a></li>
     </ul>
   </div>
 </nav>
 
-  <!-- Mobile Menu Panel -->
-  <div id="mobileMenu" class="md:hidden origin-top scale-y-0 opacity-0 pointer-events-none transition-all duration-200 border-t border-neutral-200 dark:border-neutral-800">
-  <nav class="px-4 py-3 space-y-2">
-    <a href="/about/" class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">About</a>
-    <a href="/blog/" class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">Blog</a>
-    <a href="/contact/" class="block rounded-lg px-3 py-2 border border-neutral-300/70 dark:border-neutral-700">Contact</a>
 
+<!-- Mobile Menu Panel (overlay) -->
+<div id="mobileMenu"
+     class="fixed inset-x-0 top-[6rem] z-50 md:hidden
+            max-h-[calc(100vh-6rem)] overflow-y-auto
+            bg-white dark:bg-neutral-900
+            border-t border-neutral-200 dark:border-neutral-800 shadow-lg
+            opacity-0 translate-y-[-8px] pointer-events-none
+            transition-all duration-200">
+  <nav class="px-4 py-3 space-y-2">
+    <a href="/about/"   class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">About</a>
+    <a href="/blog/"    class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">Blog</a>
+    <a href="/contact/" class="block rounded-lg px-3 py-2 border border-neutral-300/70 dark:border-neutral-700">Contact</a>
   </nav>
+</div>
+
 </div>
 </header>
 <main class="min-h-[60vh]">

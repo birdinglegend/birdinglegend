@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birding Legend</title>
+    <meta name="description" content="BirdingLegend - My birding adventures, gear, and blogs." />
+<script>
+  // set theme early to avoid FOUC
+  (function () {
+    const stored = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = stored ? stored : (systemDark ? 'dark' : 'light');
+    if (theme === 'dark') document.documentElement.classList.add('dark');
+  })();
+</script>
+<style>
+  .subnav-link {
+    display:inline-flex; align-items:center; height:100%;
+    padding:0 .25rem; gap:.5rem; text-decoration:none;
+    color: rgb(82 82 82); /* neutral-600 */
+  }
+  .subnav-link:hover { color: rgb(23 23 23); } /* neutral-900 */
+  .dark .subnav-link { color: rgb(163 163 163); } /* neutral-400 */
+  .dark .subnav-link:hover { color: rgb(255 255 255); }
+</style>
+
+  </head>
+  <body class="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white font-sans antialiased">
+<!-- Header / Navbar -->
+<header id="siteHeader" class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-neutral-900/70 bg-white/90 dark:bg-neutral-900/90 border-b border-neutral-200 dark:border-neutral-800">
+  <!-- Main Bar -->
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="h-12 md:h-16 flex items-center justify-between">
+   <!-- Left: Logo -->
+<a href="/" class="flex items-center gap-3">
+  <img 
+    src="/src/assets/images/about/eugene-birdinglegend.jpg" 
+    alt="BirdingLegend logo" 
+    class="h-9 w-9 rounded-full object-cover border border-neutral-300 dark:border-neutral-700"
+    loading="lazy"
+    decoding="async"
+  >
+  <span class="font-semibold tracking-tight text-neutral-900 dark:text-white">@birdinglegend</span>
+</a>
+
+   <!-- Right: Desktop Nav + Theme -->
+<nav class="hidden md:flex items-center gap-6">
+  <a href="/about/" class="text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors">About</a>
+  <a href="/blog/" class="text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors">Blog</a>
+  <a href="/contact/" class="inline-flex items-center gap-2 rounded-xl border border-neutral-300/70 dark:border-neutral-700 px-3 py-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+    Contact
+  </a>
+</nav>
+
+
+      <!-- Mobile: Burger -->
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-full border border-neutral-300 dark:border-neutral-700"
+        aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Backdrop for mobile menu -->
+<div id="mobileBackdrop"
+     class="fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-opacity md:hidden"></div>
+
+
+<!-- Sub-Nav (always visible) -->
+<nav class="border-t border-neutral-200 dark:border-neutral-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-md">
+    <ul
+      class="flex w-full items-center h-10 md:h-12
+             gap-4 sm:gap-8
+             overflow-x-auto no-scrollbar
+             flex-nowrap sm:flex-wrap
+             justify-between sm:justify-center px-4">
+      <li><a href="/latest/"  class="subnav-link aria-[current=page]:text-neutral-900 dark:aria-[current=page]:text-white">Latest</a></li>
+      <li><a href="/gear/"    class="subnav-link">Gear</a></li>
+       <li><a href="/archive/" class="subnav-link">Archive</a></li>
+      <li><a href="/linktree/" class="subnav-link">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Mobile Menu Panel (overlay) -->
+<div id="mobileMenu"
+     class="fixed inset-x-0 top-[6rem] z-50 md:hidden
+            max-h-[calc(100vh-6rem)] overflow-y-auto
+            bg-white dark:bg-neutral-900
+            border-t border-neutral-200 dark:border-neutral-800 shadow-lg
+            opacity-0 translate-y-[-8px] pointer-events-none
+            transition-all duration-200">
+  <nav class="px-4 py-3 space-y-2">
+    <a href="/about/"   class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">About</a>
+    <a href="/blog/"    class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">Blog</a>
+    <a href="/contact/" class="block rounded-lg px-3 py-2 border border-neutral-300/70 dark:border-neutral-700">Contact</a>
+  </nav>
+</div>
+
+</div>
+</header>
+<main class="min-h-[60vh]">
+  <section class="max-w-7xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center">Gear</h1>
+    <p class="mt-4 text-neutral-700 dark:text-neutral-300">
+      Starter content goes here.
+    </p>
+  </section>
+</main>
+
+<!-- Tiny style helpers (optional) -->
+<style>
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .subnav-link{
+    display:inline-flex; align-items:center; height:100%;
+    padding:0 .25rem; gap:.5rem;
+    color: rgb(82 82 82); text-decoration:none; /* neutral-600 */
+  }
+  .subnav-link:hover{ color: rgb(23 23 23); }          /* neutral-900 */
+  .dark .subnav-link{ color: rgb(163 163 163); }       /* neutral-400 */
+  .dark .subnav-link:hover{ color: rgb(255 255 255); } /* white */
+</style>
+
+
+ <footer class="border-t border-neutral-200 dark:border-neutral-800 py-6">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
+    <div class="text-sm text-neutral-600 dark:text-neutral-400">
+      © <span id="year"></span> Birding Legend. All rights reserved.
+    </div>
+
+    <!-- Theme toggle in footer (right aligned) -->
+    <button id="themeToggleFooter"
+      class="inline-flex items-center justify-center h-9 w-9 rounded-full dark:border-neutral-700 hover:bg-neutral-50 hover:border hover:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:border dark:hover:border-neutral-200 transition-colors"
+      aria-label="Toggle dark mode">
+      <img id="themeIconFooter" src="/src/assets/icons/moon.svg" alt="Theme icon" class="h-5 w-5">
+    </button>
+  </div>
+</footer>
+    <!-- Main JS -->
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
