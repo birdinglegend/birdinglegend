@@ -105,11 +105,238 @@
 </div>
 </header>
 <main class="min-h-[60vh]">
-  <section class="max-w-7xl mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold text-center">Gear</h1>
-    <p class="mt-4 text-neutral-700 dark:text-neutral-300">
-      Starter content goes here.
-    </p>
+<main id="main" class="min-h-screen">
+  <!-- HERO (max half the page height) -->
+  <section aria-labelledby="gear-hero" class="border-b border-neutral-200 dark:border-neutral-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+
+      <!-- Image wrapper: never taller than 50vh -->
+      <figure class="relative h-[50vh] max-h-[50vh] rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800">
+        <!-- Replace with your real group gear shot when ready -->
+        <img
+          src="/src/assets/images/leopard-in-marula-tree-kruger-national-park-pretoriuskop.webp"
+          alt="Placeholder: a clean backdrop ready for a group shot of all my gear"
+          class="w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
+        <figcaption class="absolute inset-x-0 bottom-0 p-3 text-sm text-white/90 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
+          Group kit shot coming soon.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+    <!-- Intro / quick notes -->
+    <div class="mb-8">
+      <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 p-4 md:p-6 bg-white dark:bg-neutral-900">
+        <h2 class="text-xl md:text-2xl font-semibold">How I Think About Gear</h2>
+        <p class="mt-2 text-neutral-700 dark:text-neutral-300">
+          I aim for reliable, field‑friendly equipment: fast setup, strong battery life, and weather resilience. 
+          Below you’ll find my core kit, what I pack for <em>birding-first</em> days vs <em>filming-first</em> days, and the accessories that keep everything running smoothly.
+        </p>
+      </div>
+    </div>
+
+    <!-- Two-column layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+      <!-- LEFT (spans 2 cols on desktop): Core Kit Cards -->
+      <div class="lg:col-span-2 space-y-6">
+
+        <!-- Cameras -->
+        <article class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+          <header class="p-4 md:p-6 border-b border-neutral-200 dark:border-neutral-800">
+            <h3 class="text-lg md:text-xl font-semibold">Cameras</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
+              Main bodies for documentary-style birding films and B‑roll.
+            </p>
+          </header>
+          <div class="p-4 md:p-6 grid sm:grid-cols-2 gap-4">
+            <!-- Sony A7S III -->
+            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
+              <div class="flex items-center justify-between">
+                <h4 class="font-medium">Sony A7S III</h4>
+                <span class="text-xs rounded-full px-2 py-0.5 border border-neutral-300 dark:border-neutral-700">Primary</span>
+              </div>
+              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                Shot in S‑Log3 / S‑Gamut3.Cine, 50p (100p for slow‑mo). My main camera for low‑light and flexible color.
+              </p>
+              <ul class="mt-3 text-sm space-y-1 list-disc list-inside">
+                <li>XAVC HS 4K</li>
+                <li>Prefers native Sony lenses (TBD list)</li>
+                <li>Graded in DaVinci Resolve</li>
+              </ul>
+            </div>
+
+            <!-- GoPro Hero 9 -->
+            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
+              <div class="flex items-center justify-between">
+                <h4 class="font-medium">GoPro Hero 9</h4>
+                <span class="text-xs rounded-full px-2 py-0.5 border border-neutral-300 dark:border-neutral-700">Action / POV</span>
+              </div>
+              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                GoPro Flat profile for walk‑throughs, vehicle POV, and quick inserts. I match it to Sony in Resolve.
+              </p>
+              <ul class="mt-3 text-sm space-y-1 list-disc list-inside">
+                <li>Flat color profile</li>
+                <li>Stabilized POV & time‑savers</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Drone -->
+        <article class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+          <header class="p-4 md:p-6 border-b border-neutral-200 dark:border-neutral-800">
+            <h3 class="text-lg md:text-xl font-semibold">Drone</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
+              Aerial establishing shots and habitat context.
+            </p>
+          </header>
+          <div class="p-4 md:p-6 grid sm:grid-cols-2 gap-4">
+            <!-- DJI Air 2S -->
+            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
+              <div class="flex items-center justify-between">
+                <h4 class="font-medium">DJI Air 2S</h4>
+                <span class="text-xs rounded-full px-2 py-0.5 border border-neutral-300 dark:border-neutral-700">Aerial</span>
+              </div>
+              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                Usually Normal profile at 25p with Auto WB; I sometimes use D‑Log for specific scenes.
+              </p>
+              <ul class="mt-3 text-sm space-y-1 list-disc list-inside">
+                <li>1&quot; sensor; crisp aerial cutaways</li>
+                <li>Keep spare ND filters and batteries</li>
+              </ul>
+            </div>
+
+            <!-- Placeholder for future drone/lens -->
+            <div class="rounded-xl border border-dashed border-neutral-300 dark:border-neutral-700 p-4">
+              <h4 class="font-medium">Future Upgrade</h4>
+              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                Reserve this spot for your next drone or tele lens.
+              </p>
+              <button class="mt-3 text-sm underline decoration-neutral-500 underline-offset-4 hover:decoration-2">
+                Add notes
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Audio -->
+        <article class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+          <header class="p-4 md:p-6 border-b border-neutral-200 dark:border-neutral-800">
+            <h3 class="text-lg md:text-xl font-semibold">Audio</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
+              Clean narration makes or breaks long‑form stories.
+            </p>
+          </header>
+          <div class="p-4 md:p-6 grid sm:grid-cols-2 gap-4">
+            <!-- Sennheiser MKE 400 -->
+            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
+              <div class="flex items-center justify-between">
+                <h4 class="font-medium">Sennheiser MKE 400</h4>
+                <span class="text-xs rounded-full px-2 py-0.5 border border-neutral-300 dark:border-neutral-700">On‑Camera</span>
+              </div>
+              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                Compact shotgun for run‑and‑gun narration and ambient bush audio.
+              </p>
+              <ul class="mt-3 text-sm space-y-1 list-disc list-inside">
+                <li>Low‑cut & sensitivity controls</li>
+                <li>Always pack a deadcat</li>
+              </ul>
+            </div>
+
+            <!-- Placeholder lav/recorder -->
+            <div class="rounded-xl border border-dashed border-neutral-300 dark:border-neutral-700 p-4">
+              <h4 class="font-medium">Lavalier / Field Recorder</h4>
+              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                Placeholder for your lav kit or handheld recorder specs.
+              </p>
+              <button class="mt-3 text-sm underline decoration-neutral-500 underline-offset-4 hover:decoration-2">
+                Add model & notes
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Power, Media & Accessories -->
+        <article class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
+          <header class="p-4 md:p-6 border-b border-neutral-200 dark:border-neutral-800">
+            <h3 class="text-lg md:text-xl font-semibold">Power, Media & Accessories</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
+              The quiet heroes that keep shooting days smooth.
+            </p>
+          </header>
+          <div class="p-4 md:p-6 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
+              <h4 class="font-medium">Batteries & Charging</h4>
+              <ul class="mt-2 text-sm space-y-1 list-disc list-inside">
+                <li>Native Sony batteries + dual charger</li>
+                <li>Drone batteries x3 (min)</li>
+                <li>12V vehicle inverter (camp use)</li>
+              </ul>
+            </div>
+            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
+              <h4 class="font-medium">Media</h4>
+              <ul class="mt-2 text-sm space-y-1 list-disc list-inside">
+                <li>V60/V90 SD cards for Sony</li>
+                <li>High‑endurance microSD for GoPro & DJI</li>
+                <li>Rugged SSDs for backups</li>
+              </ul>
+            </div>
+            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
+              <h4 class="font-medium">Support</h4>
+              <ul class="mt-2 text-sm space-y-1 list-disc list-inside">
+                <li>Compact travel tripod (TBD)</li>
+                <li>Vehicle beanbag for long lenses</li>
+                <li>Clamp/arm for POV inside vehicle</li>
+              </ul>
+            </div>
+            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
+              <h4 class="font-medium">Bags & Protection</h4>
+              <ul class="mt-2 text-sm space-y-1 list-disc list-inside">
+                <li>Weather‑resistant daypack</li>
+                <li>Hard case for drone/cameras</li>
+                <li>Rain covers & lens cloths</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- RIGHT: Loadouts (sticky on desktop) -->
+      <aside class="lg:sticky lg:top-24 space-y-6 h-max">
+        <!-- Filming-first -->
+        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 md:p-5">
+          <h3 class="text-base font-semibold">Loadout: Filming‑First</h3>
+          <ul class="mt-3 text-sm space-y-2 list-disc list-inside">
+            <li>Sony A7S III + on‑camera MKE 400</li>
+            <li>GoPro Hero 9 (POV/vehicle)</li>
+            <li>DJI Air 2S + 2–3 batteries</li>
+            <li>ND set, spare media, compact tripod</li>
+          </ul>
+        </div>
+        <!-- Birding-first -->
+        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 md:p-5">
+          <h3 class="text-base font-semibold">Loadout: Birding‑First</h3>
+          <ul class="mt-3 text-sm space-y-2 list-disc list-inside">
+            <li>Light body + tele lens (TBD)</li>
+            <li>Beanbag support for vehicle</li>
+            <li>GoPro for quick inserts</li>
+            <li>Spare batteries & microfiber</li>
+          </ul>
+        </div>
+        <!-- Notes -->
+        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 md:p-5">
+          <h3 class="text-base font-semibold">Notes</h3>
+          <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+            I rotate lenses depending on target species. A proper telephoto list is coming soon with sample frames.
+          </p>
+        </div>
+      </aside>
+    </div>
   </section>
 </main>
 

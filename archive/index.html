@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archive | Birding Legend</title>
+    <meta
+      name="description"
+      content="BirdingLegend video archive — older style videos kept here for reference."
+    />
+    <script>
+      // set theme early to avoid FOUC
+      (function () {
+        const stored = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored ? stored : (systemDark ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      })();
+    </script>
+  </head>
+ <body class="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white font-sans antialiased">
+<!-- Header / Navbar -->
+<header id="siteHeader" class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-neutral-900/70 bg-white/90 dark:bg-neutral-900/90 border-b border-neutral-200 dark:border-neutral-800">
+  <!-- Main Bar -->
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="h-12 md:h-16 flex items-center justify-between">
+   <!-- Left: Logo -->
+<a href="/" class="flex items-center gap-3">
+  <img 
+    src="/src/assets/images/about/eugene-birdinglegend.jpg" 
+    alt="BirdingLegend logo" 
+    class="h-9 w-9 rounded-full object-cover border border-neutral-300 dark:border-neutral-700"
+    loading="lazy"
+    decoding="async"
+  >
+  <span class="font-semibold tracking-tight text-neutral-900 dark:text-white">@birdinglegend</span>
+</a>
+
+   <!-- Right: Desktop Nav + Theme -->
+<nav class="hidden md:flex items-center gap-6">
+  <a href="/about/" class="text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors">About</a>
+  <a href="/blog/" class="text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors">Blog</a>
+  <a href="/contact/" class="inline-flex items-center gap-2 rounded-xl border border-neutral-300/70 dark:border-neutral-700 px-3 py-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+    Contact
+  </a>
+</nav>
+
+
+      <!-- Mobile: Burger -->
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-full border border-neutral-300 dark:border-neutral-700"
+        aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Backdrop for mobile menu -->
+<div id="mobileBackdrop"
+     class="fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-opacity md:hidden"></div>
+
+
+<!-- Sub-Nav (always visible) -->
+<nav class="border-t border-neutral-200 dark:border-neutral-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <ul
+      class="flex w-full items-center h-12
+             gap-4 sm:gap-8
+             overflow-x-auto no-scrollbar
+             flex-nowrap sm:flex-wrap
+             justify-between sm:justify-center px-4"
+    >
+      <li><a href="/latest/"  class="subnav-link aria-[current=page]:text-neutral-900 dark:aria-[current=page]:text-white">Latest</a></li>
+      <li><a href="/gear/"    class="subnav-link">Gear</a></li>
+       <li><a href="/videos/" class="subnav-link">Videos</a></li>
+      <li><a href="/support/" class="subnav-link">Support</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Mobile Menu Panel (overlay) -->
+<div id="mobileMenu"
+     class="fixed inset-x-0 top-[6rem] z-50 md:hidden
+            max-h-[calc(100vh-6rem)] overflow-y-auto
+            bg-white dark:bg-neutral-900
+            border-t border-neutral-200 dark:border-neutral-800 shadow-lg
+            opacity-0 translate-y-[-8px] pointer-events-none
+            transition-all duration-200 px-36">
+  <nav class="px-4 py-3 space-y-2 text-center">
+    <a href="/about/"   class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">About</a>
+    <a href="/blog/"    class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">Blog</a>
+    <a href="/contact/" class="block rounded-lg px-3 py-2 border border-neutral-100/70 dark:border-neutral-700">Contact</a>
+  </nav>
+</div>
+
+</div>
+</header>
+    <main class="min-h-screen">
+      <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+        <h1 class="text-3xl font-semibold mb-6">Video Archive</h1>
+        <p class="mb-10 text-neutral-700 dark:text-neutral-300 max-w-2xl">
+          These are older uploads from BirdingLegend — unlisted on YouTube, but
+          kept here for anyone curious about my early style.
+        </p>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Card 1 -->
+          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
+            <a href="/blog/early-birding-vlog" class="block">
+              <img
+                src="/src/assets/images/yt-thumbnails/archive-1.jpg"
+                alt="Early Birding Vlog thumbnail"
+                class="w-full h-48 object-cover rounded-t-xl"
+              />
+              <div class="p-4">
+                <h2 class="text-lg font-semibold">Early Birding Vlog</h2>
+                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                  A look back at my first experimental vlog format.
+                </p>
+                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
+                  Read blog &amp; watch →
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
+            <a href="/blog/cape-birding-lens-test" class="block">
+              <img
+                src="/src/assets/images/yt-thumbnails/archive-2.jpg"
+                alt="Cape Birding Lens Test"
+                class="w-full h-48 object-cover rounded-t-xl"
+              />
+              <div class="p-4">
+                <h2 class="text-lg font-semibold">Cape Birding: Lens Test</h2>
+                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                  Shaky but fun experiments testing new gear.
+                </p>
+                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
+                  Read blog &amp; watch →
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
+            <a href="/blog/forest-dawn-experiment" class="block">
+              <img
+                src="/src/assets/images/yt-thumbnails/archive-3.jpg"
+                alt="Forest Dawn Chorus thumbnail"
+                class="w-full h-48 object-cover rounded-t-xl"
+              />
+              <div class="p-4">
+                <h2 class="text-lg font-semibold">Forest Dawn Chorus</h2>
+                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                  Early attempts at capturing soundscapes.
+                </p>
+                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
+                  Read blog &amp; watch →
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
+            <a href="/blog/wetlands-recap" class="block">
+              <img
+                src="/src/assets/images/yt-thumbnails/archive-4.jpg"
+                alt="Wetlands Recap thumbnail"
+                class="w-full h-48 object-cover rounded-t-xl"
+              />
+              <div class="p-4">
+                <h2 class="text-lg font-semibold">Wetlands Recap</h2>
+                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                  A raw, behind-the-scenes look at my process.
+                </p>
+                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
+                  Read blog &amp; watch →
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
+            <a href="/blog/birding-2019" class="block">
+              <img
+                src="/src/assets/images/yt-thumbnails/archive-5.jpg"
+                alt="Birding 2019 thumbnail"
+                class="w-full h-48 object-cover rounded-t-xl"
+              />
+              <div class="p-4">
+                <h2 class="text-lg font-semibold">Birding 2019</h2>
+                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                  Throwback edit from my earliest fieldwork.
+                </p>
+                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
+                  Read blog &amp; watch →
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
+            <a href="/blog/uganda-first-trip" class="block">
+              <img
+                src="/src/assets/images/yt-thumbnails/archive-6.jpg"
+                alt="Uganda First Trip thumbnail"
+                class="w-full h-48 object-cover rounded-t-xl"
+              />
+              <div class="p-4">
+                <h2 class="text-lg font-semibold">Uganda First Trip</h2>
+                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                  My first attempt at documenting Uganda’s birdlife.
+                </p>
+                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
+                  Read blog &amp; watch →
+                </p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+   <footer class="border-t border-neutral-200 dark:border-neutral-800 py-6">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
+    <div class="text-sm text-neutral-600 dark:text-neutral-400">
+      © <span id="year"></span> Birding Legend. All rights reserved.
+    </div>
+
+    <!-- Theme toggle in footer (right aligned) -->
+    <button id="themeToggleFooter"
+      class="inline-flex items-center justify-center h-9 w-9 rounded-full dark:border-neutral-700 hover:bg-neutral-50 hover:border hover:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:border dark:hover:border-neutral-200 transition-colors"
+      aria-label="Toggle dark mode">
+      <img id="themeIconFooter" src="/src/assets/icons/moon.svg" alt="Theme icon" class="h-5 w-5">
+    </button>
+  </div>
+</footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+        <!-- Main JS -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
