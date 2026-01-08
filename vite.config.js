@@ -8,7 +8,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: path.resolve(__dirname, 'index.html'),
-        linktree: path.resolve(__dirname, '/linktree/index.html'),
       }
     }
   }
