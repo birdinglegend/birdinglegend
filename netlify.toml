@@ -1,0 +1,70 @@
+######################
+# Build Settings
+######################
+
+[build]
+  command = "npm run build"   
+  publish = "dist"          
+
+[build.processing]
+  trailingSlash = "always"  
+
+######################
+# Header Rules
+######################
+
+# Global security + HTML caching
+[[headers]]
+for = "/*"
+  [headers.values]
+    X-Frame-Options            = "SAMEORIGIN"
+    X-Content-Type-Options     = "nosniff"
+    Referrer-Policy            = "strict-origin-when-cross-origin"
+    Strict-Transport-Security  = "max-age=63072000; includeSubDomains; preload"
+    Permissions-Policy         = "geolocation=(), microphone=(), camera=(), payment=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    # Skip COEP for now to avoid breaking future embeds. Add later if needed:
+    # Cross-Origin-Embedder-Policy = "require-corp"
+    Cross-Origin-Resource-Policy = "same-site"
+    Cache-Control              = "no-store, must-revalidate"
+
+    # Optional: monitor Trusted Types without breaking anything
+    Content-Security-Policy-Report-Only = "require-trusted-types-for 'script'"
+
+# Long-cache for versioned static assets
+[[headers]]
+for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Icons
+[[headers]]
+for = "/favicon.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Error/utility pages (don’t cache)
+[[headers]]
+for = "/404.html"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+for = "/410.html"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+for = "/maintenance.html"
+  [headers.values]
+    Cache-Control = "no-cache"
