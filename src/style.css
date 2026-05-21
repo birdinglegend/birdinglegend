@@ -1,3 +1,70 @@
+@font-face {
+  font-family: 'Crimson Text';
+  src: url('./assets/fonts/crimson/CrimsonText-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  src: url('./assets/fonts/crimson/CrimsonText-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  src: url('./assets/fonts/crimson/CrimsonText-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  src: url('./assets/fonts/crimson/CrimsonText-SemiBoldItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  src: url('./assets/fonts/crimson/CrimsonText-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Crimson Text';
+  src: url('./assets/fonts/crimson/CrimsonText-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Explicit utilities (safe with Vite) */
+@layer utilities {
+  .font-crimson {
+    font-family: "Crimson Text", serif;
+  }
+}
+
+/* Custom styles can be added here */
+body {
+}
+
+main h1 {
+    @apply text-3xl font-crimson text-gray-900 leading-relaxed;
+  }
+
+main p {
+    @apply text-lg font-crimson text-gray-900;
+  }

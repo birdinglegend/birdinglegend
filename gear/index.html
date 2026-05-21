@@ -1,379 +1,330 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Birding Legend</title>
-    <meta name="description" content="BirdingLegend - My birding adventures, gear, and blogs." />
-<script>
-  // set theme early to avoid FOUC
-  (function () {
-    const stored = localStorage.getItem('theme');
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = stored ? stored : (systemDark ? 'dark' : 'light');
-    if (theme === 'dark') document.documentElement.classList.add('dark');
-  })();
-</script>
-<style>
-  .subnav-link {
-    display:inline-flex; align-items:center; height:100%;
-    padding:0 .25rem; gap:.5rem; text-decoration:none;
-    color: rgb(82 82 82); /* neutral-600 */
-  }
-  .subnav-link:hover { color: rgb(23 23 23); } /* neutral-900 */
-  .dark .subnav-link { color: rgb(163 163 163); } /* neutral-400 */
-  .dark .subnav-link:hover { color: rgb(255 255 255); }
-</style>
+<html lang="en">
+<head>
+  <!-- Basic Meta -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
 
-  </head>
-  <body class="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white font-sans antialiased">
-<!-- Header / Navbar -->
-<header id="siteHeader" class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-neutral-900/70 bg-white/90 dark:bg-neutral-900/90 border-b border-neutral-200 dark:border-neutral-800">
-  <!-- Main Bar -->
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="h-12 md:h-16 flex items-center justify-between">
-   <!-- Left: Logo -->
-<a href="/" class="flex items-center gap-3">
-  <img 
-    src="/src/assets/images/about/eugene-birdinglegend.jpg" 
-    alt="BirdingLegend logo" 
-    class="h-9 w-9 rounded-full object-cover border border-neutral-300 dark:border-neutral-700"
-    loading="lazy"
-    decoding="async"
-  >
-  <span class="font-semibold tracking-tight text-neutral-900 dark:text-white">@birdinglegend</span>
-</a>
+  <!-- SEO -->
+  <title>Birding Legend - Eugene Booysen</title>
+  <meta name="description" content="Believe it" />
+  <link rel="canonical" href="https://birdinglegend.com" />
 
-   <!-- Right: Desktop Nav + Theme -->
-<nav class="hidden md:flex items-center gap-6">
-  <a href="/about/" class="text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors">About</a>
-  <a href="/blog/" class="text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors">Blog</a>
-  <a href="/contact/" class="inline-flex items-center gap-2 rounded-xl border border-neutral-300/70 dark:border-neutral-700 px-3 py-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
-    Contact
-  </a>
-</nav>
+  <!-- Open Graph (for sharing later) -->
+  <meta property="og:title" content="Birding Legend" />
+  <meta property="og:description" content="Learn, Explore & Master Birding" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://birdinglegend.com" />
 
+</head>
 
-      <!-- Mobile: Burger -->
-      <button id="navToggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-full border border-neutral-300 dark:border-neutral-700"
-        aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-  </div>
+<body class="antialiased">
+  <!-- MOBILE TOP BAR -->
+<header class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-stone-100/95 backdrop-blur border-b border-stone-300">
 
-  <!-- Backdrop for mobile menu -->
-<div id="mobileBackdrop"
-     class="fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-opacity md:hidden"></div>
+  <div class="flex items-center justify-between px-5 py-4">
 
+    <!-- Brand -->
+    <a href="/" class="font-serif text-2xl text-stone-800 tracking-wide">
+      BirdingLegend
+    </a>
 
-<!-- Sub-Nav (always visible) -->
-<nav class="border-t border-neutral-200 dark:border-neutral-800">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-md">
-    <ul
-      class="flex w-full items-center h-10 md:h-12
-             gap-4 sm:gap-8
-             overflow-x-auto no-scrollbar
-             flex-nowrap sm:flex-wrap
-             justify-between sm:justify-center px-4">
-      <li><a href="/latest/"  class="subnav-link aria-[current=page]:text-neutral-900 dark:aria-[current=page]:text-white">Latest</a></li>
-      <li><a href="/gear/"    class="subnav-link">Gear</a></li>
-       <li><a href="/archive/" class="subnav-link">Archive</a></li>
-      <li><a href="/linktree/" class="subnav-link">Support</a></li>
-    </ul>
-  </div>
-</nav>
-
-
-<!-- Mobile Menu Panel (overlay) -->
-<div id="mobileMenu"
-     class="fixed inset-x-0 top-[6rem] z-50 md:hidden
-            max-h-[calc(100vh-6rem)] overflow-y-auto
-            bg-white dark:bg-neutral-900
-            border-t border-neutral-200 dark:border-neutral-800 shadow-lg
-            opacity-0 translate-y-[-8px] pointer-events-none
-            transition-all duration-200">
-  <nav class="px-4 py-3 space-y-2">
-    <a href="/about/"   class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">About</a>
-    <a href="/blog/"    class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">Blog</a>
-    <a href="/contact/" class="block rounded-lg px-3 py-2 border border-neutral-300/70 dark:border-neutral-700">Contact</a>
-  </nav>
-</div>
-
-</div>
-</header>
-<main class="min-h-[60vh]">
-<main id="main" class="min-h-screen">
-  <!-- HERO (max half the page height) -->
-  <section aria-labelledby="gear-hero" class="border-b border-neutral-200 dark:border-neutral-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 md:py-8">
-
-      <!-- Image wrapper: never taller than 50vh -->
-      <figure class="relative h-[50vh] max-h-[50vh] rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800">
-        <!-- Replace with your real group gear shot when ready -->
-        <img
-          src="/src/assets/images/leopard-in-marula-tree-kruger-national-park-pretoriuskop.webp"
-          alt="Placeholder: a clean backdrop ready for a group shot of all my gear"
-          class="w-full h-full object-cover"
-          loading="eager"
-          decoding="async"
-        />
-        <figcaption class="absolute inset-x-0 bottom-0 p-3 text-sm text-white/90 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
-          Group kit shot coming soon.
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- CONTENT -->
-  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 md:py-10">
-    <!-- Intro / quick notes -->
-    <div class="mb-8">
-      <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 p-4 md:p-6 bg-white dark:bg-neutral-900">
-        <h2 class="text-xl md:text-2xl font-semibold">How I Think About Gear</h2>
-        <p class="mt-2 text-neutral-700 dark:text-neutral-300">
-          I aim for reliable, field‑friendly equipment: fast setup, strong battery life, and weather resilience. 
-          Below you’ll find my core kit, what I pack for <em>birding-first</em> days vs <em>filming-first</em> days, and the accessories that keep everything running smoothly.
-        </p>
-      </div>
-    </div>
-
-    <!-- Two-column layout -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-      <!-- LEFT (spans 2 cols on desktop): Core Kit Cards -->
-      <div class="lg:col-span-2 space-y-6">
-
-        <!-- Cameras -->
-        <article class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
-          <header class="p-4 md:p-6 border-b border-neutral-200 dark:border-neutral-800">
-            <h3 class="text-lg md:text-xl font-semibold">Cameras</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-              Main bodies for documentary-style birding films and B‑roll.
-            </p>
-          </header>
-          <div class="p-4 md:p-6 grid sm:grid-cols-2 gap-4">
-            <!-- Sony A7S III -->
-            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
-              <div class="flex items-center justify-between">
-                <h4 class="font-medium">Sony A7S III</h4>
-                <span class="text-xs rounded-full px-2 py-0.5 border border-neutral-300 dark:border-neutral-700">Primary</span>
-              </div>
-              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                Shot in S‑Log3 / S‑Gamut3.Cine, 50p (100p for slow‑mo). My main camera for low‑light and flexible color.
-              </p>
-              <ul class="mt-3 text-sm space-y-1 list-disc list-inside">
-                <li>XAVC HS 4K</li>
-                <li>Prefers native Sony lenses (TBD list)</li>
-                <li>Graded in DaVinci Resolve</li>
-              </ul>
-            </div>
-
-            <!-- GoPro Hero 9 -->
-            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
-              <div class="flex items-center justify-between">
-                <h4 class="font-medium">GoPro Hero 9</h4>
-                <span class="text-xs rounded-full px-2 py-0.5 border border-neutral-300 dark:border-neutral-700">Action / POV</span>
-              </div>
-              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                GoPro Flat profile for walk‑throughs, vehicle POV, and quick inserts. I match it to Sony in Resolve.
-              </p>
-              <ul class="mt-3 text-sm space-y-1 list-disc list-inside">
-                <li>Flat color profile</li>
-                <li>Stabilized POV & time‑savers</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Drone -->
-        <article class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
-          <header class="p-4 md:p-6 border-b border-neutral-200 dark:border-neutral-800">
-            <h3 class="text-lg md:text-xl font-semibold">Drone</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-              Aerial establishing shots and habitat context.
-            </p>
-          </header>
-          <div class="p-4 md:p-6 grid sm:grid-cols-2 gap-4">
-            <!-- DJI Air 2S -->
-            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
-              <div class="flex items-center justify-between">
-                <h4 class="font-medium">DJI Air 2S</h4>
-                <span class="text-xs rounded-full px-2 py-0.5 border border-neutral-300 dark:border-neutral-700">Aerial</span>
-              </div>
-              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                Usually Normal profile at 25p with Auto WB; I sometimes use D‑Log for specific scenes.
-              </p>
-              <ul class="mt-3 text-sm space-y-1 list-disc list-inside">
-                <li>1&quot; sensor; crisp aerial cutaways</li>
-                <li>Keep spare ND filters and batteries</li>
-              </ul>
-            </div>
-
-            <!-- Placeholder for future drone/lens -->
-            <div class="rounded-xl border border-dashed border-neutral-300 dark:border-neutral-700 p-4">
-              <h4 class="font-medium">Future Upgrade</h4>
-              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                Reserve this spot for your next drone or tele lens.
-              </p>
-              <button class="mt-3 text-sm underline decoration-neutral-500 underline-offset-4 hover:decoration-2">
-                Add notes
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Audio -->
-        <article class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
-          <header class="p-4 md:p-6 border-b border-neutral-200 dark:border-neutral-800">
-            <h3 class="text-lg md:text-xl font-semibold">Audio</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-              Clean narration makes or breaks long‑form stories.
-            </p>
-          </header>
-          <div class="p-4 md:p-6 grid sm:grid-cols-2 gap-4">
-            <!-- Sennheiser MKE 400 -->
-            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
-              <div class="flex items-center justify-between">
-                <h4 class="font-medium">Sennheiser MKE 400</h4>
-                <span class="text-xs rounded-full px-2 py-0.5 border border-neutral-300 dark:border-neutral-700">On‑Camera</span>
-              </div>
-              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                Compact shotgun for run‑and‑gun narration and ambient bush audio.
-              </p>
-              <ul class="mt-3 text-sm space-y-1 list-disc list-inside">
-                <li>Low‑cut & sensitivity controls</li>
-                <li>Always pack a deadcat</li>
-              </ul>
-            </div>
-
-            <!-- Placeholder lav/recorder -->
-            <div class="rounded-xl border border-dashed border-neutral-300 dark:border-neutral-700 p-4">
-              <h4 class="font-medium">Lavalier / Field Recorder</h4>
-              <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                Placeholder for your lav kit or handheld recorder specs.
-              </p>
-              <button class="mt-3 text-sm underline decoration-neutral-500 underline-offset-4 hover:decoration-2">
-                Add model & notes
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Power, Media & Accessories -->
-        <article class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
-          <header class="p-4 md:p-6 border-b border-neutral-200 dark:border-neutral-800">
-            <h3 class="text-lg md:text-xl font-semibold">Power, Media & Accessories</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-              The quiet heroes that keep shooting days smooth.
-            </p>
-          </header>
-          <div class="p-4 md:p-6 grid sm:grid-cols-2 gap-4">
-            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
-              <h4 class="font-medium">Batteries & Charging</h4>
-              <ul class="mt-2 text-sm space-y-1 list-disc list-inside">
-                <li>Native Sony batteries + dual charger</li>
-                <li>Drone batteries x3 (min)</li>
-                <li>12V vehicle inverter (camp use)</li>
-              </ul>
-            </div>
-            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
-              <h4 class="font-medium">Media</h4>
-              <ul class="mt-2 text-sm space-y-1 list-disc list-inside">
-                <li>V60/V90 SD cards for Sony</li>
-                <li>High‑endurance microSD for GoPro & DJI</li>
-                <li>Rugged SSDs for backups</li>
-              </ul>
-            </div>
-            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
-              <h4 class="font-medium">Support</h4>
-              <ul class="mt-2 text-sm space-y-1 list-disc list-inside">
-                <li>Compact travel tripod (TBD)</li>
-                <li>Vehicle beanbag for long lenses</li>
-                <li>Clamp/arm for POV inside vehicle</li>
-              </ul>
-            </div>
-            <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4">
-              <h4 class="font-medium">Bags & Protection</h4>
-              <ul class="mt-2 text-sm space-y-1 list-disc list-inside">
-                <li>Weather‑resistant daypack</li>
-                <li>Hard case for drone/cameras</li>
-                <li>Rain covers & lens cloths</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- RIGHT: Loadouts (sticky on desktop) -->
-      <aside class="lg:sticky lg:top-24 space-y-6 h-max">
-        <!-- Filming-first -->
-        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 md:p-5">
-          <h3 class="text-base font-semibold">Loadout: Filming‑First</h3>
-          <ul class="mt-3 text-sm space-y-2 list-disc list-inside">
-            <li>Sony A7S III + on‑camera MKE 400</li>
-            <li>GoPro Hero 9 (POV/vehicle)</li>
-            <li>DJI Air 2S + 2–3 batteries</li>
-            <li>ND set, spare media, compact tripod</li>
-          </ul>
-        </div>
-        <!-- Birding-first -->
-        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 md:p-5">
-          <h3 class="text-base font-semibold">Loadout: Birding‑First</h3>
-          <ul class="mt-3 text-sm space-y-2 list-disc list-inside">
-            <li>Light body + tele lens (TBD)</li>
-            <li>Beanbag support for vehicle</li>
-            <li>GoPro for quick inserts</li>
-            <li>Spare batteries & microfiber</li>
-          </ul>
-        </div>
-        <!-- Notes -->
-        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 md:p-5">
-          <h3 class="text-base font-semibold">Notes</h3>
-          <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
-            I rotate lenses depending on target species. A proper telephoto list is coming soon with sample frames.
-          </p>
-        </div>
-      </aside>
-    </div>
-  </section>
-</main>
-
-<!-- Tiny style helpers (optional) -->
-<style>
-  .no-scrollbar::-webkit-scrollbar { display: none; }
-  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-  .subnav-link{
-    display:inline-flex; align-items:center; height:100%;
-    padding:0 .25rem; gap:.5rem;
-    color: rgb(82 82 82); text-decoration:none; /* neutral-600 */
-  }
-  .subnav-link:hover{ color: rgb(23 23 23); }          /* neutral-900 */
-  .dark .subnav-link{ color: rgb(163 163 163); }       /* neutral-400 */
-  .dark .subnav-link:hover{ color: rgb(255 255 255); } /* white */
-</style>
-
-
- <footer class="border-t border-neutral-200 dark:border-neutral-800 py-6">
-  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
-    <div class="text-sm text-neutral-600 dark:text-neutral-400">
-      © <span id="year"></span> Birding Legend. All rights reserved.
-    </div>
-
-    <!-- Theme toggle in footer (right aligned) -->
-    <button id="themeToggleFooter"
-      class="inline-flex items-center justify-center h-9 w-9 rounded-full dark:border-neutral-700 hover:bg-neutral-50 hover:border hover:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:border dark:hover:border-neutral-200 transition-colors"
-      aria-label="Toggle dark mode">
-      <img id="themeIconFooter" src="/src/assets/icons/moon.svg" alt="Theme icon" class="h-5 w-5">
+    <!-- Menu Button -->
+    <button
+      id="menuBtn"
+      class="flex flex-col gap-1.5 group"
+    >
+      <span class="w-6 h-[1.5px] bg-stone-800 transition-all"></span>
+      <span class="w-6 h-[1.5px] bg-stone-800 transition-all"></span>
+      <span class="w-6 h-[1.5px] bg-stone-800 transition-all"></span>
     </button>
+
   </div>
-</footer>
-    <!-- Main JS -->
-    <script type="module" src="/src/main.js"></script>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+
+</header>
+
+
+<!-- MOBILE MENU OVERLAY -->
+<div
+  id="mobileMenu"
+  class="lg:hidden fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-all duration-300"
+>
+
+  <!-- SIDE PANEL -->
+<aside
+  id="mobilePanel"
+  class="absolute right-0 top-0 h-full w-[85%] max-w-sm translate-x-full bg-[#f7f3ea] border-l border-stone-300 shadow-2xl overflow-y-auto transition-transform duration-500 ease-out"
+>
+
+    <!-- Header -->
+    <div class="px-6 py-8 border-b border-stone-300">
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="px-5 py-6">
+
+      <ul class="space-y-2">
+
+        <li>
+          <a href="/locations/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Locations
+            </span>
+
+            <span class="text-sm text-stone-500">
+              Birding hotspots
+            </span>
+
+          </a>
+        </li>
+
+        <li>
+          <a href="/safaris/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Safaris
+            </span>
+
+            <span class="text-sm text-stone-500">
+              Birding safaris & tours
+            </span>
+
+          </a>
+        </li>
+
+        <li>
+          <a href="/channel-list/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Channel list
+            </span>
+
+            <span class="text-sm text-stone-500">
+              My up to date channel bird list
+            </span>
+
+          </a>
+        </li>
+
+        <li>
+          <a href="/gear/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Gear
+            </span>
+
+            <span class="text-sm text-stone-500">
+              Binoculars & equipment
+            </span>
+
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+    <!-- Footer -->
+    <div class="px-6 py-8 border-t border-stone-300">
+
+      <div class="rounded-2xl border border-stone-300 bg-white p-5">
+
+        <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mb-2">
+          Latest Entry
+        </p>
+
+        <h3 class="font-serif text-xl text-stone-800">
+          Birding in Northern Kruger
+        </h3>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+</div>
+<!-- BirdingLegend Book-Style Sidebar -->
+<aside class="hidden lg:flex lg:flex-col fixed top-0 left-0 h-screen w-72 bg-stone-100 border-r border-stone-300 justify-between shadow-[8px_0_25px_rgba(0,0,0,0.05)] overflow-y-auto">
+
+  <!-- Top Section -->
+  <div>
+
+    <!-- Logo / Brand -->
+    <div class="px-8 py-10 border-b border-stone-300">
+      <a href="/" class="block">
+        <h1 class="text-3xl tracking-wide font-serif text-stone-800">
+          BirdingLegend
+        </h1>
+        <p class="mt-2 text-sm text-stone-500 italic leading-relaxed">
+          Birding is best
+        </p>
+      </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="px-5 py-8">
+
+      <p class="px-3 mb-3 text-xs uppercase tracking-[0.25em] text-stone-400">
+        Explore
+      </p>
+
+      <ul class="space-y-1">
+
+        <li>
+          <a href="/locations/"
+             class="group flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-stone-200/70 transition-all duration-300">
+
+            <div>
+              <span class="block text-stone-800 font-medium">
+                Locations
+              </span>
+              <span class="text-xs text-stone-500">
+                Birding hotspots
+              </span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/safaris/"
+             class="group flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-stone-200/70 transition-all duration-300">
+
+            <div>
+              <span class="block text-stone-800 font-medium">
+                Safaris
+              </span>
+              <span class="text-xs text-stone-500">
+                Birding safaris & tours
+              </span>
+            </div>
+          </a>
+        </li>
+<li>
+          <a href="/channel-list/"
+             class="group flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-stone-200/70 transition-all duration-300">
+
+            <div>
+              <span class="block text-stone-800 font-medium">
+                Channel List
+              </span>
+              <span class="text-xs text-stone-500">
+                My up to date channel bird list
+              </span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/gear/"
+             class="group flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-stone-200/70 transition-all duration-300">
+
+            <div>
+              <span class="block text-stone-800 font-medium">
+                Gear
+              </span>
+              <span class="text-xs text-stone-500">
+                Binoculars & equipment
+              </span>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- Divider -->
+      <div class="my-8 border-t border-stone-300"></div>
+
+      <!-- Secondary -->
+      <p class="px-3 mb-3 text-xs uppercase tracking-[0.25em] text-stone-400">
+        Knowledge
+      </p>
+
+      <ul class="space-y-1">
+
+        <li>
+          <a href="/learn/beginner-birding/"
+             class="block px-4 py-3 rounded-xl text-stone-700 hover:bg-stone-200/70 transition-all duration-300">
+            Beginner Birding
+          </a>
+        </li>
+
+        <li>
+          <a href="/migration/"
+             class="block px-4 py-3 rounded-xl text-stone-700 hover:bg-stone-200/70 transition-all duration-300">
+            Migration
+          </a>
+        </li>
+
+        <li>
+          <a href="/bird-families/"
+             class="block px-4 py-3 rounded-xl text-stone-700 hover:bg-stone-200/70 transition-all duration-300">
+            Bird Families
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+  </div>
+
+  <!-- Bottom Section -->
+  <div class="p-6 border-t border-stone-300 bg-stone-50">
+
+    <div class="rounded-2xl border border-stone-300 bg-white p-5 shadow-sm">
+      <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mb-2">
+        Latest Entry
+      </p>
+
+      <h3 class="text-stone-800 font-serif text-lg leading-snug">
+        Birding in Northern Kruger
+      </h3>
+
+      <p class="mt-2 text-sm text-stone-500 leading-relaxed">
+        a visit to the Northern Kruger early April 2026.
+      </p>
+
+      <a href="/locations/south-africa/northern-kruger/"
+         class="inline-block mt-4 text-sm text-stone-700 underline underline-offset-4 hover:text-black transition-colors duration-300">
+        Open Journal
+      </a>
+    </div>
+
+  </div>
+
+</aside>
+
+  <!-- MAIN CONTENT -->
+ <main class="pt-20 lg:pt-0 px-4 lg:ml-72 min-h-screen bg-[#f8f5ee]">
+  <section class="mx-auto text-left max-w-4xl">
+    <div>
+      <h1 class="text-2xl py-8">
+        My <strong>Gear</strong> I use in the field.
+      </h1>
+      <p class="mb-4">
+      a Good video not only needs a good story, it also needs depth. The correct gear can make a huge difference in the quality of your birding videos. Now everyone has their own preference, which brand that they prefer etc. 
+      </p>
+      <p class="mb-4">
+This is just a list of gear I use and hopefully this could guide you and inspire you to lock in when needed.
+      </p>
+      <p>
+ I prefer <strong>Sony</strong> as my camera brand of choice, of course. Especially the cameras that hold a wide dynamic range. I am still pretty noob, but thats the gift, you'll never get worse only if you allow it. Practise makes a more imperfect perfect and always aim to improve, strategise and try something new.
+      </p>
+    </div>
+  </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300">
+   
+  </footer>
+</body>
+  <script type="module" src="/src/main.js"></script>
+
 </html>
