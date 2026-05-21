@@ -120,24 +120,73 @@ if (tbody && searchInput && countryFilter) {
         : '';
 
       return `
-        <tr class="bird-row">
-          <td class="col-num">
-            <span class="row-num">${rowNumber}</span>
-          </td>
-          <td>
-            <span class="bird-name">${bird.common}</span>
-          </td>
-          <td>
-            <span class="sci-name">${bird.scientific}</span>
-          </td>
-          <td class="col-loc">${bird.location}</td>
-          <td>
-            <span class="country-badge">${bird.country}</span>
-          </td>
-          <td class="col-date">${formatDate(bird.date)}</td>
-          <td>${watchButton}</td>
-        </tr>
-      `;
+  <tr class="border-b border-stone-100 hover:bg-stone-50/80 transition-colors duration-200">
+
+    <!-- Number -->
+    <td class="px-4 py-5 text-center">
+      <span class="font-serif italic text-sm text-stone-400">
+        ${rowNumber}
+      </span>
+    </td>
+
+    <!-- Common Name -->
+    <td class="px-8 py-5 min-w-[320px]">
+
+      <div class="font-medium text-[15px] text-stone-800 leading-snug">
+        ${bird.common}
+      </div>
+
+    </td>
+
+    <!-- Scientific -->
+    <td class="px-5 py-5 min-w-[240px]">
+
+      <div class="italic text-sm text-stone-500">
+        ${bird.scientific}
+      </div>
+
+    </td>
+
+    <!-- Location -->
+    <td class="px-5 py-5 text-sm text-stone-600 min-w-[220px]">
+      ${bird.location}
+    </td>
+
+    <!-- Country -->
+    <td class="px-5 py-5">
+
+      <span class="inline-flex items-center rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-700 whitespace-nowrap">
+        ${bird.country}
+      </span>
+
+    </td>
+
+    <!-- Date -->
+    <td class="px-5 py-5 text-sm text-stone-500 whitespace-nowrap">
+      ${formatDate(bird.date)}
+    </td>
+
+    <!-- Watch -->
+    <td class="px-5 py-5">
+
+      ${watchButton
+        ? `
+          <a
+            href="${bird.videoUrl}"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center rounded-lg border border-stone-300 px-3 py-1.5 text-xs font-medium text-stone-700 hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all duration-200"
+          >
+            Watch
+          </a>
+        `
+        : ''
+      }
+
+    </td>
+
+  </tr>
+`;
     }).join('');
   }
 

@@ -66,5 +66,5 @@ main h1 {
   }
 
 main p {
-    @apply text-lg font-crimson text-gray-900;
+    @apply text-base font-normal font-crimson text-black leading-relaxed;
   }

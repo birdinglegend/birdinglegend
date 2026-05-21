@@ -21,174 +21,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
 
   <style>
-    :root {
-      --forest:    #1a2e1a;
-      --moss:      #2d4a2d;
-      --sage:      #4a7c59;
-      --fern:      #7ab893;
-      --mist:      #c8dcc8;
-      --parchment: #f5f0e8;
-      --ink:       #1a1a18;
-      --warm-gray: #8a8680;
-      --accent:    #c8a45a;
-      --accent-bg: #f5ead4;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--parchment);
-      color: var(--ink);
-    }
-
-    /* ── Logo ── */
-    .logo { font-family: 'Playfair Display', serif; }
-    .logo-accent { color: var(--fern); }
-
-    /* ── Header ── */
-    .site-header { background: var(--forest); }
-
-    .sub-nav a.active {
-      color: white;
-      border-bottom: 2px solid var(--fern);
-      padding-bottom: 2px;
-    }
-
-    /* ── Hero ── */
-    .hero { background: var(--forest); }
-
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      line-height: 1.15;
-    }
-
-    .hero-title em { color: var(--fern); font-style: italic; }
-
-    /* ── Stats bar ── */
-    .stats-bar { background: var(--moss); }
-
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      color: var(--fern);
-    }
-
-    /* ── Table ── */
-    .bird-table thead tr { background: var(--forest); }
-
-    .bird-table thead th {
-      color: var(--mist);
-      opacity: 0.7;
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 500;
-      padding: 12px 16px;
-      text-align: left;
-      white-space: nowrap;
-    }
-
-    .bird-table thead th:first-child { text-align: center; width: 50px; }
-    .bird-table thead th:last-child  { width: 80px; }
-
-    .bird-row {
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-      transition: background 0.15s;
-    }
-    .bird-row:last-child { border-bottom: none; }
-    .bird-row:hover { background: #ede9e0; }
-
-    .bird-table td { padding: 13px 16px; font-size: 13px; }
-    .col-num { text-align: center; }
-
-    .row-num {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 12px;
-      color: var(--warm-gray);
-    }
-
-    .bird-name { font-weight: 500; color: var(--forest); }
-
-    .sci-name {
-      font-style: italic;
-      color: var(--warm-gray);
-      font-size: 12px;
-    }
-
-    .country-badge {
-      display: inline-block;
-      padding: 2px 10px;
-      border-radius: 20px;
-      font-size: 11px;
-      font-weight: 500;
-      background: rgba(26,46,26,0.08);
-      color: var(--moss);
-      letter-spacing: 0.02em;
-      white-space: nowrap;
-    }
-
-    .col-date { color: var(--warm-gray); font-size: 12px; white-space: nowrap; }
-    .col-loc  { color: #555; font-size: 13px; }
-
-    .latest-tag {
-      display: inline-block;
-      padding: 1px 7px;
-      border-radius: 4px;
-      font-size: 10px;
-      font-weight: 500;
-      background: var(--accent-bg);
-      color: #7a5a1a;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-
-    .watch-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 11px;
-      color: var(--sage);
-      text-decoration: none;
-      font-weight: 500;
-      padding: 3px 9px;
-      border: 1px solid var(--mist);
-      border-radius: 6px;
-      transition: all 0.15s;
-      white-space: nowrap;
-    }
-    .watch-btn:hover {
-      background: var(--moss);
-      color: white;
-      border-color: var(--moss);
-    }
-
-    /* ── Sort arrow ── */
-    .sort-arrow { opacity: 0.6; font-size: 10px; }
-
-    /* ── Search / Filter ── */
-    .search-input, .filter-select {
-      background: white;
-      border: 1px solid rgba(0,0,0,0.12);
-      border-radius: 8px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px;
-      color: var(--ink);
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .search-input:focus, .filter-select:focus {
-      border-color: var(--sage);
-    }
-
-    /* ── Empty state ── */
-    #empty-state { display: none; }
-  </style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 </head>
 
-<body>
+<body class="bg-stone-50 text-stone-900 font-sans">
 
  <!-- MOBILE TOP BAR -->
 <header class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-stone-100/95 backdrop-blur border-b border-stone-300">
@@ -328,23 +167,28 @@
   <div>
 
     <!-- Logo / Brand -->
-    <div class="px-8 py-10 border-b border-stone-300">
-      <a href="/" class="block">
-        <h1 class="text-3xl tracking-wide font-serif text-stone-800">
-          BirdingLegend
-        </h1>
-        <p class="mt-2 text-sm text-stone-500 italic leading-relaxed">
-          Birding is best when shared.
-        </p>
-      </a>
-    </div>
+<div class="px-8 py-10">
+  <a href="/" class="block">
+    <img
+      src="/src/assets/images/channel-list/channel-list-navbar-pic.png"
+      alt="BirdingLegend"
+      class="h-24 md:h-28 w-auto mx-auto"
+    />
+  </a>
+</div>
 
     <!-- Navigation -->
     <nav class="px-5 py-8">
-
-      <p class="px-3 mb-3 text-xs uppercase tracking-[0.25em] text-stone-400">
+<div class="py-6">
+    <p class="sr-only">
         Explore
       </p>
+  <img
+    src="/src/assets/images/navbar/explore-nav.png"
+    alt="Explore"
+    class="max-w-md mx-auto h-4"
+  />
+</div>
 
       <ul class="space-y-1">
 
@@ -353,26 +197,30 @@
              class="group flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-stone-200/70 transition-all duration-300">
 
             <div>
-              <span class="block text-stone-800 font-medium">
+              <span class="block text-stone-800 sr-only">
                 Locations
               </span>
-              <span class="text-xs text-stone-500">
-                Birding hotspots
-              </span>
+              <img
+    src="/src/assets/images/navbar/locations-nav.png"
+    alt="Locations"
+    class="w-full max-w-md mx-auto h-5"
+  />
             </div>
           </a>
         </li>
         <li>
           <a href="/safaris/"
-             class="group flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-stone-200/70 transition-all duration-300">
+             class="group flex items-center gap-4 px-4 py-3 rounded-2xl hover:bg-stone-200/70 transition-all duration-300">
 
             <div>
-              <span class="block text-stone-800 font-medium">
+              <span class="block text-stone-800 sr-only">
                 Safaris
               </span>
-              <span class="text-xs text-stone-500">
-                Birding safaris & tours
-              </span>
+             <img
+    src="/src/assets/images/navbar/safaris-nav.png"
+    alt="Safaris"
+    class="w-full max-w-md mx-auto h-6"
+  />
             </div>
           </a>
         </li>
@@ -381,13 +229,15 @@
              class="group flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-stone-200/70 transition-all duration-300">
 
             <div>
-              <span class="block text-stone-800 font-medium">
+              <span class="block text-stone-800 sr-only">
                 Channel List
               </span>
-              <span class="text-xs text-stone-500">
-                My up to date channel bird list
-              </span>
-            </div>
+              <img
+    src="/src/assets/images/navbar/channel-list-nav.png"
+    alt="Channel List"
+    class="w-full max-w-md mx-auto h-6"
+  />
+  </div>
           </a>
         </li>
         <li>
@@ -395,202 +245,234 @@
              class="group flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-stone-200/70 transition-all duration-300">
 
             <div>
-              <span class="block text-stone-800 font-medium">
+              <span class="block text-stone-800 sr-only">
                 Gear
               </span>
-              <span class="text-xs text-stone-500">
-                Binoculars & equipment
-              </span>
+                 <img
+    src="/src/assets/images/navbar/gear-nav.png"
+    alt="Gear"
+    class="w-full max-w-md mx-auto h-6"
+  />
             </div>
           </a>
         </li>
 
       </ul>
 
-      <!-- Divider -->
-      <div class="my-8 border-t border-stone-300"></div>
-
-      <!-- Secondary -->
-      <p class="px-3 mb-3 text-xs uppercase tracking-[0.25em] text-stone-400">
-        Knowledge
-      </p>
-
-      <ul class="space-y-1">
-
-        <li>
-          <a href="/beginner-guide/"
-             class="block px-4 py-3 rounded-xl text-stone-700 hover:bg-stone-200/70 transition-all duration-300">
-            Beginner Birding
-          </a>
-        </li>
-
-        <li>
-          <a href="/migration/"
-             class="block px-4 py-3 rounded-xl text-stone-700 hover:bg-stone-200/70 transition-all duration-300">
-            Migration
-          </a>
-        </li>
-
-        <li>
-          <a href="/bird-families/"
-             class="block px-4 py-3 rounded-xl text-stone-700 hover:bg-stone-200/70 transition-all duration-300">
-            Bird Families
-          </a>
-        </li>
-
-      </ul>
-
-    </nav>
-  </div>
-
-  <!-- Bottom Section -->
-  <div class="p-6 border-t border-stone-300 bg-stone-50">
-
-    <div class="rounded-2xl border border-stone-300 bg-white p-5 shadow-sm">
-      <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mb-2">
-        Latest Entry
-      </p>
-
-      <h3 class="text-stone-800 font-serif text-lg leading-snug">
-        Birding in Northern Kruger
-      </h3>
-
-      <p class="mt-2 text-sm text-stone-500 leading-relaxed">
-        a visit to the Northern Kruger early April 2026.
-      </p>
-
-      <a href="/locations/south-africa/northern-kruger/"
-         class="inline-block mt-4 text-sm text-stone-700 underline underline-offset-4 hover:text-black transition-colors duration-300">
-        Open Journal
-      </a>
-    </div>
-
-  </div>
+      </nav>
 
 </aside>
 
-<main>
-  
-</main>
+<section class="bg-stone-900 px-6 pt-28 lg:pt-16 pb-14 lg:ml-72">
+  <div class="max-w-6xl mx-auto">
 
-<!-- ════════════════════════════ HERO ════════════════════════════ -->
-<div class="hero px-6 pt-10 pb-12">
-  <div class="max-w-7xl mx-auto">
-    <p class="text-xs font-medium tracking-widest uppercase mb-3" style="color: var(--fern);">
-      Channel Bird List
+    <p class="text-xs uppercase tracking-[0.25em] text-amber-400 mb-4">
+      Eugene Booysen
     </p>
-    <h1 class="hero-title text-4xl md:text-5xl font-bold text-white mb-4">
-      Every bird,<br><em>every outing.</em>
+
+    <h1 class="font-crimson text-3xl md:text-6xl text-white leading-tight mb-5">
+      Birding Legend,<br>
+      <span class="italic text-amber-400">
+        Channel bird list.
+      </span>
     </h1>
-    <p class="text-sm text-white/60 max-w-md leading-relaxed">
-      A live record of every species filmed on the channel.
-      Updated after each new video — follow along as the list grows.
+
+    <p class="text-stone-200 max-w-lg leading-relaxed">
+      Everytime a new video is uploaded, the list will get updated with any new species filmed. The list started in my video where I introduced this in Tzaneen.
     </p>
-  </div>
-</div>
-
-
-<!-- ════════════════════════════ STATS ════════════════════════════ -->
-<div class="stats-bar px-6 py-4 border-b border-white/10">
-  <div class="max-w-7xl mx-auto flex flex-wrap gap-8 items-center">
-
-    <div class="flex items-baseline gap-2">
-      <span class="stat-num text-3xl font-bold" id="stat-species">0</span>
-      <span class="text-xs uppercase tracking-wider font-medium text-white/50">Species recorded</span>
-    </div>
-
-    <div class="w-px h-7 bg-white/10 hidden sm:block"></div>
-
-    <div class="flex items-baseline gap-2">
-      <span class="stat-num text-3xl font-bold" id="stat-countries">0</span>
-      <span class="text-xs uppercase tracking-wider font-medium text-white/50">Countries birded</span>
-    </div>
-
-    <div class="w-px h-7 bg-white/10 hidden sm:block"></div>
-
-    <div class="flex items-baseline gap-2">
-      <span class="stat-num text-3xl font-bold" id="stat-videos">0</span>
-      <span class="text-xs uppercase tracking-wider font-medium text-white/50">Videos with footage</span>
-    </div>
 
   </div>
-</div>
+</section>
+<section class="bg-stone-800 border-b border-stone-700 lg:ml-72">
+  <div class="max-w-6xl mx-auto px-6 py-5 flex flex-wrap gap-8">
+
+    <div>
+      <p id="stat-species" class="font-serif text-3xl text-amber-400">
+        0
+      </p>
+      <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mt-1">
+        Species Recorded
+      </p>
+    </div>
+
+    <div>
+      <p id="stat-countries" class="font-serif text-3xl text-amber-400">
+        0
+      </p>
+      <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mt-1">
+        Countries Birded
+      </p>
+    </div>
+
+    <div>
+      <p id="stat-videos" class="font-serif text-3xl text-amber-400">
+        0
+      </p>
+      <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mt-1">
+        Videos With Footage
+      </p>
+    </div>
+
+  </div>
+</section>
+<main class="lg:ml-72 px-6 py-12">
+<div class="max-w-6xl mx-auto">
 
 
-<!-- ════════════════════════════ MAIN ════════════════════════════ -->
-<main class="max-w-7xl mx-auto px-6 py-10">
+  <!-- Heading -->
+  <div class="mb-8">
 
-  <!-- Page heading -->
-  <div class="mb-6">
-    <h2 class="text-xl font-semibold mb-1" style="font-family: 'Playfair Display', serif;">
+    <h2 class="font-serif text-3xl md:text-4xl text-stone-800 leading-tight mb-3">
       Birds filmed on the channel
     </h2>
-    <p class="text-sm" style="color: var(--warm-gray);">
-      A growing record of birds seen and filmed during my outings. Click a column header to sort.
+
+    <p class="text-stone-500 text-sm leading-relaxed max-w-2xl">
+      A growing record of birds seen and filmed during my outings.
+      Click a column heading to sort the archive.
     </p>
+
   </div>
 
-  <!-- Filter bar -->
-  <div class="flex flex-col sm:flex-row gap-3 mb-5">
+  <!-- Filter Bar -->
+  <div class="flex flex-col sm:flex-row gap-3 mb-6">
+
+    <!-- Search -->
     <div class="relative flex-1">
-      <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
+
+      <svg
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400 pointer-events-none"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"
+        />
       </svg>
+
       <input
         id="search-input"
         type="text"
-        placeholder="Search by name, location…"
-        class="search-input w-full pl-9 pr-4 py-2"
+        placeholder="Search by bird, location..."
+        class="w-full rounded-md border border-stone-300 bg-stone-50 py-3 pl-11 pr-4 text-sm text-stone-700 placeholder:text-stone-400 outline-none transition-all duration-300 focus:border-stone-500 focus:bg-white"
       />
+
     </div>
-    <select id="country-filter" class="filter-select px-3 py-2 pr-8 appearance-none bg-no-repeat cursor-pointer"
-      style="background-image: url(); background-position: right 10px center;">
+
+    <!-- Country Filter -->
+    <select
+      id="country-filter"
+      class="rounded-md border border-stone-300 bg-stone-50 px-4 py-3 text-sm text-stone-700 outline-none transition-all duration-300 focus:border-stone-500 focus:bg-white cursor-pointer"
+    >
       <option value="">All countries</option>
     </select>
+
   </div>
 
-  <!-- Table -->
-  <div class="border border-black/10 rounded-xl overflow-hidden bg-white">
+  <!-- Table Wrapper -->
+  <div class="overflow-hidden rounded-md border border-stone-200 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.04)]">
+
     <div class="overflow-x-auto">
-      <table class="bird-table w-full text-sm text-left">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th data-sort="common">Common name</th>
-            <th data-sort="scientific">Scientific name</th>
-            <th data-sort="location">Location</th>
-            <th data-sort="country">Country</th>
-            <th data-sort="date">Date</th>
-            <th></th>
+
+      <table class="w-full min-w-[950px] text-sm text-left">
+
+        <!-- Head -->
+        <thead class="bg-stone-900">
+
+          <tr class="border-b border-stone-700">
+
+            <th class="px-5 py-4 text-center text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium w-14">           #
+            </th>
+
+            <th
+              data-sort="common"
+              class="px-5 py-4 text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium cursor-pointer"
+            >
+              Common name
+            </th>
+
+            <th
+              data-sort="scientific"
+              class="px-5 py-4 text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium cursor-pointer"
+            >
+              Scientific name
+            </th>
+
+            <th
+              data-sort="location"
+              class="px-5 py-4 text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium cursor-pointer"
+            >
+              Location
+            </th>
+
+            <th
+              data-sort="country"
+              class="px-5 py-4 text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium cursor-pointer"
+            >
+              Country
+            </th>
+
+            <th
+              data-sort="date"
+              class="px-5 py-4 text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium whitespace-nowrap cursor-pointer"
+            >
+              Date
+            </th>
+
+            <th class="w-24"></th>
+
           </tr>
+
         </thead>
-        <tbody id="bird-tbody"></tbody>
+
+        <!-- JS Entries -->
+        <tbody
+          id="bird-tbody"
+          class="divide-y divide-stone-100"
+        ></tbody>
+
       </table>
+
     </div>
 
-    <!-- Empty state -->
-    <div id="empty-state" class="py-20 text-center">
-      <p class="text-4xl mb-4">🔭</p>
-      <p class="font-semibold text-lg mb-1" style="font-family:'Playfair Display',serif; color:var(--forest);">No birds found</p>
-      <p class="text-sm" style="color:var(--warm-gray);">Try adjusting your search or filter.</p>
+    <!-- Empty State -->
+    <div
+      id="empty-state"
+      class="hidden py-24 text-center bg-stone-50"
+    >
+
+      <h3 class="font-serif text-2xl text-stone-800 mb-2">
+        No birds found
+      </h3>
+
+      <p class="text-sm text-stone-500">
+        Try adjusting your search or filter.
+      </p>
+
     </div>
+
   </div>
-
+</div>
 </main>
+<footer class="border-t border-stone-200 py-10 px-6 lg:ml-72">
 
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
 
-<!-- ════════════════════════════ FOOTER ════════════════════════════ -->
-<footer class="mt-16 py-10 px-6 border-t border-black/10">
-  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-    <p class="logo text-lg text-gray-700">
-      birding<span class="logo-accent">legend</span>
+    <p class="font-serif text-xl text-stone-800">
+      BirdingLegend
     </p>
-    <p class="text-xs" style="color:var(--warm-gray);">
+
+    <p class="text-sm text-stone-500">
       © 2026 BirdingLegend. All rights reserved.
     </p>
-  </div>
-</footer>
 
+  </div>
+
+</footer>
 
 
   <script type="module" src="/src/main.js"></script>
