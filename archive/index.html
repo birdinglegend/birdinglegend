@@ -1,254 +1,306 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Archive | Birding Legend</title>
-    <meta
-      name="description"
-      content="BirdingLegend video archive — older style videos kept here for reference."
-    />
-    <script>
-      // set theme early to avoid FOUC
-      (function () {
-        const stored = localStorage.getItem('theme');
-        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = stored ? stored : (systemDark ? 'dark' : 'light');
-        if (theme === 'dark') document.documentElement.classList.add('dark');
-      })();
-    </script>
-  </head>
- <body class="bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white font-sans antialiased">
-<!-- Header / Navbar -->
-<header id="siteHeader" class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-neutral-900/70 bg-white/90 dark:bg-neutral-900/90 border-b border-neutral-200 dark:border-neutral-800">
-  <!-- Main Bar -->
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="h-12 md:h-16 flex items-center justify-between">
-   <!-- Left: Logo -->
-<a href="/" class="flex items-center gap-3">
-  <img 
-    src="/src/assets/images/about/eugene-birdinglegend.jpg" 
-    alt="BirdingLegend logo" 
-    class="h-9 w-9 rounded-full object-cover border border-neutral-300 dark:border-neutral-700"
-    loading="lazy"
-    decoding="async"
-  >
-  <span class="font-semibold tracking-tight text-neutral-900 dark:text-white">@birdinglegend</span>
-</a>
+<html lang="en">
+<head>
+  <!-- Basic Meta -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="/src/assets/images/icon/navicon.webp" type="image/svg+xml" />
+  <link rel="alternate icon" href="/src/assets/images/icon/navicon.webp" />
+  <!-- SEO -->
+  <title>Archive - Find my older videos here</title>
+  <meta name="description" content="Come along and embrace the wonders of birds, let me be your guide and come birding with Eugene Booysen." />
+  <link rel="canonical" href="https://birdinglegend.com" />
 
-   <!-- Right: Desktop Nav + Theme -->
-<nav class="hidden md:flex items-center gap-6">
-  <a href="/about/" class="text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors">About</a>
-  <a href="/blog/" class="text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white transition-colors">Blog</a>
-  <a href="/contact/" class="inline-flex items-center gap-2 rounded-xl border border-neutral-300/70 dark:border-neutral-700 px-3 py-1.5 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
-    Contact
-  </a>
-</nav>
+  <!-- Open Graph (for sharing later) -->
+  <meta property="og:title" content="Birding Legend" />
+  <meta property="og:description" content="Learn, Explore & Master Birding" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://birdinglegend.com" />
 
+</head>
 
-      <!-- Mobile: Burger -->
-      <button id="navToggle" class="md:hidden inline-flex items-center justify-center p-2 rounded-full border border-neutral-300 dark:border-neutral-700"
-        aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-  </div>
+<body class="antialiased">
+  <!-- MOBILE TOP BAR -->
+<header class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-stone-100/95 backdrop-blur border-b border-stone-300">
 
-  <!-- Backdrop for mobile menu -->
-<div id="mobileBackdrop"
-     class="fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-opacity md:hidden"></div>
+  <div class="flex items-center justify-between px-5 py-4">
 
+    <!-- Brand -->
+    <a href="/" class="font-serif text-2xl text-stone-800 tracking-wide">
+      BirdingLegend
+    </a>
 
-<!-- Sub-Nav (always visible) -->
-<nav class="border-t border-neutral-200 dark:border-neutral-800">
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <ul
-      class="flex w-full items-center h-12
-             gap-4 sm:gap-8
-             overflow-x-auto no-scrollbar
-             flex-nowrap sm:flex-wrap
-             justify-between sm:justify-center px-4"
+    <!-- Menu Button -->
+    <button
+      id="menuBtn"
+      class="flex flex-col gap-1.5 group"
     >
-      <li><a href="/latest/"  class="subnav-link aria-[current=page]:text-neutral-900 dark:aria-[current=page]:text-white">Latest</a></li>
-      <li><a href="/gear/"    class="subnav-link">Gear</a></li>
-       <li><a href="/videos/" class="subnav-link">Videos</a></li>
-      <li><a href="/support/" class="subnav-link">Support</a></li>
-    </ul>
+      <span class="w-6 h-[1.5px] bg-stone-800 transition-all"></span>
+      <span class="w-6 h-[1.5px] bg-stone-800 transition-all"></span>
+      <span class="w-6 h-[1.5px] bg-stone-800 transition-all"></span>
+    </button>
+
   </div>
-</nav>
 
-
-<!-- Mobile Menu Panel (overlay) -->
-<div id="mobileMenu"
-     class="fixed inset-x-0 top-[6rem] z-50 md:hidden
-            max-h-[calc(100vh-6rem)] overflow-y-auto
-            bg-white dark:bg-neutral-900
-            border-t border-neutral-200 dark:border-neutral-800 shadow-lg
-            opacity-0 translate-y-[-8px] pointer-events-none
-            transition-all duration-200 px-36">
-  <nav class="px-4 py-3 space-y-2 text-center">
-    <a href="/about/"   class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">About</a>
-    <a href="/blog/"    class="block rounded-lg px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">Blog</a>
-    <a href="/contact/" class="block rounded-lg px-3 py-2 border border-neutral-100/70 dark:border-neutral-700">Contact</a>
-  </nav>
-</div>
-
-</div>
 </header>
-    <main class="min-h-screen">
-      <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
-        <h1 class="text-3xl font-semibold mb-6">Video Archive</h1>
-        <p class="mb-10 text-neutral-700 dark:text-neutral-300 max-w-2xl">
-          These are older uploads from BirdingLegend — unlisted on YouTube, but
-          kept here for anyone curious about my early style.
-        </p>
 
-        <!-- Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          <!-- Card 1 -->
-          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
-            <a href="/blog/early-birding-vlog" class="block">
-              <img
-                src="/src/assets/images/yt-thumbnails/archive-1.jpg"
-                alt="Early Birding Vlog thumbnail"
-                class="w-full h-48 object-cover rounded-t-xl"
-              />
-              <div class="p-4">
-                <h2 class="text-lg font-semibold">Early Birding Vlog</h2>
-                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                  A look back at my first experimental vlog format.
-                </p>
-                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
-                  Read blog &amp; watch →
-                </p>
-              </div>
-            </a>
-          </article>
 
-          <!-- Card 2 -->
-          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
-            <a href="/blog/cape-birding-lens-test" class="block">
-              <img
-                src="/src/assets/images/yt-thumbnails/archive-2.jpg"
-                alt="Cape Birding Lens Test"
-                class="w-full h-48 object-cover rounded-t-xl"
-              />
-              <div class="p-4">
-                <h2 class="text-lg font-semibold">Cape Birding: Lens Test</h2>
-                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                  Shaky but fun experiments testing new gear.
-                </p>
-                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
-                  Read blog &amp; watch →
-                </p>
-              </div>
-            </a>
-          </article>
+<!-- MOBILE MENU OVERLAY -->
+<div
+  id="mobileMenu"
+  class="lg:hidden fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-all duration-300"
+>
 
-          <!-- Card 3 -->
-          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
-            <a href="/blog/forest-dawn-experiment" class="block">
-              <img
-                src="/src/assets/images/yt-thumbnails/archive-3.jpg"
-                alt="Forest Dawn Chorus thumbnail"
-                class="w-full h-48 object-cover rounded-t-xl"
-              />
-              <div class="p-4">
-                <h2 class="text-lg font-semibold">Forest Dawn Chorus</h2>
-                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                  Early attempts at capturing soundscapes.
-                </p>
-                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
-                  Read blog &amp; watch →
-                </p>
-              </div>
-            </a>
-          </article>
+  <!-- SIDE PANEL -->
+<aside
+  id="mobilePanel"
+  class="absolute right-0 top-0 h-full w-[85%] max-w-sm translate-x-full bg-[#f7f3ea] border-l border-stone-300 shadow-2xl overflow-y-auto transition-transform duration-500 ease-out"
+>
 
-          <!-- Card 4 -->
-          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
-            <a href="/blog/wetlands-recap" class="block">
-              <img
-                src="/src/assets/images/yt-thumbnails/archive-4.jpg"
-                alt="Wetlands Recap thumbnail"
-                class="w-full h-48 object-cover rounded-t-xl"
-              />
-              <div class="p-4">
-                <h2 class="text-lg font-semibold">Wetlands Recap</h2>
-                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                  A raw, behind-the-scenes look at my process.
-                </p>
-                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
-                  Read blog &amp; watch →
-                </p>
-              </div>
-            </a>
-          </article>
+    <!-- Header -->
+    <div class="px-6 py-8 border-b border-stone-300">
 
-          <!-- Card 5 -->
-          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
-            <a href="/blog/birding-2019" class="block">
-              <img
-                src="/src/assets/images/yt-thumbnails/archive-5.jpg"
-                alt="Birding 2019 thumbnail"
-                class="w-full h-48 object-cover rounded-t-xl"
-              />
-              <div class="p-4">
-                <h2 class="text-lg font-semibold">Birding 2019</h2>
-                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                  Throwback edit from my earliest fieldwork.
-                </p>
-                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
-                  Read blog &amp; watch →
-                </p>
-              </div>
-            </a>
-          </article>
-
-          <!-- Card 6 -->
-          <article class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-md transition">
-            <a href="/blog/uganda-first-trip" class="block">
-              <img
-                src="/src/assets/images/yt-thumbnails/archive-6.jpg"
-                alt="Uganda First Trip thumbnail"
-                class="w-full h-48 object-cover rounded-t-xl"
-              />
-              <div class="p-4">
-                <h2 class="text-lg font-semibold">Uganda First Trip</h2>
-                <p class="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                  My first attempt at documenting Uganda’s birdlife.
-                </p>
-                <p class="mt-3 text-sm underline decoration-neutral-400 underline-offset-4">
-                  Read blog &amp; watch →
-                </p>
-              </div>
-            </a>
-          </article>
-        </div>
-      </section>
-    </main>
-
-   <footer class="border-t border-neutral-200 dark:border-neutral-800 py-6">
-  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
-    <div class="text-sm text-neutral-600 dark:text-neutral-400">
-      © <span id="year"></span> Birding Legend. All rights reserved.
     </div>
 
-    <!-- Theme toggle in footer (right aligned) -->
-    <button id="themeToggleFooter"
-      class="inline-flex items-center justify-center h-9 w-9 rounded-full dark:border-neutral-700 hover:bg-neutral-50 hover:border hover:border-neutral-500 dark:hover:bg-neutral-800 dark:hover:border dark:hover:border-neutral-200 transition-colors"
-      aria-label="Toggle dark mode">
-      <img id="themeIconFooter" src="/src/assets/icons/moon.svg" alt="Theme icon" class="h-5 w-5">
-    </button>
-  </div>
-</footer>
+    <!-- Navigation -->
+    <nav class="px-5 py-6">
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-        <!-- Main JS -->
-    <script type="module" src="/src/main.js"></script>
-  </body>
+      <ul class="space-y-2">
+
+        <li>
+          <a href="/locations/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Locations
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/safaris/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Safaris
+            </span>
+
+            <span class="text-sm text-stone-500">
+              Birding safaris & tours
+            </span>
+
+          </a>
+        </li>
+
+        <li>
+          <a href="/channel-list/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Channel list
+            </span>
+
+            <span class="text-sm text-stone-500">
+              My up to date channel bird list
+            </span>
+
+          </a>
+        </li>
+
+        <li>
+          <a href="/gear/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Gear
+            </span>
+
+            <span class="text-sm text-stone-500">
+              Binoculars & equipment
+            </span>
+
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+  </aside>
+
+</div>
+<!-- BirdingLegend Custom-Style Sidebar -->
+<aside class="hidden lg:flex lg:flex-col fixed top-0 left-0 h-screen w-72 bg-stone-50 border-r border-black justify-between shadow-[8px_0_25px_rgba(0,0,0,0.05)] overflow-y-auto">
+  <!-- Top Section -->
+  <div>
+    <!-- Logo / Brand -->
+<div class="px-8 py-10">
+  <a href="/" class="block">
+    <img
+      src="/src/assets/images/icon/navicon.webp"
+      alt="Birding Legend Logo"
+      class="h-24 md:h-36 w-auto mx-auto"
+    />
+  </a>
+</div>
+    <!-- Navigation -->
+    <nav class="px-5 py-8">
+<div class="py-8">
+    <p class="sr-only">
+        Explore
+      </p>
+  <img
+    src="/src/assets/images/navbar/explore-nav.webp" 
+    alt="Explore" 
+    class="max-w-md mx-auto h-5" 
+    width="77"
+    height="20"/>
+  </div>
+      <ul class="space-y-1">
+<li>
+  <div class="group flex items-center gap-4 px-4 py-3 relative">
+    <a href="/locations/" class="relative inline-block">
+      <span class="sr-only">
+        Locations
+      </span>
+    <img
+      src="/src/assets/images/navbar/locations-nav.webp"
+      alt="Locations"
+      class="w-full max-w-md mx-auto h-5"
+      width="123"
+      height="20"/>
+     <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/locations-nav-hover.webp"
+      alt=""
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-3
+         w-12 opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"/>
+    </a>
+  </div>
+</li>
+<li>
+  <div class="group flex items-center gap-4 px-4 py-3 relative">
+    <a href="/safaris/" class="relative inline-block">
+      <span class="block text-stone-800 sr-only">
+        Safaris
+      </span>
+    <img
+      src="/src/assets/images/navbar/safaris-nav.webp"
+      alt="Safaris"
+      class="w-full max-w-md mx-auto h-5"
+      width="85"
+      height="20"/>
+  <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/safaris-nav-hover.webp"
+      alt=""
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-3
+         w-10 opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"/>
+    </a>
+  </div>
+</li>
+<li>
+  <div class="group flex items-center gap-4 px-4 py-3 relative">
+    <a href="/channel-list/" class="relative inline-block">
+      <span class="block text-stone-800 sr-only">
+        Channel List
+      </span>
+    <img
+      src="/src/assets/images/navbar/channel-list-nav.webp"
+      alt="Channel List"
+      class="w-full max-w-md mx-auto h-5"
+      width="140"
+      height="20"/>
+   <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/channel-list-nav-hover.webp"
+      alt=""
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-3
+         w-16 opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"/>
+    </a>
+ </div>
+</li>
+<li>
+  <div class="group flex items-center gap-4 px-4 py-3 relative">
+    <a href="/gear/" class="relative inline-block">
+      <span class="block text-stone-800 sr-only">
+        Gear
+      </span>
+    <img
+      src="/src/assets/images/navbar/gear-nav.webp"
+      alt="Gear"
+      class="w-full max-w-md mx-auto h-5"
+      width="57"
+      height="20"/>
+  <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/gear-nav-hover.webp"
+      alt=""
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-3
+         w-6 opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"/>
+    </a>
+  </div>
+</li>
+</ul>
+</nav>
+</aside>
+
+  <!-- MAIN CONTENT -->
+ <main class="pt-20 lg:pt-0 px-4 lg:ml-72 min-h-screen bg-[#f8f5ee]">
+  <section class="mx-auto text-left max-w-5xl">
+    <div>
+      <div class="relative py-10">
+<!-- Real SEO H1 -->
+  <h1 class="sr-only">
+  Birding with Eugene Booysen
+  </h1>
+
+  <!-- Your hand-drawn title -->
+  <img
+    src="/src/assets/images/homepage/birding-with-eugene-booysen.png"
+    alt="Birding with Eugene Booysen"
+    class="w-full max-w-md"
+    width="1200"
+    height="300"
+  />
+      </div>
+      <p class="mb-4">
+Welcome to my website, at the moment there is not much going on here, but with the growth of my channel and my youtube channel subscribers, so will the website be joining that fate. 
+      </p>
+      <p class="mb-4">
+        Let me introduce myself, my name is Eugene Booysen, I started birding a while back, and I would not recommend it. 
+      </p>
+       <p class="mb-4">
+        I started birding in 2013, it was set ablaze when I did my FGASA field guide course, I've always been interested in birds, observing them, making my own names and enjoying their beauty.
+      </p>
+      <p class="mb-4">
+        But thanks to a good friend, he graved the path to one of the most rewarding hobbies you could ever have, once you pick up that book and succesfully identify your first bird, then you'll naturally want to identify another one.
+      </p>
+      <p>
+        Good luck!
+      </p>
+    </div>
+  </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300">
+   
+  </footer>
+</body>
+  <script type="module" src="/src/main.js"></script>
+
 </html>

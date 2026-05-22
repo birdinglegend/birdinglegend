@@ -8,7 +8,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: path.resolve(__dirname, 'index.html'),
-        linktree: path.resolve(__dirname, 'linktree/index.html'),
+        about: path.resolve(__dirname, 'about/index.html'),
+        channelList: path.resolve(__dirname, 'channel-list/index.html'),
+        contact: path.resolve(__dirname, 'contact/index.html'),
+        gear: path.resolve(__dirname, 'gear/index.html'),
+        linkegg: path.resolve(__dirname, 'link-egg/index.html'),
+        locations: path.resolve(__dirname, 'locations/index.html'),
+        safaris: path.resolve(__dirname, 'safaris/index.html'),
       }
     }
   }
