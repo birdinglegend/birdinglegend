@@ -6,10 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
-
+  <link rel="icon" href="/src/assets/images/icon/navicon.webp" type="image/svg+xml" />
+  <link rel="alternate icon" href="/src/assets/images/icon/navicon.webp" />
   <!-- SEO -->
-  <title>Birding Legend | Learn, Explore & Master Birding</title>
-  <meta name="description" content="Birding Legend is a birding education and exploration platform built for birders of all levels. Learn, explore and become a true Birding Legend." />
+  <title>Birding with Eugene Booysen the Birding Legend</title>
+  <meta name="description" content="Come along and embrace the wonders of birds, let me be your guide and come birding with Eugene Booysen." />
+  <link rel="canonical" href="https://birdinglegend.com" />
 
   <!-- Open Graph (for sharing later) -->
   <meta property="og:title" content="Birding Legend" />
@@ -19,78 +21,736 @@
 
 </head>
 
-<body class="bg-white text-gray-800 font-sans antialiased">
+<body class="antialiased">
+  <!-- MOBILE TOP BAR -->
+<header class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-stone-100/95 backdrop-blur border-b border-stone-300">
 
-<!-- HEADER -->
-<header class="w-full border-b border-gray-200">
+  <div class="flex items-center justify-between px-5 py-4">
 
-  <!-- TOP NAV -->
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    
-    <!-- Logo -->
-    <a href="/" class="text-xl font-semibold tracking-tight">
-      Birding<span class="text-gray-500">Legend</span>
+    <!-- Brand -->
+    <a href="/" class="font-serif text-2xl text-stone-800 tracking-wide">
+      BirdingLegend
     </a>
 
- <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+    <!-- Menu Button -->
+    <button
+      id="menuBtn"
+      class="flex flex-col gap-1.5 group"
+    >
+      <span class="w-6 h-[1.5px] bg-stone-800 transition-all"></span>
+      <span class="w-6 h-[1.5px] bg-stone-800 transition-all"></span>
+      <span class="w-6 h-[1.5px] bg-stone-800 transition-all"></span>
+    </button>
 
-  <a href="#" class="hover:text-gray-900">Main</a>
-  <a href="#" class="hover:text-gray-900">Work With Me</a>
-  <a href="#" class="hover:text-gray-900">About</a>
-
-  <!-- MORE DROPDOWN -->
-  <details class="relative">
-    <summary class="cursor-pointer list-none hover:text-gray-900">
-      More
-    </summary>
-
-    <div class="absolute right-0 mt-3 w-40 bg-white border border-gray-200 rounded-md shadow-sm">
-      <a href="#"
-         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-        Blog
-      </a>
-      <a href="#"
-         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-        Contact
-      </a>
-    </div>
-  </details>
-
-</nav>
-  </div>
-
-  <!-- SUB NAV -->
-  <div class="bg-gray-50 border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 py-3">
-      <nav class="grid grid-flow-col auto-cols-max justify-center gap-10 text-sm font-medium">
-        <a href="#" class="text-gray-900">
-          Videos
-        </a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">
-          Gear
-        </a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">
-          Bird Lists
-        </a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">
-          Roadmap
-        </a>
-      </nav>
-    </div>
   </div>
 
 </header>
 
+
+<!-- MOBILE MENU OVERLAY -->
+<div
+  id="mobileMenu"
+  class="lg:hidden fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-all duration-300"
+>
+
+  <!-- SIDE PANEL -->
+<aside
+  id="mobilePanel"
+  class="absolute right-0 top-0 h-full w-[85%] max-w-sm translate-x-full bg-[#f7f3ea] border-l border-stone-300 shadow-2xl overflow-y-auto transition-transform duration-500 ease-out"
+>
+
+    <!-- Header -->
+    <div class="px-6 py-8 border-b border-stone-300">
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="px-5 py-6">
+
+      <ul class="space-y-2">
+
+        <li>
+          <a href="/locations/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Locations
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="/safaris/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Safaris
+            </span>
+
+            <span class="text-sm text-stone-500">
+              Birding safaris & tours
+            </span>
+
+          </a>
+        </li>
+
+        <li>
+          <a href="/channel-list/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Channel list
+            </span>
+
+            <span class="text-sm text-stone-500">
+              My up to date channel bird list
+            </span>
+
+          </a>
+        </li>
+
+        <li>
+          <a href="/gear/"
+             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
+            
+            <span class="block text-lg text-stone-800 font-medium">
+              Gear
+            </span>
+
+            <span class="text-sm text-stone-500">
+              Binoculars & equipment
+            </span>
+
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+  </aside>
+
+</div>
+<!-- BirdingLegend Custom-Style Sidebar -->
+<aside class="hidden lg:flex lg:flex-col fixed top-0 left-0 h-screen w-72 bg-stone-50 border-r border-black justify-between shadow-[8px_0_25px_rgba(0,0,0,0.05)] overflow-y-auto">
+  <!-- Top Section -->
+  <div>
+    <!-- Logo / Brand -->
+<div class="px-8 py-10">
+  <a href="/" class="block">
+    <img
+      src="/src/assets/images/icon/navicon.webp"
+      alt="Birding Legend Logo"
+      class="h-24 md:h-36 w-auto mx-auto"
+    />
+  </a>
+</div>
+    <!-- Navigation -->
+    <nav class="px-5 py-8">
+<div class="py-8">
+    <p class="sr-only">
+        Explore
+      </p>
+  <img
+    src="/src/assets/images/navbar/explore-nav.webp" 
+    alt="Explore" 
+    class="max-w-md mx-auto h-5" 
+    width="77"
+    height="20"/>
+  </div>
+      <ul class="space-y-1">
+<li>
+  <div class="group flex items-center gap-4 px-4 py-3 relative">
+    <a href="/locations/" class="relative inline-block">
+      <span class="sr-only">
+        Locations
+      </span>
+    <img
+      src="/src/assets/images/navbar/locations-nav.webp"
+      alt="Locations"
+      class="w-full max-w-md mx-auto h-5"
+      width="123"
+      height="20"/>
+     <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/locations-nav-hover.webp"
+      alt="Locations Hover Line"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-3
+         w-12 opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"/>
+    </a>
+  </div>
+</li>
+<li>
+  <div class="group flex items-center gap-4 px-4 py-3 relative">
+    <a href="/safaris/" class="relative inline-block">
+      <span class="block text-stone-800 sr-only">
+        Safaris
+      </span>
+    <img
+      src="/src/assets/images/navbar/safaris-nav.webp"
+      alt="Safaris"
+      class="w-full max-w-md mx-auto h-5"
+      width="85"
+      height="20"/>
+  <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/safaris-nav-hover.webp"
+      alt="Safaris Hover Line"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-3
+         w-10 opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"/>
+    </a>
+  </div>
+</li>
+<li>
+  <div class="group flex items-center gap-4 px-4 py-3 relative">
+    <a href="/channel-list/" class="relative inline-block">
+      <span class="block text-stone-800 sr-only">
+        Channel List
+      </span>
+    <img
+      src="/src/assets/images/navbar/channel-list-nav.webp"
+      alt="Channel List"
+      class="w-full max-w-md mx-auto h-5"
+      width="140"
+      height="20"/>
+   <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/channel-list-nav-hover.webp"
+      alt="Channel List Hover Line"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-3
+         w-16 opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"/>
+    </a>
+ </div>
+</li>
+<li>
+  <div class="group flex items-center gap-4 px-4 py-3 relative">
+    <a href="/gear/" class="relative inline-block">
+      <span class="block text-stone-800 sr-only">
+        Gear
+      </span>
+    <img
+      src="/src/assets/images/navbar/gear-nav.webp"
+      alt="Gear"
+      class="w-full max-w-md mx-auto h-5"
+      width="57"
+      height="20"/>
+  <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/gear-nav-hover.webp"
+      alt="Gear Hover Line"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-3
+         w-6 opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"/>
+    </a>
+  </div>
+</li>
+</ul>
+</nav>
+</aside>
+
   <!-- MAIN CONTENT -->
-  <main>
-  
+ <main class="pt-20 lg:pt-0 px-4 lg:ml-72 min-h-screen bg-[#f8f5ee]">
+  <section class="mx-auto text-left max-w-5xl">
+    <div>
+      <div class="relative py-10">
+<!-- Real SEO H1 -->
+  <h1 class="sr-only">
+  Birding with Eugene Booysen
+  </h1>
+
+  <!-- Your hand-drawn title -->
+  <img
+    src="/src/assets/images/homepage/birding-with-eugene-booysen.png"
+    alt="Birding with Eugene Booysen"
+    class="w-full max-w-md"
+    width="1200"
+    height="300"
+  />
+      </div>
+      <p class="mb-4">
+Welcome to my website, at the moment there is not much going on here, but with the growth of my channel and my youtube channel subscribers, so will the website be joining that fate. 
+      </p>
+      <p class="mb-4">
+        Let me introduce myself, my name is Eugene Booysen, I started birding a while back, and I would not recommend it. 
+      </p>
+       <p class="mb-4">
+        I started birding in 2013, it was set ablaze when I did my FGASA field guide course, I've always been interested in birds, observing them, making my own names and enjoying their beauty.
+      </p>
+      <p class="mb-4">
+        But thanks to a good friend, he graved the path to one of the most rewarding hobbies you could ever have, once you pick up that book and succesfully identify your first bird, then you'll naturally want to identify another one.
+      </p>
+      <p>
+        Good luck!
+      </p>
+    </div>
+  </section>
   </main>
+  <!-- Footer -->
+<footer class="bg-stone-50 border-t border-black px-4 lg:px-0 lg:ml-72">
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-300">
+  <div class="max-w-5xl mx-auto py-12 text-center lg:text-left">
+
+    <!-- Top Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8">
+      <!-- Left Block -->
+      <div>
+      <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+    <h3 class="sr-only">
+        Birding Legend
+    </h3>
+  <img
+    src="/src/assets/images/navbar/footer-birding-legend.webp" 
+    alt="Birding Legend Custom Text" 
+    class="max-w-md h-7"/>
+  </div>
+
+        <p class="text-black leading-relaxed mb-2">
+          Feel free to get in touch with me, if you have any questions, suggestions or would like to collaborate, I would love to hear from you!
+        </p>
+
+       <a
+  href="mailto:birdinglegend@gmail.com"
+  class="relative group inline-flex flex-col items-center"
+>
+<div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+    <a href="mailto:birdinglegend@gmail.com"
+  class="relative group inline-flex flex-col">
+      <span class="sr-only">
+        birdinglegend@gmail.com
+      </span>
+    <img
+      src="/src/assets/images/navbar/footer-email-link.webp"
+      alt="Email Custom Text Link"
+      class="w-full max-w-md h-8"
+      loading="lazy"
+      decoding="async"
+      />
+     <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/footer-email-link-hover.webp"
+      alt="Email Custom Text Link Hover Underline"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-0
+         w-full opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"
+      loading="lazy"
+      decoding="async" />
+    </a>
+  </div>
+  
+</a>
+      </div>
+
+      <!-- Info -->
+      <div class="mx-auto">
+       <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+    <h3 class="sr-only">
+       Info
+      </h3>
+  <img
+    src="/src/assets/images/navbar/footer-info.webp" 
+    alt="Info Custom Text" 
+    class="max-w-md h-6"
+    loading="lazy"
+    decoding="async"/>
+  </div>
+
+        <ul class="space-y-2">
+
+          <li>
+  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+    <a href="/about/" class="relative inline-block">
+      <span class="sr-only">
+        about
+      </span>
+    <img
+      src="/src/assets/images/navbar/footer-about-nav.webp"
+      alt="About"
+      class="w-full max-w-md h-4"
+      />
+     <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/footer-about-hover.webp"
+      alt="about hover line"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-2
+         w-full opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"
+      loading="lazy"
+      decoding="async"/>
+    </a>
+  </div>
+</li>
+
+          <li>
+  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+    <a href="/blog/" class="relative inline-block">
+      <span class="sr-only">
+        Blog
+      </span>
+    <img
+      src="/src/assets/images/navbar/footer-blog-nav.webp"
+      alt="Blog"
+      class="w-full max-w-md h-4"
+      loading="lazy"
+      decoding="async"
+      />
+     <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/footer-blog-hover.webp"
+      alt="Blog hover line"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-2
+         w-full opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"
+         loading="lazy"
+      decoding="async"/>
+    </a>
+  </div>
+</li>
+
+         <li>
+ <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+    <a href="/contact/" class="relative inline-block">
+      <span class="sr-only">
+        Contact
+      </span>
+    <img
+      src="/src/assets/images/navbar/footer-contact-nav.webp"
+      alt="Contact"
+      class="w-full max-w-md h-4"
+      loading="lazy"
+      decoding="async"
+      />
+     <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/footer-contact-hover.webp"
+      alt="Contact Hover Line"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-2
+         w-full opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"
+      loading="lazy"
+      decoding="async"/>
+    </a>
+  </div>
+</li>
+        </ul>
+      </div>
+
+      <!-- Explore -->
+      <div class="mx-auto text-right">
+        
+      <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+    <h3 class="sr-only">
+       Explore
+      </h3>
+  <img
+    src="/src/assets/images/navbar/footer-explore.webp" 
+    alt="Explore Custom Text" 
+    class="max-w-md h-6"
+    loading="lazy"
+    decoding="async"/>
+  </div>
+
+        <ul class="space-y-1">
+
+           <li>
+  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+    <a href="/locations/" class="relative inline-block">
+      <span class="sr-only">
+        Locations
+      </span>
+    <img
+      src="/src/assets/images/navbar/footer-locations.webp"
+      alt="Locations"
+      class="w-full max-w-md h-4"
+      loading="lazy"
+      decoding="async"
+      />
+     <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/footer-locations-hover.webp"
+      alt="Locations Hover Line"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-2
+         w-full opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"
+      loading="lazy"
+      decoding="async"/>
+    </a>
+  </div>
+</li>
+
+          <li>
+  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+    <a href="/safaris/" class="relative inline-block">
+      <span class="sr-only">
+        Safaris
+      </span>
+    <img
+      src="/src/assets/images/navbar/footer-safaris.webp"
+      alt="Safaris"
+      class="w-full max-w-md h-4"
+      loading="lazy"
+      decoding="async"
+      />
+     <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/footer-safaris-hover.webp"
+      alt="Safaris Hover Line"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-2
+         w-full opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"
+      loading="lazy"
+      decoding="async"/>
+    </a>
+  </div>
+</li>
+
+          <li>
+  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+    <a href="/channel-list/" class="relative inline-block">
+      <span class="sr-only">
+        Channel List
+      </span>
+    <img
+      src="/src/assets/images/navbar/footer-channel-list.webp"
+      alt="Channel List"
+      class="w-full max-w-md h-4"
+      loading="lazy"
+      decoding="async"    
+      />
+     <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/footer-channel-list-hover.webp"
+      alt="Channel List Hover Line"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-2
+         w-full opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"
+      loading="lazy"
+      decoding="async"/>
+    </a>
+  </div>
+</li>
+
+          <li>
+  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+    <a href="/gear/" class="relative inline-block">
+      <span class="sr-only">
+        Gear
+      </span>
+    <img
+      src="/src/assets/images/navbar/footer-gear.webp"
+      alt="Gear"
+      class="w-full max-w-md h-4"
+      loading="lazy"
+      decoding="async"
+      />
+     <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/footer-gear-hover.webp"
+      alt="footer gear underline"
+      aria-hidden="true"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-2
+         w-full opacity-0
+         group-hover:opacity-100
+         transition-all duration-100"
+      loading="lazy"
+      decoding="async"/>
+    </a>
+  </div>
+</li>
+        </ul>
+      </div>
+
+    </div>
+
    
-  </footer>
 
+  </div>
+ <!-- Full Width Bottom Bar -->
+<div class="border-t border-black">
+  <div class="px-6">
+    
+    <p class="text-sm text-stone-700 text-center sm:text-right py-6">
+      © 2026 BirdingLegend. All rights reserved.
+    </p>
+
+  </div>
+</div>
+</footer>
 </body>
   <script type="module" src="/src/main.js"></script>
+
 </html>
+
+<!-- IMAGES -->
+
+<section class="px-6 py-16">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Image -->
+    <img
+      src="/images/example.jpg"
+      alt="Description"
+      class="w-full rounded-2xl border border-black object-cover"
+      loading="lazy"
+    />
+
+    <!-- Content -->
+    <div class="mt-8">
+      <p class="text-sm uppercase tracking-[0.2em] text-zinc-500 mb-3">
+        South Africa
+      </p>
+
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+        Exploring the Grasslands
+      </h2>
+
+      <p class="text-zinc-700 leading-relaxed text-lg">
+        The highveld grasslands offer incredible birding opportunities,
+        especially during the summer months when migratory species arrive.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="px-6 py-20">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+    <!-- Image -->
+    <div>
+      <img
+        src="/images/example.jpg"
+        alt="Description"
+        class="w-full rounded-2xl border border-black object-cover"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Text -->
+    <div>
+      <p class="text-sm uppercase tracking-[0.2em] text-zinc-500 mb-3">
+        Birding Legend
+      </p>
+
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6">
+        Birding Across Southern Africa
+      </h2>
+
+      <p class="text-zinc-700 leading-relaxed mb-6 text-lg">
+        From the fynbos of the Western Cape to the woodlands of Limpopo,
+        Southern Africa provides some of the most diverse birding habitats
+        on the continent.
+      </p>
+
+      <a
+        href="/locations/"
+        class="inline-block border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition duration-300"
+      >
+        Explore Locations
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- IMAGE on the Left -->
+<section class="px-6 py-20">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+    <!-- Image -->
+    <div>
+      <img
+        src="/images/example.jpg"
+        alt="Description"
+        class="w-full rounded-2xl border border-black object-cover"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Text -->
+    <div>
+      <p class="text-sm uppercase tracking-[0.2em] text-zinc-500 mb-3">
+        Birding Legend
+      </p>
+
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6">
+        Birding Across Southern Africa
+      </h2>
+
+      <p class="text-zinc-700 leading-relaxed mb-6 text-lg">
+        From the fynbos of the Western Cape to the woodlands of Limpopo,
+        Southern Africa provides some of the most diverse birding habitats
+        on the continent.
+      </p>
+
+      <a
+        href="/locations/"
+        class="inline-block border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition duration-300"
+      >
+        Explore Locations
+      </a>
+    </div>
+
+  </div>
+</section>
+<section class="px-6 py-20">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+    <!-- Text -->
+    <div class="order-2 lg:order-1">
+      <p class="text-sm uppercase tracking-[0.2em] text-zinc-500 mb-3">
+        Field Notes
+      </p>
+
+      <h2 class="text-3xl md:text-5xl font-semibold mb-6">
+        Filming Wildlife in Natural Light
+      </h2>
+
+      <p class="text-zinc-700 leading-relaxed mb-6 text-lg">
+        Early morning and late afternoon light create the most cinematic
+        conditions for wildlife filmmaking while also keeping colors soft
+        and natural.
+      </p>
+
+      <a
+        href="/blog/"
+        class="inline-block border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition duration-300"
+      >
+        Read Journal
+      </a>
+    </div>
+
+    <!-- Image -->
+    <div class="order-1 lg:order-2">
+      <img
+        src="/images/example.jpg"
+        alt="Description"
+        class="w-full rounded-2xl border border-black object-cover"
+        loading="lazy"
+      />
+    </div>
+
+  </div>
+</section>
