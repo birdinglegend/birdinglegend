@@ -57,13 +57,17 @@
   }
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 /* Custom styles can be added here */
 body {
   font-family: 'Source Serif 4', serif;
 }
 
 main h1 {
-    @apply text-3xl font-sourceserif text-gray-900 leading-relaxed;
+    @apply text-3xl font-sourceserif;
   }
 
 main p {
