@@ -1,8 +1,32 @@
 const birds = [
-   {
+  {
+    common: "Cape Parrot",
+    scientific: "Poicephalus robustus",
+    location: "Magoebaskloof",
+    country: "South Africa",
+    date: "2026-05-29",
+    videoUrl: null
+  },
+  {
+    common: "Olive Woodpecker",
+    scientific: "Mesopicos griseocephalus",
+    location: "Magoebaskloof",
+    country: "South Africa",
+    date: "2026-05-27",
+    videoUrl: null
+  }, 
+  {
+    common: "Yellow-streaked Greenbul",
+    scientific: "Phyllastrephus flavostriatus",
+    location: "Magoebaskloof",
+    country: "South Africa",
+    date: "2026-05-27",
+    videoUrl: null
+  },
+  {
     common: "Ashy Flycatcher",
-    scientific: "Spilopelia senegalensis",
-    location: "Aqua Park, Tzaneen",
+    scientific: "Muscicapa caerulescens",
+    location: "Tzaneen",
     country: "South Africa",
     date: "2026-05-18",
     videoUrl: null
@@ -10,7 +34,7 @@ const birds = [
   {
     common: "Collared Sunbird",
     scientific: "Spilopelia senegalensis",
-    location: "Aqua Park, Tzaneen",
+    location: "Tzaneen",
     country: "South Africa",
     date: "2026-05-18",
     videoUrl: null
@@ -26,7 +50,6 @@ const emptyState = document.getElementById('empty-state');
 
 const statSpecies = document.getElementById('stat-species');
 const statCountries = document.getElementById('stat-countries');
-const statVideos = document.getElementById('stat-videos');
 
 if (tbody && searchInput && countryFilter) {
   let sortField = 'date';
@@ -46,7 +69,6 @@ if (tbody && searchInput && countryFilter) {
   function renderStats(list) {
     statSpecies.textContent = new Set(list.map(bird => `${bird.common}-${bird.scientific}`)).size;
     statCountries.textContent = new Set(list.map(bird => bird.country)).size;
-    statVideos.textContent = list.filter(bird => bird.videoUrl).length;
   }
 
   function populateCountryFilter() {

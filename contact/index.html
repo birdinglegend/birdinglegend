@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact</title>
+  <meta name="description" content="Feel free to get in touch, if you have any questions, suggestions or would like to collaborate, I would love to hear from you!">
+  <link rel="canonical" href="https://birdinglegend.com/contact/">
+
+  <meta name="robots" content="index, follow">
+
   <link rel="icon" href="/src/assets/images/icon/navicon.webp" type="image/svg+xml" />
   <link rel="alternate icon" href="/src/assets/images/icon/navicon.webp" />
-  <!-- SEO -->
-  <title>Birding with Eugene Booysen the Birding Legend</title>
-  <meta name="description" content="Come along and embrace the wonders of birds, let me be your guide and come birding with Eugene Booysen." />
-  <link rel="canonical" href="https://birdinglegend.com" />
-
-  <!-- Open Graph (for sharing later) -->
-  <meta property="og:title" content="Birding Legend" />
-  <meta property="og:description" content="Learn, Explore & Master Birding" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://birdinglegend.com" />
 
 </head>
-
 <body class="antialiased">
   <!-- MOBILE TOP BAR -->
 <header class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-stone-100/95 backdrop-blur border-b border-black">
@@ -30,7 +23,7 @@
     <!-- Brand -->
     <a href="/">
       <span class="sr-only">BirdingLegend</span>
-        <img
+      <img
     src="/src/assets/images/navbar/header-birding-legend.svg"
     alt="Birding with Eugene Booysen"
     class="w-auto h-6"
@@ -153,31 +146,46 @@
   <div>
     <!-- Logo / Brand -->
 <div class="px-8 py-10">
-  <a href="/" class="block">
     <img
-      src="/src/assets/images/icon/birdinglegend-logo.svg"
+      src="/src/assets/images/navbar/aside-birding-legend-logo.svg"
       alt="Birding Legend Logo"
       loading="eager"
-      class="h-24 md:h-36 w-auto mx-auto"
+      class="h-24 md:h-30 w-auto mx-auto block"
     />
-  </a>
 </div>
     <!-- Navigation -->
+       <div class="flex-1 flex items-center justify-center">
     <nav class="px-5 py-8">
-<div class="py-8">
-    <p class="sr-only">
-        Explore
-      </p>
-  <img
-    src="/src/assets/images/navbar/aside-explore-nav.svg" 
-    alt="" 
-    class="max-w-md mx-auto h-5" 
-    loading="eager"
-    aria-hidden="true"
-    width="77"
-    height="20"/>
-  </div>
       <ul class="space-y-1">
+        <li>
+  <div class="group flex items-center gap-4 px-4 py-3 relative">
+    <a href="/" class="relative inline-block">
+      <span class="sr-only">
+        Home
+      </span>
+    <img
+      src="/src/assets/images/navbar/aside-home-nav.svg"
+      alt=""
+      class="w-full max-w-md mx-auto h-6"
+      loading="eager"
+      aria-hidden="true"
+      width="126"
+      height="24"/>
+     <!-- Custom Hover Line -->
+    <img
+      src="/src/assets/images/navbar/aside-home-nav-hover.svg"
+      alt=""
+      aria-hidden="true"
+      loading="eager"
+      class="absolute left-1/2 -translate-x-1/2 -bottom-2
+         w-full opacity-0
+         group-hover:opacity-100
+         transition-all duration-200"
+         width="117"
+      height="9"/>
+    </a>
+  </div>
+</li>
 <li>
   <div class="group flex items-center gap-4 px-4 py-3 relative">
     <a href="/locations/" class="relative inline-block">
@@ -296,12 +304,12 @@
 </li>
 </ul>
 </nav>
+</div>
 </aside>
-
   <!-- MAIN CONTENT -->
- <main class="pt-20 lg:pt-16 px-4 lg:ml-72 min-h-screen bg-[#f8f5ee]">
+ <main class="pt-10 lg:pt-20 px-4 lg:ml-72 min-h-screen bg-[#f8f5ee]">
   <section class="mx-auto text-left max-w-3xl">
-    <div>
+    <div class="py-10">
       <div class="relative pb-8 lg:pb-16">
 <!-- Real SEO H1 -->
   <h1 class="sr-only">
@@ -312,19 +320,26 @@
   <img
     src="/src/assets/images/contact/contact.svg"
     alt=""
-    class="w-full h-10 max-w-xs mx-auto"
+    class="mx-auto h-12 lg:block w-full max-w-md"
     aria-hidden="true"
     loading="eager"
     width="139"
     height="40"
   />
       </div>
-        <p class="mb-4 text-center md:text-left">
-   Feel free to contact me, if you have any questions, suggestions or would like to collaborate, I would love to hear from you! You can use the email link below.
+      <p class="mx-auto text-center lg:text-left">
+        
+Feel free to get in touch, if you have any questions, suggestions or would like to collaborate, I would love to hear from you!
       </p>
     </div>
   </section>
-
+  <section class="mx-auto max-w-xs py-12">
+ <img 
+      src="/src/assets/images/contact/messenger-pigeon.svg" 
+      alt="contact page messenger pigeon drawing" 
+      class="mx-auto h-56 w-auto"
+    >
+  </section>
   </main>
   <!-- Footer -->
 <footer class="bg-stone-50 border-t border-black px-4 lg:px-0 lg:ml-72">
