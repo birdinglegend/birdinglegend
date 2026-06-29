@@ -21,296 +21,183 @@
 
 </head>
 <body class="antialiased">
-  <!-- MOBILE TOP BAR -->
-<header class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-stone-100/95 backdrop-blur border-b border-black">
+  <!-- MOBILE HEADER -->
+<header class="lg:hidden fixed top-0 inset-x-0 z-50 bg-[#f8f5ee] border-b border-black">
 
-  <div class="flex items-center justify-between px-5 py-4">
+    <div class="relative h-20">
 
-    <!-- Brand -->
-    <a href="/">
-      <span class="sr-only">BirdingLegend</span>
-      <img
-    src="/src/assets/images/navbar/header-birding-legend.svg"
-    alt="Birding with Eugene Booysen"
-    class="w-auto h-6"
-    aria-hidden="true"
-    loading="eager"
-    width="162"
-    height="26"
-  />
-    </a>
-    <!-- Menu Button -->
-    <button
-      id="menuBtn"
-      class="flex flex-col gap-1.5 group"
-    >
-      <span class="w-6 h-[2px] bg-stone-800 transition-all"></span>
-      <span class="w-6 h-[2px] bg-stone-800 transition-all"></span>
-      <span class="w-6 h-[2px] bg-stone-800 transition-all"></span>
-    </button>
+        <!-- Hamburger -->
+        <button
+            id="menuBtn"
+            class="absolute left-5 top-1/2 -translate-y-1/2">
 
-  </div>
+            <img
+                id="mobileMenuIcon"
+                src="/src/assets/images/navbar/hamburger-closed.svg"
+                alt="Open menu"
+                class="h-8 w-auto">
 
-</header>
-<!-- MOBILE MENU OVERLAY -->
-<div
-  id="mobileMenu"
-  class="lg:hidden fixed inset-0 z-40 bg-black/40 opacity-0 pointer-events-none transition-all duration-300"
->
-  <!-- SIDE PANEL -->
-<aside
-  id="mobilePanel"
-  class="absolute right-0 top-0 h-full w-[85%] max-w-sm translate-x-full bg-stone-50 border-l border-black shadow-2xl overflow-y-auto transition-transform duration-500 ease-out"
->
+        </button>
 
-    <!-- Header -->
-    <div class="px-6 py-8">
+        <!-- Logo -->
+        <a
+            href="/"
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+            <img
+                src="/src/assets/images/navbar/header-birding-legend.svg"
+                alt="BirdingLegend"
+                class="h-6 w-auto">
+
+        </a>
+
+        <!-- Mail -->
+        <a
+            href="mailto:birdinglegend@gmail.com"
+            class="absolute right-5 top-1/2 -translate-y-1/2 group">
+
+            <img
+                src="/src/assets/images/navbar/mail-letter-closed.svg"
+                class="block group-hover:hidden h-8">
+
+            <img
+                src="/src/assets/images/navbar/mail-letter-open.svg"
+                class="hidden group-hover:block h-8">
+
+        </a>
 
     </div>
 
-    <!-- Navigation -->
-    <nav class="px-5 py-6">
+</header>
+<aside
+id="mobilePanel"
+class="
+absolute
+left-0
+top-20
+h-[calc(100vh-5rem)]
+w-72
+bg-[#f8f5ee]
+border-r
+border-black
+-transform
+-translate-x-full
+transition-transform
+duration-300">
+<nav class="pt-10 px-8">
 
-      <ul class="space-y-2">
+<ul class="space-y-8 text-2xl font-bird">
 
-        <li>
-          <a href="/locations/"
-             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
-            
-            <span class="sr-only">
-              Locations
-            </span>
-             <img
-      src="/src/assets/images/navbar/aside-locations-nav.svg"
-      alt="Locations"
-      aria-hidden="true"
-      class="mx-auto h-5"
-      loading="eager"
-      />
-          </a>
-        </li>
+<li><a href="/">Home</a></li>
 
-        <li>
-          <a href="/safaris/"
-             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
-            
-            <span class="sr-only">
-              Safaris
-            </span>
-              <img
-      src="/src/assets/images/navbar/aside-safaris-nav.svg"
-      alt="Safaris"
-      aria-hidden="true"
-      class="mx-auto h-5"
-      loading="eager"
-      />
-          </a>
-        </li>
+<li><a href="/locations/">Locations</a></li>
 
-        <li>
-          <a href="/channel-list/"
-             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
-            
-            <span class="sr-only">
-              Channel list
-            </span>
-              <img
-      src="/src/assets/images/navbar/aside-channel-list-nav.svg"
-      alt="Channel List"
-      aria-hidden="true"
-      class="mx-auto h-5"
-      loading="eager"
-      />
-          </a>
-        </li>
+<li><a href="/channel-list/">Channel List</a></li>
 
-        <li>
-          <a href="/contact/"
-             class="block rounded-2xl px-5 py-4 hover:bg-stone-200/60 transition-all duration-300">
-            
-            <span class="sr-only">
-              Contact
-            </span>
-              <img
-      src="/src/assets/images/navbar/aside-contact-nav.svg"
-      alt="Gear"
-      aria-hidden="true"
-      class="mx-auto h-5"
-      loading="eager"
-      />
-          </a>
-        </li>
+<li><a href="/contact/">Contact</a></li>
 
-      </ul>
+</ul>
+
+</nav>
+</aside>
+<!-- ===========================
+Desktop Header
+============================ -->
+<header class="hidden lg:block fixed top-0 inset-x-0 z-50 bg-[#f8f5ee]">
+
+    <div class="relative h-24">
+
+        <!-- Left -->
+        <button
+            id="desktopMenuBtn"
+            class="absolute left-28 top-1/2 -translate-y-1/2">
+
+            <img
+                id="menuIcon"
+                src="/src/assets/images/navbar/hamburger-closed.svg"
+                alt="Open menu"
+                class="h-9 w-auto">
+        </button>
+
+        <!-- Center -->
+        <a
+            href="/"
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+            <img
+                src="/src/assets/images/navbar/header-birding-legend.svg"
+                alt="BirdingLegend"
+                class="h-8 w-auto">
+        </a>
+
+        <!-- Right -->
+        <div class="absolute right-28 top-1/2 -translate-y-1/2 group">
+
+            <a href="mailto:birdinglegend@gmail.com">
+
+                <img
+                    src="/src/assets/images/navbar/mail-letter-closed.svg"
+                    class="block group-hover:hidden h-9">
+
+                <img
+                    src="/src/assets/images/navbar/mail-letter-open.svg"
+                    class="hidden group-hover:block h-9">
+
+            </a>
+
+        </div>
+
+    </div>
+      <div
+        id="headerBorder"
+        class="absolute bottom-0 left-0 w-full h-px bg-black">
+    </div>
+    <div
+    id="borderMask"
+    class="absolute bottom-0 left-0 h-px w-80 bg-[#f8f5ee] hidden">
+</div>
+
+</header>
+<div
+id="sidebarOverlay"
+class="hidden fixed inset-0 bg-black/10 z-40">
+
+</div>
+
+<aside
+id="desktopSidebar"
+class="
+fixed
+left-0
+top-24
+h-[calc(100vh-6rem)]
+w-80
+bg-[#f8f5ee]
+-transform
+-translate-x-full
+transition-transform
+duration-300
+z-40
+border-r
+border-black">
+  
+
+    <nav class="pt-32 px-10">
+
+        <ul class="space-y-8 text-3xl font-bird">
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/locations/">Locations</a></li>
+
+            <li><a href="/channel-list/">Channel List</a></li>
+
+            <li><a href="/contact/">Contact</a></li>
+
+        </ul>
 
     </nav>
-  </aside>
-</div>
-<!-- BirdingLegend Custom-Style Sidebar -->
-<aside class="hidden lg:flex lg:flex-col fixed top-0 left-0 h-screen w-72 bg-stone-50 border-r border-black justify-between shadow-[8px_0_25px_rgba(0,0,0,0.05)] overflow-y-auto">
-  <!-- Top Section -->
-  <div>
-    <!-- Logo / Brand -->
-<div class="px-8 py-10">
-    <img
-      src="/src/assets/images/navbar/aside-birding-legend-logo.svg"
-      alt="Birding Legend Logo"
-      loading="eager"
-      class="h-24 md:h-30 w-auto mx-auto block"
-    />
-</div>
-    <!-- Navigation -->
-       <div class="flex-1 flex items-center justify-center">
-    <nav class="px-5 py-8">
-      <ul class="space-y-1">
-        <li>
-  <div class="group flex items-center gap-4 px-4 py-3 relative">
-    <a href="/" class="relative inline-block">
-      <span class="sr-only">
-        Home
-      </span>
-    <img
-      src="/src/assets/images/navbar/aside-home-nav.svg"
-      alt=""
-      class="w-full max-w-md mx-auto h-6"
-      loading="eager"
-      aria-hidden="true"
-      width="126"
-      height="24"/>
-     <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/aside-home-nav-hover.svg"
-      alt=""
-      aria-hidden="true"
-      loading="eager"
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-         width="117"
-      height="9"/>
-    </a>
-  </div>
-</li>
-<li>
-  <div class="group flex items-center gap-4 px-4 py-3 relative">
-    <a href="/locations/" class="relative inline-block">
-      <span class="sr-only">
-        Locations
-      </span>
-    <img
-      src="/src/assets/images/navbar/aside-locations-nav.svg"
-      alt=""
-      class="w-full max-w-md mx-auto h-6"
-      loading="eager"
-      aria-hidden="true"
-      width="126"
-      height="24"/>
-     <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/aside-locations-nav-hover.svg"
-      alt=""
-      aria-hidden="true"
-      loading="eager"
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-         width="117"
-      height="9"/>
-    </a>
-  </div>
-</li>
-<li>
-  <div class="group flex items-center gap-4 px-4 py-3 relative">
-    <a href="/safaris/" class="relative inline-block">
-      <span class="block text-stone-800 sr-only">
-        Safaris
-      </span>
-    <img
-      src="/src/assets/images/navbar/aside-safaris-nav.svg"
-      alt=""
-      class="w-full max-w-md mx-auto h-6"
-      loading="eager"
-      aria-hidden="true"
-      width="100"
-      height="24"/>
-  <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/aside-safaris-nav-hover.svg"
-      alt=""
-      loading="eager"
-      aria-hidden="true"
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-      width=""
-      height=""/>
-    </a>
-  </div>
-</li>
-<li>
-  <div class="group flex items-center gap-4 px-4 py-3 relative">
-    <a href="/channel-list/" class="relative inline-block">
-      <span class="block text-stone-800 sr-only">
-        Channel List
-      </span>
-    <img
-      src="/src/assets/images/navbar/aside-channel-list-nav.svg"
-      alt=""
-      class="w-full max-w-md mx-auto h-6"
-      loading="eager"
-      aria-hidden="true"
-      width="152"
-      height="24"/>
-   <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/aside-channel-list-nav-hover.svg"
-      alt=""
-      loading="eager"
-      aria-hidden="true"
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-      width=""
-      height=""/>
-    </a>
- </div>
-</li>
-<li>
-  <div class="group flex items-center gap-4 px-4 py-3 relative">
-    <a href="/contact/" class="relative inline-block">
-      <span class="block text-stone-800 sr-only">
-        Contact
-      </span>
-    <img
-      src="/src/assets/images/navbar/aside-contact-nav.svg"
-      alt=""
-      class="w-full max-w-md mx-auto h-6"
-      loading="eager"
-      aria-hidden="true"
-      width="86"
-      height="24"/>
-  <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/aside-contact-nav-hover.svg"
-      alt=""
-      loading="eager"
-      aria-hidden="true"
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-      width=""
-      height=""/>
-    </a>
-  </div>
-</li>
-</ul>
-</nav>
-</div>
+
 </aside>
 <!-- MAIN CONTENT -->
  <main class="pt-20 lg:pt-0 px-4 lg:ml-72 min-h-screen bg-[#f8f5ee]">

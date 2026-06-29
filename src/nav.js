@@ -1,19 +1,103 @@
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobilePanel = document.getElementById('mobilePanel');
+// --------------------
+// Desktop Navigation
+// --------------------
 
-menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('opacity-0');
-  mobileMenu.classList.toggle('pointer-events-none');
+const btn = document.getElementById("desktopMenuBtn");
 
-  mobilePanel.classList.toggle('translate-x-full');
-});
+const sidebar = document.getElementById("desktopSidebar");
 
-mobileMenu.addEventListener('click', (e) => {
-  if (e.target === mobileMenu) {
-    mobileMenu.classList.add('opacity-0');
-    mobileMenu.classList.add('pointer-events-none');
+const overlay = document.getElementById("sidebarOverlay");
 
-    mobilePanel.classList.add('translate-x-full');
-  }
-});
+const icon = document.getElementById("menuIcon");
+
+
+
+let open = false;
+
+btn.onclick = () => {
+
+    open = !open;
+
+    if(open){
+
+        sidebar.classList.remove("-translate-x-full");
+
+        overlay.classList.remove("hidden");
+
+        icon.src="/src/assets/images/navbar/hamburger-open.svg";
+
+
+    }else{
+
+        sidebar.classList.add("-translate-x-full");
+
+        overlay.classList.add("hidden");
+
+        icon.src="/src/assets/images/navbar/hamburger-closed.svg";
+
+
+    }
+
+}
+
+overlay.onclick = () =>{
+
+    open=false;
+
+    sidebar.classList.add("-translate-x-full");
+
+    overlay.classList.add("hidden");
+
+   icon.src="/src/assets/images/navbar/hamburger-closed.svg";
+
+}
+
+// --------------------
+// Mobile Navigation
+// --------------------
+
+const mobileBtn = document.getElementById("menuBtn");
+
+const mobileIcon = document.getElementById("mobileMenuIcon");
+
+const mobilePanel = document.getElementById("mobilePanel");
+
+const mobileOverlay = document.getElementById("mobileMenu");
+
+let mobileOpen = false;
+
+mobileBtn.onclick = () => {
+
+    mobileOpen = !mobileOpen;
+
+    if(mobileOpen){
+
+        mobilePanel.classList.remove("-translate-x-full");
+
+        mobileOverlay.classList.remove("opacity-0","pointer-events-none");
+
+        mobileIcon.src="/src/assets/images/navbar/hamburger-open.svg";
+
+    }else{
+
+        mobilePanel.classList.add("-translate-x-full");
+
+        mobileOverlay.classList.add("opacity-0","pointer-events-none");
+
+        mobileIcon.src="/src/assets/images/navbar/hamburger-closed.svg";
+
+    }
+
+}
+
+mobileOverlay.onclick = () => {
+
+    mobileOpen = false;
+
+    mobilePanel.classList.add("-translate-x-full");
+
+    mobileOverlay.classList.add("opacity-0","pointer-events-none");
+
+    mobileIcon.src="/src/assets/images/navbar/hamburger-closed.svg";
+
+}

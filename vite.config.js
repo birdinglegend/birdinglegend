@@ -14,7 +14,6 @@ export default defineConfig({
         gear: path.resolve(__dirname, 'gear/index.html'),
         linkegg: path.resolve(__dirname, 'link-egg/index.html'),
         locations: path.resolve(__dirname, 'locations/index.html'),
-        safaris: path.resolve(__dirname, 'safaris/index.html'),
       }
     }
   }
