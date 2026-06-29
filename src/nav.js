@@ -24,7 +24,7 @@ btn.onclick = () => {
 
         overlay.classList.remove("hidden");
 
-        icon.src="/src/assets/images/navbar/hamburger-open.svg";
+        icon.src="/images/navbar/hamburger-open.svg";
 
 
     }else{
@@ -33,7 +33,7 @@ btn.onclick = () => {
 
         overlay.classList.add("hidden");
 
-        icon.src="/src/assets/images/navbar/hamburger-closed.svg";
+        icon.src="/images/navbar/hamburger-closed.svg";
 
 
     }
@@ -48,7 +48,7 @@ overlay.onclick = () =>{
 
     overlay.classList.add("hidden");
 
-   icon.src="/src/assets/images/navbar/hamburger-closed.svg";
+   icon.src="/images/navbar/hamburger-closed.svg";
 
 }
 
@@ -76,7 +76,7 @@ mobileBtn.onclick = () => {
 
         mobileOverlay.classList.remove("opacity-0","pointer-events-none");
 
-        mobileIcon.src="/src/assets/images/navbar/hamburger-open.svg";
+        mobileIcon.src="/images/navbar/hamburger-open.svg";
 
     }else{
 
@@ -84,7 +84,7 @@ mobileBtn.onclick = () => {
 
         mobileOverlay.classList.add("opacity-0","pointer-events-none");
 
-        mobileIcon.src="/src/assets/images/navbar/hamburger-closed.svg";
+        mobileIcon.src="/images/navbar/hamburger-closed.svg";
 
     }
 
@@ -98,6 +98,6 @@ mobileOverlay.onclick = () => {
 
     mobileOverlay.classList.add("opacity-0","pointer-events-none");
 
-    mobileIcon.src="/src/assets/images/navbar/hamburger-closed.svg";
+    mobileIcon.src="/images/navbar/hamburger-closed.svg";
 
 }
