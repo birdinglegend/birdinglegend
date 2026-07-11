@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core Main Entry (Top Priority) -->
+  <url>
+    <loc>https://birdinglegend.com/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Core Hubs & Commercial Content -->
+  <url>
+    <loc>https://birdinglegend.com/tours/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq> 
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://birdinglegend.com/gear/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://birdinglegend.com/life-list/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Standard Informational Pages -->
+  <url>
+    <loc>https://birdinglegend.com/about/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Utility / Administrative Pages -->
+  <url>
+    <loc>https://birdinglegend.com/contact/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>

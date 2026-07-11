@@ -1,83 +1,101 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Basic Meta -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
-    <link rel="icon" href="/assets/navicon-Cd-GMoD_.webp" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="/assets/navicon-Cd-GMoD_.webp"
+      type="image/svg+xml"
+    />
     <link rel="alternate icon" href="/assets/navicon-Cd-GMoD_.webp" />
-    <!-- SEO -->
-    <title>Birding Legend - Bird Watching with Eugene Booysen</title>
+    <title>Have a look at my channel bird list - Birding Legend</title>
     <meta
       name="description"
-      content="Come along and embrace the wonders of birds, let me be your guide and come birding with Eugene Booysen."
+      content="Every bird species filmed on the BirdingLegend YouTube channel. A live record updated after every new video."
     />
-    <link rel="canonical" href="https://birdinglegend.com" />
+    <link rel="canonical" href="https://birdinglegend.com/channel-list/" />
 
-    <!-- Open Graph (for sharing later) -->
-    <meta property="og:title" content="Birding Legend" />
-    <meta property="og:description" content="Learn, Explore & Master Birding" />
+    <meta property="og:title" content="Channel Bird List — Birding Legend" />
+    <meta
+      property="og:description"
+      content="Every bird species filmed on the BirdingLegend YouTube channel."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://birdinglegend.com" />
+    <meta property="og:url" content="https://birdinglegend.com/channel-list/" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style></style>
     <script type="module" crossorigin src="/assets/main-Dwck9-KL.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/main-BNjfFpMd.css">
   </head>
-  <body class="antialiased bg-white">
+  <body class="antialiased">
     <!-- #region Mobile Header -->
-    <header class="lg:hidden fixed top-0 inset-x-0 z-50 bg-white border-b border-black">
+    <header
+      class="lg:hidden fixed top-0 inset-x-0 z-50 bg-[#f8f5ee] border-b border-black"
+    >
       <div class="relative h-20">
         <!-- Hamburger -->
-        <button
-          id="menuBtn"
-          class="absolute left-5 top-1/2 -translate-y-1/2 transition-transform duration-150 active:scale-95"
-        >
+        <button id="menuBtn" class="absolute left-5 top-1/2 -translate-y-1/2">
           <img
             id="mobileMenuIcon"
             src="/images/navbar/hamburger-closed.svg"
             alt="Open menu"
-            class="h-8 w-auto transition-transform duration-150"
+            class="h-8 w-auto"
             loading="eager"
           />
         </button>
 
         <!-- Logo -->
-        <a href="/" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <img src="/images/navbar/header-birding-legend.svg" alt="Birding Legend" class="h-8 w-auto" loading="eager" />
+        <a
+          href="/"
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <img
+            src="/images/navbar/header-birding-legend.svg"
+            alt="Birding Legend"
+            class="h-8 w-auto"
+            loading="eager"
+          />
         </a>
 
         <!-- Mail -->
         <a
-          href="mailto:eugene@eugenesafaris.com"
+          href="mailto:birdinglegend@gmail.com"
           class="absolute right-5 top-1/2 -translate-y-1/2 group"
           aria-label="Send email to Birding Legend"
         >
-          <img src="/images/navbar/mail-letter-closed.svg" class="block h-8" alt="send email button" loading="eager" />
+          <img
+            src="/images/navbar/mail-letter-closed.svg"
+            class="block h-8"
+            alt="send email button"
+            loading="eager"
+          />
         </a>
       </div>
     </header>
-    <div
-      id="mobileOverlay"
-      class="fixed inset-0 bg-black/10 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out hidden z-30"
-    ></div>
     <aside
       id="mobilePanel"
-      class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 bg-white border-r border-black -transform -translate-x-full transition-transform duration-300 z-40"
+      class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 bg-[#f8f5ee] -transform -translate-x-full transition-transform duration-300 z-40 border-r border-black"
     >
       <nav class="pt-10 px-8">
-        <ul class="space-y-8 text-2xl">
-          <li>
-            <a href="/tours/">Tours</a>
-          </li>
+        <ul class="space-y-8 text-2xl font-bird">
+          <li><a href="/">Home</a></li>
 
-          <li>
-            <a href="/blog/">Blogs & Videos</a>
-          </li>
+          <li><a href="/locations/">Locations</a></li>
 
-          <li><a href="/about/">About</a></li>
+          <li><a href="/channel-list/">Channel List</a></li>
 
-          <li><a href="/contact/">Book</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </nav>
     </aside>
@@ -85,9 +103,12 @@
     <!-- #region Desktop Header -->
     <header
       id="desktopHeader"
-      class="hidden lg:block fixed top-0 inset-x-0 z-50 bg-white transition-all duration-300 border-b border-black"
+      class="hidden lg:block fixed top-0 inset-x-0 z-50 bg-[#f8f5ee] transition-all duration-300 border-b border-black"
     >
-      <div id="desktopHeaderInner" class="relative h-24 transition-all duration-300">
+      <div
+        id="desktopHeaderInner"
+        class="relative h-24 transition-all duration-300"
+      >
         <!-- Left -->
         <button
           id="desktopMenuBtn"
@@ -103,18 +124,23 @@
         </button>
 
         <!-- Center -->
-        <a href="/" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <a
+          href="/"
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
           <img
             id="desktopLogo"
             src="/images/navbar/header-birding-legend.svg"
             alt="Birding Legend"
-            class="h-7 w-auto transition-all duration-300 ease-in-out"
+            class="h-8 w-auto transition-all duration-300 ease-in-out"
             loading="eager"
           />
         </a>
 
         <!-- Right -->
-        <div class="absolute right-28 top-1/2 -translate-y-1/2 flex items-center gap-6">
+        <div
+          class="absolute right-28 top-1/2 -translate-y-1/2 flex items-center gap-6"
+        >
           <!-- Contact Button -->
           <a
             id="contactButton"
@@ -140,11 +166,14 @@
             />
 
             <!-- Text -->
-            <span class="relative z-10 text-xl font-black font-eugene"> CONTACT </span>
+            <span class="relative z-10 text-lg font-eugene"> CONTACT </span>
           </a>
 
           <!-- Mail -->
-          <a href="mailto:eugene@eugenesafaris.com" aria-label="Send email to Birding Legend">
+          <a
+            href="mailto:birdinglegend@gmail.com"
+            aria-label="Send email to Birding Legend"
+          >
             <img
               id="desktopMail"
               src="/images/navbar/mail-letter-closed.svg"
@@ -162,52 +191,174 @@
     ></div>
     <aside
       id="desktopSidebar"
-      class="fixed left-0 top-0 pt-24 h-screen w-80 bg-white border-r border-black -transform -translate-x-full transition-all duration-300 z-40"
+      class="fixed left-0 top-0 pt-24 h-screen w-80 bg-[#f8f5ee] -transform -translate-x-full transition-all duration-300 z-40 border-r border-black"
     >
       <nav class="pt-32 px-10">
-        <ul class="space-y-8 text-2xl">
-          <li>
-            <a href="/tours/">Tours</a>
-          </li>
+        <ul class="space-y-8 text-3xl font-bird">
+          <li><a href="/">Home</a></li>
 
-          <li>
-            <a href="/blog/">Blogs & Videos</a>
-          </li>
+          <li><a href="/locations/">Locations</a></li>
 
-          <li><a href="/about/">About</a></li>
+          <li><a href="/channel-list/">Channel List</a></li>
 
-          <li><a href="/contact/">Book</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </nav>
     </aside>
     <!-- #endregion -->
     <main class="pt-24">
-      <section class="mx-auto text-center lg:text-left max-w-3xl">
-        <div>
-          <p class="mb-4">
-            Welcome to my website, at the moment there is not much going on here, but with the growth of my channel and
-            my youtube channel subscribers, so will the website be joining that fate.
-          </p>
-          <p class="mb-4">
-            Let me introduce myself, my name is Eugene Booysen, I started birding a while back, and I would not
-            recommend it.
-          </p>
-          <p class="mb-4">
-            I started birding in 2013, it was set ablaze when I did my FGASA field guide course, I've always been
-            interested in birds, observing them, making my own names and enjoying their beauty.
-          </p>
-          <p class="mb-4">
-            But thanks to a good friend, he graved the path to one of the most rewarding hobbies you could ever have,
-            once you pick up that book and succesfully identify your first bird, then you'll naturally want to identify
-            another one.
-          </p>
-          <p>Good luck!</p>
+      <section class="bg-stone-800 border-b border-stone-700">
+        <div
+          class="max-w-6xl mx-auto flex justify-center items-center gap-6 px-6 py-5"
+        >
+          <div class="text-center">
+            <p id="stat-species" class="font-serif text-3xl text-amber-400">
+              0
+            </p>
+            <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mt-1">
+              Species Recorded
+            </p>
+          </div>
+
+          <div class="text-center">
+            <p id="stat-countries" class="font-serif text-3xl text-amber-400">
+              0
+            </p>
+            <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mt-1">
+              Countries Birded
+            </p>
+          </div>
         </div>
       </section>
+      <section class="max-w-7xl mx-auto px-4 py-0 lg:py-16">
+        <div class="max-w-6xl mx-auto">
+          <!-- Real SEO H1 -->
+          <h1
+            class="font-eugene text-5xl pt-6 md:pt-0 text-center lg:text-left uppercase font-semibold"
+          >
+            My Youtube Channel Bird List
+          </h1>
 
-      <section class="mx-auto max-w-3xl py-12 lg:py-24">
-        <div class="flex justify-center">
-          <img src="/assets/feather-divider-CMerOpNt.svg" alt="" class="h-8 w-auto" />
+          <!-- Heading -->
+          <div class="mb-8">
+            <p class="text-black max-w-2xl">
+              Follow along with my channel bird list, a record that keeps
+              getting updated after every new video, with the dates and
+              locations of each sighting. Read the full
+              <a href="/locations/" class="underline">locations</a> articles for
+              more details on where I filmed each species.
+            </p>
+          </div>
+
+          <!-- Filter Bar -->
+          <div class="flex flex-col sm:flex-row gap-3 mb-6">
+            <!-- Search -->
+            <div class="relative flex-1">
+              <svg
+                class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400 pointer-events-none"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"
+                />
+              </svg>
+
+              <input
+                id="search-input"
+                type="text"
+                placeholder="Search by bird, location..."
+                class="w-full rounded-md border border-stone-300 bg-stone-50 py-3 pl-11 pr-4 text-sm text-stone-700 placeholder:text-stone-400 outline-none transition-all duration-300 focus:border-stone-500 focus:bg-white"
+              />
+            </div>
+
+            <!-- Country Filter -->
+            <select
+              id="country-filter"
+              class="rounded-md border border-stone-300 bg-stone-50 px-4 py-3 text-sm text-stone-700 outline-none transition-all duration-300 focus:border-stone-500 focus:bg-white cursor-pointer"
+            >
+              <option value="">All countries</option>
+            </select>
+          </div>
+
+          <!-- Table Wrapper -->
+          <div
+            class="overflow-hidden rounded-md border border-stone-200 bg-white shadow-[0_10px_40px_rgba(0,0,0,0.04)]"
+          >
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[950px] text-sm text-left">
+                <!-- Head -->
+                <thead class="bg-stone-900">
+                  <tr class="border-b border-stone-700">
+                    <th
+                      class="px-5 py-4 text-center text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium w-14"
+                    >
+                      #
+                    </th>
+
+                    <th
+                      data-sort="common"
+                      class="px-5 py-4 text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium cursor-pointer"
+                    >
+                      Common name
+                    </th>
+
+                    <th
+                      data-sort="scientific"
+                      class="px-5 py-4 text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium cursor-pointer"
+                    >
+                      Scientific name
+                    </th>
+
+                    <th
+                      data-sort="location"
+                      class="px-5 py-4 text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium cursor-pointer"
+                    >
+                      Location
+                    </th>
+
+                    <th
+                      data-sort="country"
+                      class="px-5 py-4 text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium cursor-pointer"
+                    >
+                      Country
+                    </th>
+
+                    <th
+                      data-sort="date"
+                      class="px-5 py-4 text-[11px] uppercase tracking-[0.18em] text-stone-400 font-medium whitespace-nowrap cursor-pointer"
+                    >
+                      Date
+                    </th>
+
+                    <th class="w-24"></th>
+                  </tr>
+                </thead>
+
+                <!-- JS Entries -->
+                <tbody
+                  id="bird-tbody"
+                  class="divide-y divide-stone-100"
+                ></tbody>
+              </table>
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="hidden py-24 text-center bg-stone-50">
+              <h3 class="font-serif text-2xl text-stone-800 mb-2">
+                No birds found
+              </h3>
+
+              <p class="text-sm text-stone-500">
+                Try adjusting your search or filter.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -215,10 +366,14 @@
     <footer class="bg-stone-50 border-t border-black px-4 lg:px-0">
       <div class="max-w-5xl mx-auto py-12 text-center lg:text-left">
         <!-- Top Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8"
+        >
           <!-- Left Block -->
           <div>
-            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+            <div
+              class="group flex justify-center lg:justify-start gap-4 py-6 relative"
+            >
               <h3 class="sr-only">Birding Legend</h3>
               <img
                 src="/assets/footer-birding-legend-Ddj9Kkmn.svg"
@@ -232,13 +387,21 @@
             </div>
 
             <p class="text-black leading-relaxed mb-2">
-              Feel free to get in touch, if you have any questions, suggestions or would like to collaborate, I would
-              love to hear from you!
+              Feel free to get in touch, if you have any questions, suggestions
+              or would like to collaborate, I would love to hear from you!
             </p>
 
-            <a href="mailto:birdinglegend@gmail.com" class="relative group inline-flex flex-col items-center">
-              <div class="group flex justify-center lg:justify-start py-3 relative">
-                <a href="mailto:birdinglegend@gmail.com" class="relative group inline-flex flex-col">
+            <a
+              href="mailto:birdinglegend@gmail.com"
+              class="relative group inline-flex flex-col items-center"
+            >
+              <div
+                class="group flex justify-center lg:justify-start py-3 relative"
+              >
+                <a
+                  href="mailto:birdinglegend@gmail.com"
+                  class="relative group inline-flex flex-col"
+                >
                   <span class="sr-only"> birdinglegend@gmail.com </span>
                   <img
                     src="/assets/footer-email-link-Bu-fwXh-.svg"
@@ -268,7 +431,9 @@
 
           <!-- Info -->
           <div class="mx-auto">
-            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+            <div
+              class="group flex justify-center lg:justify-start gap-4 py-6 relative"
+            >
               <h3 class="sr-only">Info</h3>
               <img
                 src="/assets/footer-info-nav-DDd8ZfPj.svg"
@@ -282,7 +447,9 @@
 
             <ul class="space-y-2">
               <li>
-                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
                   <a href="/about/" class="relative inline-block">
                     <span class="sr-only"> about </span>
                     <img
@@ -306,7 +473,9 @@
               </li>
 
               <li>
-                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
                   <a href="/blog/" class="relative inline-block">
                     <span class="sr-only"> Blog </span>
                     <img
@@ -331,7 +500,9 @@
               </li>
 
               <li>
-                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
                   <a href="/contact/" class="relative inline-block">
                     <span class="sr-only"> Contact </span>
                     <img
@@ -359,7 +530,9 @@
 
           <!-- Explore -->
           <div class="mx-auto text-right">
-            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+            <div
+              class="group flex justify-center lg:justify-start gap-4 py-6 relative"
+            >
               <h3 class="sr-only">Explore</h3>
               <img
                 src="/assets/footer-explore-nav-DCYPMlGt.svg"
@@ -373,7 +546,9 @@
 
             <ul class="space-y-1">
               <li>
-                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
                   <a href="/locations/" class="relative inline-block">
                     <span class="sr-only"> Locations </span>
                     <img
@@ -398,7 +573,9 @@
               </li>
 
               <li>
-                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
                   <a href="/safaris/" class="relative inline-block">
                     <span class="sr-only"> Safaris </span>
                     <img
@@ -423,7 +600,9 @@
               </li>
 
               <li>
-                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
                   <a href="/channel-list/" class="relative inline-block">
                     <span class="sr-only"> Channel List </span>
                     <img
@@ -448,7 +627,9 @@
               </li>
 
               <li>
-                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
                   <a href="/gear/" class="relative inline-block">
                     <span class="sr-only"> Gear </span>
                     <img
@@ -483,6 +664,6 @@
           </p>
         </div>
       </div>
-    </footer>
-  </body>
+    </footer>
+  </body>
 </html>

@@ -1,672 +1,645 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <!-- Basic Meta -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <link rel="icon" href="/src/assets/images/icon/navicon.webp" type="image/svg+xml" />
-  <link rel="alternate icon" href="/src/assets/images/icon/navicon.webp" />
-  <!-- SEO -->
-  <title>The Gear I use in the field - Birding Legend</title>
-  <meta name="description" content="Gear plays an important part in making quality content, and here is what I use in the field when making my videos." />
-  <link rel="canonical" href="https://birdinglegend.com/gear/" />
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="icon"
+      href="/src/assets/images/icon/navicon.webp"
+      type="image/svg+xml"
+    />
+    <link rel="alternate icon" href="/src/assets/images/icon/navicon.webp" />
+    <!-- SEO -->
+    <title>The Gear I use in the field - Birding Legend</title>
+    <meta
+      name="description"
+      content="Gear plays an important part in making quality content, and here is what I use in the field when making my videos."
+    />
+    <link rel="canonical" href="https://birdinglegend.com/gear/" />
 
-  <!-- Open Graph (for sharing later) -->
-  <meta property="og:title" content="Birding Legend" />
-  <meta property="og:description" content="Learn, Explore & Master Birding" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://birdinglegend.com" />
+    <!-- Open Graph (for sharing later) -->
+    <meta property="og:title" content="Birding Legend" />
+    <meta property="og:description" content="Learn, Explore & Master Birding" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://birdinglegend.com" />
+  </head>
 
-</head>
-
-<body class="antialiased">
-  <!-- MOBILE HEADER -->
-<header class="lg:hidden fixed top-0 inset-x-0 z-50 bg-[#f8f5ee] border-b border-black">
-
-    <div class="relative h-20">
-
+  <body class="antialiased bg-[#f8f5ee]">
+    <!-- #region Mobile Header -->
+    <header
+      class="lg:hidden fixed top-0 inset-x-0 z-50 bg-[#f8f5ee] border-b border-black"
+    >
+      <div class="relative h-20">
         <!-- Hamburger -->
-        <button
-            id="menuBtn"
-            class="absolute left-5 top-1/2 -translate-y-1/2">
-
-            <img
-                id="mobileMenuIcon"
-                src="/src/assets/images/navbar/hamburger-closed.svg"
-                alt="Open menu"
-                class="h-8 w-auto">
-
+        <button id="menuBtn" class="absolute left-5 top-1/2 -translate-y-1/2">
+          <img
+            id="mobileMenuIcon"
+            src="/images/navbar/hamburger-closed.svg"
+            alt="Open menu"
+            class="h-8 w-auto"
+            loading="eager"
+          />
         </button>
 
         <!-- Logo -->
         <a
-            href="/"
-            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-
-            <img
-                src="/src/assets/images/navbar/header-birding-legend.svg"
-                alt="BirdingLegend"
-                class="h-6 w-auto">
-
+          href="/"
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <img
+            src="/images/navbar/header-birding-legend.svg"
+            alt="Birding Legend"
+            class="h-8 w-auto"
+            loading="eager"
+          />
         </a>
 
         <!-- Mail -->
         <a
-            href="mailto:birdinglegend@gmail.com"
-            class="absolute right-5 top-1/2 -translate-y-1/2 group">
-
-            <img
-                src="/src/assets/images/navbar/mail-letter-closed.svg"
-                class="block group-hover:hidden h-8">
-
-            <img
-                src="/src/assets/images/navbar/mail-letter-open.svg"
-                class="hidden group-hover:block h-8">
-
+          href="mailto:birdinglegend@gmail.com"
+          class="absolute right-5 top-1/2 -translate-y-1/2 group"
+          aria-label="Send email to Birding Legend"
+        >
+          <img
+            src="/images/navbar/mail-letter-closed.svg"
+            class="block h-8"
+            alt="send email button"
+            loading="eager"
+          />
         </a>
+      </div>
+    </header>
+    <aside
+      id="mobilePanel"
+      class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 bg-[#f8f5ee] -transform -translate-x-full transition-transform duration-300 z-40 border-r border-black"
+    >
+      <nav class="pt-10 px-8">
+        <ul class="space-y-8 text-2xl font-bird">
+          <li><a href="/">Home</a></li>
 
-    </div>
+          <li><a href="/locations/">Locations</a></li>
 
-</header>
-<aside
-id="mobilePanel"
-class="
-absolute
-left-0
-top-20
-h-[calc(100vh-5rem)]
-w-72
-bg-[#f8f5ee]
-border-r
-border-black
--transform
--translate-x-full
-transition-transform
-duration-300">
-<nav class="pt-10 px-8">
+          <li><a href="/channel-list/">Channel List</a></li>
 
-<ul class="space-y-8 text-2xl font-bird">
-
-<li><a href="/">Home</a></li>
-
-<li><a href="/locations/">Locations</a></li>
-
-<li><a href="/channel-list/">Channel List</a></li>
-
-<li><a href="/contact/">Contact</a></li>
-
-</ul>
-
-</nav>
-</aside>
-<!-- ===========================
-Desktop Header
-============================ -->
-<header class="hidden lg:block fixed top-0 inset-x-0 z-50 bg-[#f8f5ee]">
-
-    <div class="relative h-24">
-
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- #endregion -->
+    <!-- #region Desktop Header -->
+    <header
+      id="desktopHeader"
+      class="hidden lg:block fixed top-0 inset-x-0 z-50 bg-[#f8f5ee] transition-all duration-300 border-b border-black"
+    >
+      <div
+        id="desktopHeaderInner"
+        class="relative h-24 transition-all duration-300"
+      >
         <!-- Left -->
         <button
-            id="desktopMenuBtn"
-            class="absolute left-28 top-1/2 -translate-y-1/2">
-
-            <img
-                id="menuIcon"
-                src="/src/assets/images/navbar/hamburger-closed.svg"
-                alt="Open menu"
-                class="h-9 w-auto">
+          id="desktopMenuBtn"
+          class="absolute left-28 top-1/2 -translate-y-1/2 transition-transform duration-150 hover:scale-105 active:scale-95"
+        >
+          <img
+            id="menuIcon"
+            src="/images/navbar/hamburger-closed.svg"
+            alt="Open menu"
+            class="h-8 w-auto transition-all duration-200"
+            loading="eager"
+          />
         </button>
 
         <!-- Center -->
         <a
-            href="/"
-            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-
-            <img
-                src="/src/assets/images/navbar/header-birding-legend.svg"
-                alt="BirdingLegend"
-                class="h-8 w-auto">
+          href="/"
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <img
+            id="desktopLogo"
+            src="/images/navbar/header-birding-legend.svg"
+            alt="Birding Legend"
+            class="h-8 w-auto transition-all duration-300 ease-in-out"
+            loading="eager"
+          />
         </a>
 
         <!-- Right -->
-        <div class="absolute right-28 top-1/2 -translate-y-1/2 group">
+        <div
+          class="absolute right-28 top-1/2 -translate-y-1/2 flex items-center gap-6"
+        >
+          <!-- Contact Button -->
+          <a
+            id="contactButton"
+            href="/contact/"
+            class="group relative flex items-center justify-center w-[110px] h-auto transition-transform duration-200 active:scale-95"
+          >
+            <!-- Ring -->
+            <img
+              src="/images/navbar/button-ring.svg"
+              alt=""
+              aria-hidden="true"
+              class="absolute w-[110px] h-auto opacity-0 scale-95 transition-all duration-200 group-hover:opacity-100 group-hover:scale-100"
+              loading="eager"
+            />
 
-            <a href="mailto:birdinglegend@gmail.com">
+            <!-- Button -->
+            <img
+              src="/images/navbar/button.svg"
+              alt=""
+              aria-hidden="true"
+              class="absolute w-[100px] h-auto"
+              loading="eager"
+            />
 
-                <img
-                    src="/src/assets/images/navbar/mail-letter-closed.svg"
-                    class="block group-hover:hidden h-9">
+            <!-- Text -->
+            <span class="relative z-10 text-lg font-eugene"> CONTACT </span>
+          </a>
 
-                <img
-                    src="/src/assets/images/navbar/mail-letter-open.svg"
-                    class="hidden group-hover:block h-9">
-
-            </a>
-
+          <!-- Mail -->
+          <a
+            href="mailto:birdinglegend@gmail.com"
+            aria-label="Send email to Birding Legend"
+          >
+            <img
+              id="desktopMail"
+              src="/images/navbar/mail-letter-closed.svg"
+              class="h-10 w-auto transition-all duration-300 hover:scale-105 hover:-rotate-6"
+              loading="eager"
+              alt="send email button"
+            />
+          </a>
         </div>
-
-    </div>
-      <div
-        id="headerBorder"
-        class="absolute bottom-0 left-0 w-full h-px bg-black">
-    </div>
+      </div>
+    </header>
     <div
-    id="borderMask"
-    class="absolute bottom-0 left-0 h-px w-80 bg-[#f8f5ee] hidden">
-</div>
-
-</header>
-<div
-id="sidebarOverlay"
-class="hidden fixed inset-0 bg-black/10 z-40">
-
-</div>
-
-<aside
-id="desktopSidebar"
-class="
-fixed
-left-0
-top-24
-h-[calc(100vh-6rem)]
-w-80
-bg-[#f8f5ee]
--transform
--translate-x-full
-transition-transform
-duration-300
-z-40
-border-r
-border-black">
-  
-
-    <nav class="pt-32 px-10">
-
+      id="sidebarOverlay"
+      class="fixed inset-0 bg-black/10 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-40"
+    ></div>
+    <aside
+      id="desktopSidebar"
+      class="fixed left-0 top-0 pt-24 h-screen w-80 bg-[#f8f5ee] -transform -translate-x-full transition-all duration-300 z-40 border-r border-black"
+    >
+      <nav class="pt-32 px-10">
         <ul class="space-y-8 text-3xl font-bird">
+          <li><a href="/">Home</a></li>
 
-            <li><a href="/">Home</a></li>
+          <li><a href="/locations/">Locations</a></li>
 
-            <li><a href="/locations/">Locations</a></li>
+          <li><a href="/channel-list/">Channel List</a></li>
 
-            <li><a href="/channel-list/">Channel List</a></li>
-
-            <li><a href="/contact/">Contact</a></li>
-
+          <li><a href="/contact/">Contact</a></li>
         </ul>
+      </nav>
+    </aside>
+    <!-- #endregion -->
+    <main class="pt-24">
+      <section class="mx-auto text-left max-w-3xl">
+        <div>
+          <div class="relative pb-12 lg:pb-16">
+            <!-- Real SEO H1 -->
+            <h1 class="sr-only">The Gear I Use In The Field</h1>
 
-    </nav>
+            <!-- Your hand-drawn title -->
+            <img
+              src="/src/assets/images/gear/the-gear-i-use-in-the-field.webp"
+              alt=""
+              class="h-10 w-full max-w-md mx-auto"
+              aria-hidden="true"
+              width="450"
+              height="40"
+            />
+          </div>
+          <p class="mb-4">
+            a Good video not only needs a good story, it also needs depth. The
+            correct gear can make a huge difference in the quality of your
+            birding videos. Now, everyone has their own preference, which brand
+            that they prefer etc.
+          </p>
+          <p class="mb-4">
+            This is a list of gear I use and hopefully this could guide you and
+            inspire you to lock in when needed.
+          </p>
+          <p>
+            I prefer <strong>Sony</strong> as my camera brand of choice, of
+            course. Especially the cameras that hold a wide dynamic range. I am
+            still pretty noob, but thats the gift, you'll never get worse only
+            if you allow it. Practise makes a more imperfect perfect and always
+            aim to improve, strategise and try something new.
+          </p>
+        </div>
+      </section>
+      <section class="px-2 py-16">
+        <div class="max-w-3xl mx-auto">
+          <!-- Image -->
+          <img
+            src="/src/assets/images/gear/sony-a7siii.png"
+            alt="Sony A7SIII"
+            class="h-72 w-auto mx-auto"
+            loading="lazy"
+          />
 
-</aside>
-<!-- MAIN CONTENT -->
- <main class="pt-20 lg:pt-16 px-4 lg:ml-72 min-h-screen bg-[#f8f5ee]">
-  <section class="mx-auto text-left max-w-3xl">
-    <div>
-      <div class="relative pb-12 lg:pb-16">
-<!-- Real SEO H1 -->
-  <h1 class="sr-only">
-  The Gear I Use In The Field
-  </h1>
+          <!-- Content -->
+          <div class="mt-2 text-center">
+            <h2 class="sr-only">Sony a7sIII</h2>
+            <!-- Visible Custom Heading -->
+            <img
+              src="/src/assets/images/gear/sony-a7siii-title.png"
+              alt=""
+              class="max-w-md mx-auto h-8 mb-6"
+              aria-hidden="true"
+              loading="lazy"
+            />
 
-  <!-- Your hand-drawn title -->
-  <img
-    src="/src/assets/images/gear/the-gear-i-use-in-the-field.webp"
-    alt=""
-    class="h-10 w-full max-w-md mx-auto"
-    aria-hidden="true"
-    width="450"
-    height="40"
-  />
+            <p class="">
+              The magnificent Sony a7sIII, the camera I use these days to film
+              my stories. It is a great camera for filming birds, it has great
+              low light capabilities, which is most important as a lot of times
+              birds vanish into a thicket or you are filming in the early hours
+              of the morning.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="px-6 py-20">
+        <div class="max-w-3xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Image -->
+          <div>
+            <img
+              src="/src/assets/images/gear/tascam-dr-05x.png"
+              alt=""
+              aria-hidden="true"
+              class="px-4 mx-auto h-72"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Text -->
+          <div>
+            <!-- Real SEO Heading -->
+            <h2 class="sr-only">TASCAM DR-05X</h2>
+
+            <!-- Visible Custom Heading -->
+            <img
+              src="/src/assets/images/gear/tascam-dr-05-x-title.png"
+              alt="TASCAM DR-05X"
+              class="max-w-md h-7 mb-6 mx-auto px-6"
+              loading="lazy"
+            />
+
+            <p class="mb-6">
+              It is not your highest quality modern audio recorder, but it does
+              what it needs to. It captures quality audio in the field and is
+              very easy to use. I use it mostly to capture background sound and
+              ambience, but it captures pretty good bird calls as well.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="px-6 py-20">
+        <div class="max-w-3xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Text -->
+          <div class="order-2 lg:order-1">
+            <h2 class="sr-only">DJI Mic 2</h2>
+
+            <!-- Visible Custom Heading -->
+            <div class="flex justify-center lg:justify-end mb-6 px-12">
+              <img
+                src="/src/assets/images/gear/dji-mic-ii-title.png"
+                alt=""
+                class="h-7 w-auto"
+                loading="lazy"
+                aria-hidden="true"
+              />
+            </div>
+
+            <p class="mb-6">
+              The DJI Mic 2, is a wireless microphone system that captures high
+              quality voice audio, it can be combined with a lavalier mic if you
+              are interested in hiding the device, but generally even without
+              the lavalier, just keep it 30cm away from the mouth and you are
+              sorted.
+            </p>
+          </div>
+
+          <!-- Image -->
+          <div class="order-1 lg:order-2">
+            <img
+              src="/src/assets/images/gear/dji-mic-ii.png"
+              alt="DJI Mic 2"
+              class="w-auto h-32 mx-auto"
+              aria-hidden="true"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-stone-50 border-t border-black px-4 lg:px-0 lg:ml-72">
+      <div class="max-w-5xl mx-auto py-12 text-center lg:text-left">
+        <!-- Top Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8"
+        >
+          <!-- Left Block -->
+          <div>
+            <div
+              class="group flex justify-center lg:justify-start gap-4 py-6 relative"
+            >
+              <h3 class="sr-only">Birding Legend</h3>
+              <img
+                src="/src/assets/images/navbar/footer-birding-legend.svg"
+                alt=""
+                class="w-auto h-6 md:h-7"
+                loading="lazy"
+                aria-hidden="true"
+                width="189"
+                height="28"
+              />
+            </div>
+
+            <p class="text-black leading-relaxed mb-2">
+              Feel free to get in touch, if you have any questions, suggestions
+              or would like to collaborate, I would love to hear from you!
+            </p>
+
+            <a
+              href="mailto:birdinglegend@gmail.com"
+              class="relative group inline-flex flex-col items-center"
+            >
+              <div
+                class="group flex justify-center lg:justify-start py-3 relative"
+              >
+                <a
+                  href="mailto:birdinglegend@gmail.com"
+                  class="relative group inline-flex flex-col"
+                >
+                  <span class="sr-only"> birdinglegend@gmail.com </span>
+                  <img
+                    src="/src/assets/images/navbar/footer-email-link.svg"
+                    alt=""
+                    class="w-full max-w-md h-8"
+                    loading="lazy"
+                    aria-hidden="true"
+                    decoding="async"
+                    width="228"
+                    height="32"
+                  />
+                  <!-- Custom Hover Line -->
+                  <img
+                    src="/src/assets/images/navbar/footer-email-link-hover.svg"
+                    alt=""
+                    class="absolute left-1/2 -translate-x-1/2 -bottom-1 opacity-0 group-hover:opacity-100 transition-all duration-200"
+                    loading="lazy"
+                    aria-hidden="true"
+                    decoding="async"
+                    width="228"
+                    height="11"
+                  />
+                </a>
+              </div>
+            </a>
+          </div>
+
+          <!-- Info -->
+          <div class="mx-auto">
+            <div
+              class="group flex justify-center lg:justify-start gap-4 py-6 relative"
+            >
+              <h3 class="sr-only">Info</h3>
+              <img
+                src="/src/assets/images/navbar/footer-info-nav.svg"
+                alt=""
+                class="max-w-md h-6"
+                loading="lazy"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </div>
+
+            <ul class="space-y-2">
+              <li>
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
+                  <a href="/about/" class="relative inline-block">
+                    <span class="sr-only"> about </span>
+                    <img
+                      src="/src/assets/images/navbar/footer-about-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/src/assets/images/navbar/footer-about-nav-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
+                  <a href="/blog/" class="relative inline-block">
+                    <span class="sr-only"> Blog </span>
+                    <img
+                      src="/src/assets/images/navbar/footer-blog-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/src/assets/images/navbar/footer-blog-nav-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
+                  <a href="/contact/" class="relative inline-block">
+                    <span class="sr-only"> Contact </span>
+                    <img
+                      src="/src/assets/images/navbar/footer-contact-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/src/assets/images/navbar/footer-contact-nav-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Explore -->
+          <div class="mx-auto text-right">
+            <div
+              class="group flex justify-center lg:justify-start gap-4 py-6 relative"
+            >
+              <h3 class="sr-only">Explore</h3>
+              <img
+                src="/src/assets/images/navbar/footer-explore-nav.svg"
+                alt=""
+                class="max-w-md h-6"
+                loading="lazy"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </div>
+
+            <ul class="space-y-1">
+              <li>
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
+                  <a href="/locations/" class="relative inline-block">
+                    <span class="sr-only"> Locations </span>
+                    <img
+                      src="/src/assets/images/navbar/footer-locations-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/src/assets/images/navbar/footer-locations-nav-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
+                  <a href="/safaris/" class="relative inline-block">
+                    <span class="sr-only"> Safaris </span>
+                    <img
+                      src="/src/assets/images/navbar/footer-safaris-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/src/assets/images/navbar/footer-safaris-nav-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
+                  <a href="/channel-list/" class="relative inline-block">
+                    <span class="sr-only"> Channel List </span>
+                    <img
+                      src="/src/assets/images/navbar/footer-channel-list.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/src/assets/images/navbar/footer-channel-list-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div
+                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
+                >
+                  <a href="/gear/" class="relative inline-block">
+                    <span class="sr-only"> Gear </span>
+                    <img
+                      src="/src/assets/images/navbar/footer-gear-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/src/assets/images/navbar/footer-gear-nav-hover.svg"
+                      alt=""
+                      aria-hidden="true"
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-        <p class="mb-4">
-      a Good video not only needs a good story, it also needs depth. The correct gear can make a huge difference in the quality of your birding videos. Now, everyone has their own preference, which brand that they prefer etc. 
-      </p>
-      <p class="mb-4">
-This is a list of gear I use and hopefully this could guide you and inspire you to lock in when needed.
-      </p>
-      <p>
- I prefer <strong>Sony</strong> as my camera brand of choice, of course. Especially the cameras that hold a wide dynamic range. I am still pretty noob, but thats the gift, you'll never get worse only if you allow it. Practise makes a more imperfect perfect and always aim to improve, strategise and try something new.
-      </p>
-    </div>
-  </section>
-  <section class="px-2 py-16">
-  <div class="max-w-3xl mx-auto">
-
-    <!-- Image -->
-    <img
-      src="/src/assets/images/gear/sony-a7siii.png"
-      alt="Sony A7SIII"
-      class="h-72 w-auto mx-auto"
-      loading="lazy"
-    />
-
-    <!-- Content -->
-    <div class="mt-2 text-center">
-
-      <h2 class="sr-only">
-        Sony a7sIII
-      </h2>
-       <!-- Visible Custom Heading -->
-      <img
-        src="/src/assets/images/gear/sony-a7siii-title.png"
-        alt=""
-        class="max-w-md mx-auto h-8 mb-6"
-        aria-hidden="true"
-        loading="lazy"
-      />
-
-      <p class="">
-       The magnificent Sony a7sIII, the camera I use these days to film my stories. It is a great camera for filming birds, it has great low light capabilities, which is most important as a lot of times birds vanish into a thicket or you are filming in the early hours of the morning.
-      </p>
-    </div>
-
-  </div>
-</section>
-  <section class="px-6 py-20">
-  <div class="max-w-3xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-
-    <!-- Image -->
-    <div>
-      <img
-        src="/src/assets/images/gear/tascam-dr-05x.png"
-        alt=""
-         aria-hidden="true"
-        class="px-4 mx-auto h-72"
-        loading="lazy"
-      />
-    </div>
-
-    <!-- Text -->
-    <div>
-
-      <!-- Real SEO Heading -->
-      <h2 class="sr-only">
-        TASCAM DR-05X
-      </h2>
-
-      <!-- Visible Custom Heading -->
-      <img
-        src="/src/assets/images/gear/tascam-dr-05-x-title.png"
-        alt="TASCAM DR-05X"
-        class="max-w-md h-7 mb-6 mx-auto px-6"
-        loading="lazy"
-      />
-
-      <p class="mb-6">
-        It is not your highest quality modern audio recorder, but it does what it needs to. It captures quality audio in the field and is very easy to use. I use it mostly to capture background sound and ambience, but it captures pretty good bird calls as well.
-      </p>
-
-    </div>
-
-  </div>
-</section>
-<section class="px-6 py-20">
-  <div class="max-w-3xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-
-    <!-- Text -->
-    <div class="order-2 lg:order-1">
-      
-      <h2 class="sr-only">
-        DJI Mic 2
-      </h2>
-
-       <!-- Visible Custom Heading -->
-      <div class="flex justify-center lg:justify-end mb-6 px-12">
-  <img
-    src="/src/assets/images/gear/dji-mic-ii-title.png"
-    alt=""
-    class="h-7 w-auto"
-    loading="lazy"
-    aria-hidden="true"
-  />
-</div>
-
-      <p class="mb-6">
-        The DJI Mic 2, is a wireless microphone system that captures high quality voice audio, it can be combined with a lavalier mic if you are interested in hiding the device, but generally even without the lavalier, just keep it 30cm away from the mouth and you are sorted.
-      </p>
-
-    </div>
-
-    <!-- Image -->
-    <div class="order-1 lg:order-2">
-      <img
-        src="/src/assets/images/gear/dji-mic-ii.png"
-        alt="DJI Mic 2"
-        class="w-auto h-32 mx-auto"
-         aria-hidden="true"
-        loading="lazy"
-      />
-    </div>
-
-  </div>
-</section>
-  </main>
-  <!-- Footer -->
-<footer class="bg-stone-50 border-t border-black px-4 lg:px-0 lg:ml-72">
-
-  <div class="max-w-5xl mx-auto py-12 text-center lg:text-left">
-
-    <!-- Top Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8">
-      <!-- Left Block -->
+      <!-- Full Width Bottom Bar -->
       <div>
-      <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
-    <h3 class="sr-only">
-        Birding Legend
-    </h3>
-  <img
-  src="/src/assets/images/navbar/footer-birding-legend.svg" 
-  alt=""
-  class="w-auto h-6 md:h-7"
-  loading="lazy"
-  aria-hidden="true"
-  width="189"
-  height="28"
-/>
-  </div>
-
-        <p class="text-black leading-relaxed mb-2">
-          Feel free to get in touch, if you have any questions, suggestions or would like to collaborate, I would love to hear from you!
-        </p>
-
-       <a
-  href="mailto:birdinglegend@gmail.com"
-  class="relative group inline-flex flex-col items-center"
->
-<div class="group flex justify-center lg:justify-start py-3 relative">
-    <a href="mailto:birdinglegend@gmail.com"
-  class="relative group inline-flex flex-col">
-      <span class="sr-only">
-        birdinglegend@gmail.com
-      </span>
-    <img
-      src="/src/assets/images/navbar/footer-email-link.svg"
-      alt=""
-      class="w-full max-w-md h-8"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"
-      width="228"
-      height="32"
-      />
-     <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/footer-email-link-hover.svg"
-      alt=""
-      class="absolute left-1/2 -translate-x-1/2 -bottom-1
-         opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async" 
-      width="228"
-      height="11">
-    </a>
-  </div>
-  
-</a>
+        <div class="px-6">
+          <p class="text-sm text-stone-700 text-center sm:text-right py-6">
+            © 2026 BirdingLegend. All rights reserved.
+          </p>
+        </div>
       </div>
-
-      <!-- Info -->
-      <div class="mx-auto">
-       <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
-    <h3 class="sr-only">
-       Info
-      </h3>
-  <img
-    src="/src/assets/images/navbar/footer-info-nav.svg" 
-    alt="" 
-    class="max-w-md h-6"
-    loading="lazy"
-    aria-hidden="true"
-    decoding="async"/>
-  </div>
-
-        <ul class="space-y-2">
-
-          <li>
-  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
-    <a href="/about/" class="relative inline-block">
-      <span class="sr-only">
-        about
-      </span>
-    <img
-      src="/src/assets/images/navbar/footer-about-nav.svg"
-      alt=""
-      class="w-full max-w-md h-4"
-      loading="lazy"
-      aria-hidden="true"/>
-     <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/footer-about-nav-hover.svg"
-      alt=""
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"/>
-    </a>
-  </div>
-</li>
-
-          <li>
-  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
-    <a href="/blog/" class="relative inline-block">
-      <span class="sr-only">
-        Blog
-      </span>
-    <img
-      src="/src/assets/images/navbar/footer-blog-nav.svg"
-      alt=""
-      class="w-full max-w-md h-4"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"
-      />
-     <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/footer-blog-nav-hover.svg"
-      alt=""
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"/>
-    </a>
-  </div>
-</li>
-
-         <li>
- <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
-    <a href="/contact/" class="relative inline-block">
-      <span class="sr-only">
-        Contact
-      </span>
-    <img
-      src="/src/assets/images/navbar/footer-contact-nav.svg"
-      alt=""
-      class="w-full max-w-md h-4"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"
-      />
-     <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/footer-contact-nav-hover.svg"
-      alt=""
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"/>
-    </a>
-  </div>
-</li>
-        </ul>
-      </div>
-
-      <!-- Explore -->
-      <div class="mx-auto text-right">
-        
-      <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
-    <h3 class="sr-only">
-       Explore
-      </h3>
-  <img
-    src="/src/assets/images/navbar/footer-explore-nav.svg" 
-    alt="" 
-    class="max-w-md h-6"
-    loading="lazy"
-    aria-hidden="true"
-    decoding="async"/>
-  </div>
-
-        <ul class="space-y-1">
-
-           <li>
-  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
-    <a href="/locations/" class="relative inline-block">
-      <span class="sr-only">
-        Locations
-      </span>
-    <img
-      src="/src/assets/images/navbar/footer-locations-nav.svg"
-      alt=""
-      class="w-full max-w-md h-4"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"
-      />
-     <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/footer-locations-nav-hover.svg"
-      alt=""
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"/>
-    </a>
-  </div>
-</li>
-
-          <li>
-  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
-    <a href="/safaris/" class="relative inline-block">
-      <span class="sr-only">
-        Safaris
-      </span>
-    <img
-      src="/src/assets/images/navbar/footer-safaris-nav.svg"
-      alt=""
-      class="w-full max-w-md h-4"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"
-      />
-     <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/footer-safaris-nav-hover.svg"
-      alt=""
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"/>
-    </a>
-  </div>
-</li>
-
-          <li>
-  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
-    <a href="/channel-list/" class="relative inline-block">
-      <span class="sr-only">
-        Channel List
-      </span>
-    <img
-      src="/src/assets/images/navbar/footer-channel-list.svg"
-      alt=""
-      class="w-full max-w-md h-4"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"    
-      />
-     <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/footer-channel-list-hover.svg"
-      alt=""
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"/>
-    </a>
-  </div>
-</li>
-
-          <li>
-  <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
-    <a href="/gear/" class="relative inline-block">
-      <span class="sr-only">
-        Gear
-      </span>
-    <img
-      src="/src/assets/images/navbar/footer-gear-nav.svg"
-      alt=""
-      class="w-full max-w-md h-4"
-      loading="lazy"
-      aria-hidden="true"
-      decoding="async"
-      />
-     <!-- Custom Hover Line -->
-    <img
-      src="/src/assets/images/navbar/footer-gear-nav-hover.svg"
-      alt=""
-      aria-hidden="true"
-      class="absolute left-1/2 -translate-x-1/2 -bottom-2
-         w-full opacity-0
-         group-hover:opacity-100
-         transition-all duration-200"
-      loading="lazy"
-      decoding="async"/>
-    </a>
-  </div>
-</li>
-        </ul>
-      </div>
-
-    </div>
-
-   
-
-  </div>
- <!-- Full Width Bottom Bar -->
-<div>
-  <div class="px-6">
-    
-    <p class="text-sm text-stone-700 text-center sm:text-right py-6">
-      © 2026 BirdingLegend. All rights reserved.
-    </p>
-
-  </div>
-</div>
-</footer>
-</body>
+    </footer>
+  </body>
   <script type="module" src="/src/main.js"></script>
-
 </html>

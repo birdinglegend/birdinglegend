@@ -1,103 +1,153 @@
-// --------------------
-// Desktop Navigation
-// --------------------
+// =========================================
+// Eugene Safaris Navigation
+// =========================================
 
-const btn = document.getElementById("desktopMenuBtn");
+// Desktop Elements
+const desktopBtn = document.getElementById("desktopMenuBtn");
+const desktopSidebar = document.getElementById("desktopSidebar");
+const desktopOverlay = document.getElementById("sidebarOverlay");
+const desktopIcon = document.getElementById("menuIcon");
+const contactButton = document.getElementById("contactButton");
 
-const sidebar = document.getElementById("desktopSidebar");
+const desktopHeaderInner = document.getElementById("desktopHeaderInner");
+const desktopLogo = document.getElementById("desktopLogo");
+const desktopMail = document.getElementById("desktopMail");
 
-const overlay = document.getElementById("sidebarOverlay");
-
-const icon = document.getElementById("menuIcon");
-
-
-
-let open = false;
-
-btn.onclick = () => {
-
-    open = !open;
-
-    if(open){
-
-        sidebar.classList.remove("-translate-x-full");
-
-        overlay.classList.remove("hidden");
-
-        icon.src="/images/navbar/hamburger-open.svg";
-
-
-    }else{
-
-        sidebar.classList.add("-translate-x-full");
-
-        overlay.classList.add("hidden");
-
-        icon.src="/images/navbar/hamburger-closed.svg";
-
-
-    }
-
-}
-
-overlay.onclick = () =>{
-
-    open=false;
-
-    sidebar.classList.add("-translate-x-full");
-
-    overlay.classList.add("hidden");
-
-   icon.src="/images/navbar/hamburger-closed.svg";
-
-}
-
-// --------------------
-// Mobile Navigation
-// --------------------
-
+// Mobile Elements
 const mobileBtn = document.getElementById("menuBtn");
-
+const mobilePanel = document.getElementById("mobilePanel");
+const mobileOverlay = document.getElementById("mobileOverlay");
 const mobileIcon = document.getElementById("mobileMenuIcon");
 
-const mobilePanel = document.getElementById("mobilePanel");
+// =========================================
+// Desktop Shrink
+// =========================================
 
-const mobileOverlay = document.getElementById("mobileMenu");
+function updateDesktopNavbar() {
+  if (window.innerWidth < 1024) return;
 
-let mobileOpen = false;
+  const shrink = window.scrollY > 50;
 
-mobileBtn.onclick = () => {
+  desktopHeaderInner.classList.toggle("h-24", !shrink);
+  desktopHeaderInner.classList.toggle("h-20", shrink);
 
-    mobileOpen = !mobileOpen;
+  desktopLogo.style.transform = shrink ? "scale(0.78)" : "scale(1)";
 
-    if(mobileOpen){
+  desktopMail.classList.toggle("h-10", !shrink);
+  desktopMail.classList.toggle("h-8", shrink);
 
-        mobilePanel.classList.remove("-translate-x-full");
+  desktopIcon.classList.toggle("h-8", !shrink);
+  desktopIcon.classList.toggle("h-7", shrink);
 
-        mobileOverlay.classList.remove("opacity-0","pointer-events-none");
+  desktopSidebar.classList.toggle("pt-24", !shrink);
+  desktopSidebar.classList.toggle("pt-20", shrink);
 
-        mobileIcon.src="/images/navbar/hamburger-open.svg";
-
-    }else{
-
-        mobilePanel.classList.add("-translate-x-full");
-
-        mobileOverlay.classList.add("opacity-0","pointer-events-none");
-
-        mobileIcon.src="/images/navbar/hamburger-closed.svg";
-
-    }
-
+  contactButton.style.transform = shrink ? "scale(0.82)" : "scale(1)";
 }
 
-mobileOverlay.onclick = () => {
+window.addEventListener("scroll", updateDesktopNavbar, { passive: true });
+window.addEventListener("resize", updateDesktopNavbar);
+window.addEventListener("load", updateDesktopNavbar);
 
-    mobileOpen = false;
+// =========================================
+// Desktop Menu
+// =========================================
 
-    mobilePanel.classList.add("-translate-x-full");
+function openDesktopMenu() {
+  desktopSidebar.classList.remove("-translate-x-full");
 
-    mobileOverlay.classList.add("opacity-0","pointer-events-none");
+  desktopOverlay.classList.remove("opacity-0", "pointer-events-none");
+  desktopOverlay.classList.add("opacity-100");
 
-    mobileIcon.src="/images/navbar/hamburger-closed.svg";
-
+  desktopIcon.src = "/images/navbar/hamburger-open.svg";
 }
+
+function closeDesktopMenu() {
+  desktopSidebar.classList.add("-translate-x-full");
+
+  desktopOverlay.classList.remove("opacity-100");
+  desktopOverlay.classList.add("opacity-0", "pointer-events-none");
+
+  desktopIcon.src = "/images/navbar/hamburger-closed.svg";
+}
+
+desktopBtn.addEventListener("click", () => {
+  if (desktopSidebar.classList.contains("-translate-x-full")) {
+    openDesktopMenu();
+  } else {
+    closeDesktopMenu();
+  }
+});
+
+desktopOverlay.addEventListener("click", closeDesktopMenu);
+
+// =========================================
+// Mobile Menu
+// =========================================
+
+function openMobileMenu() {
+  mobilePanel.classList.remove("-translate-x-full");
+
+  mobileOverlay.classList.remove("hidden");
+
+  mobileOverlay.classList.remove("opacity-0");
+  mobileOverlay.classList.add("opacity-100");
+
+  mobileIcon.src = "/images/navbar/hamburger-open.svg";
+
+  mobileBtn.classList.add("scale-95");
+
+  document.body.classList.add("overflow-hidden");
+}
+
+function closeMobileMenu() {
+  mobilePanel.classList.add("-translate-x-full");
+
+  mobileOverlay.classList.remove("opacity-100");
+  mobileOverlay.classList.add("opacity-0");
+
+  setTimeout(() => {
+    mobileOverlay.classList.add("hidden");
+  }, 250);
+
+  mobileIcon.src = "/images/navbar/hamburger-closed.svg";
+
+  mobileBtn.classList.remove("scale-95");
+
+  document.body.classList.remove("overflow-hidden");
+}
+
+mobileBtn.addEventListener("click", () => {
+  if (mobilePanel.classList.contains("-translate-x-full")) {
+    openMobileMenu();
+  } else {
+    closeMobileMenu();
+  }
+});
+
+mobileOverlay.addEventListener("click", (e) => {
+  if (mobilePanel.contains(e.target)) return;
+
+  if (mobileBtn.contains(e.target)) return;
+
+  closeMobileMenu();
+});
+
+// =========================================
+// Close on Escape
+// =========================================
+
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+
+  closeDesktopMenu();
+  closeMobileMenu();
+});
+
+// =========================================
+// Close mobile when link clicked
+// =========================================
+
+mobilePanel.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", closeMobileMenu);
+});

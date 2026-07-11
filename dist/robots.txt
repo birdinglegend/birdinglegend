@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /link-egg/
+
+Sitemap: https://birdinglegend.com/sitemap.xml
