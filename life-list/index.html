@@ -5,11 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
-    <link
-      rel="icon"
-      href="/src/assets/images/icon/navicon.webp"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/src/assets/images/icon/navicon.webp" type="image/svg+xml" />
     <link rel="alternate icon" href="/src/assets/images/icon/navicon.webp" />
     <title>Have a look at my channel bird list - Birding Legend</title>
     <meta
@@ -19,10 +15,7 @@
     <link rel="canonical" href="https://birdinglegend.com/channel-list/" />
 
     <meta property="og:title" content="Channel Bird List — Birding Legend" />
-    <meta
-      property="og:description"
-      content="Every bird species filmed on the BirdingLegend YouTube channel."
-    />
+    <meta property="og:description" content="Every bird species filmed on the BirdingLegend YouTube channel." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://birdinglegend.com/channel-list/" />
 
@@ -38,9 +31,7 @@
   </head>
   <body class="antialiased">
     <!-- #region Mobile Header -->
-    <header
-      class="lg:hidden fixed top-0 inset-x-0 z-50 bg-[#f8f5ee] border-b border-black"
-    >
+    <header class="lg:hidden fixed top-0 inset-x-0 z-50 bg-[#f8f5ee] border-b border-black">
       <div class="relative h-20">
         <!-- Hamburger -->
         <button id="menuBtn" class="absolute left-5 top-1/2 -translate-y-1/2">
@@ -54,16 +45,8 @@
         </button>
 
         <!-- Logo -->
-        <a
-          href="/"
-          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-        >
-          <img
-            src="/images/navbar/header-birding-legend.svg"
-            alt="Birding Legend"
-            class="h-8 w-auto"
-            loading="eager"
-          />
+        <a href="/" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <img src="/images/navbar/header-birding-legend.svg" alt="Birding Legend" class="h-8 w-auto" loading="eager" />
         </a>
 
         <!-- Mail -->
@@ -72,12 +55,7 @@
           class="absolute right-5 top-1/2 -translate-y-1/2 group"
           aria-label="Send email to Birding Legend"
         >
-          <img
-            src="/images/navbar/mail-letter-closed.svg"
-            class="block h-8"
-            alt="send email button"
-            loading="eager"
-          />
+          <img src="/images/navbar/mail-letter-closed.svg" class="block h-8" alt="send email button" loading="eager" />
         </a>
       </div>
     </header>
@@ -103,10 +81,7 @@
       id="desktopHeader"
       class="hidden lg:block fixed top-0 inset-x-0 z-50 bg-[#f8f5ee] transition-all duration-300 border-b border-black"
     >
-      <div
-        id="desktopHeaderInner"
-        class="relative h-24 transition-all duration-300"
-      >
+      <div id="desktopHeaderInner" class="relative h-24 transition-all duration-300">
         <!-- Left -->
         <button
           id="desktopMenuBtn"
@@ -122,10 +97,7 @@
         </button>
 
         <!-- Center -->
-        <a
-          href="/"
-          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-        >
+        <a href="/" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <img
             id="desktopLogo"
             src="/images/navbar/header-birding-legend.svg"
@@ -136,9 +108,7 @@
         </a>
 
         <!-- Right -->
-        <div
-          class="absolute right-28 top-1/2 -translate-y-1/2 flex items-center gap-6"
-        >
+        <div class="absolute right-28 top-1/2 -translate-y-1/2 flex items-center gap-6">
           <!-- Contact Button -->
           <a
             id="contactButton"
@@ -168,10 +138,7 @@
           </a>
 
           <!-- Mail -->
-          <a
-            href="mailto:birdinglegend@gmail.com"
-            aria-label="Send email to Birding Legend"
-          >
+          <a href="mailto:birdinglegend@gmail.com" aria-label="Send email to Birding Legend">
             <img
               id="desktopMail"
               src="/images/navbar/mail-letter-closed.svg"
@@ -206,45 +173,32 @@
     <!-- #endregion -->
     <main class="pt-24">
       <section class="bg-stone-800 border-b border-stone-700">
-        <div
-          class="max-w-6xl mx-auto flex justify-center items-center gap-6 px-6 py-5"
-        >
+        <div class="max-w-6xl mx-auto flex justify-center items-center gap-6 px-6 py-5">
           <div class="text-center">
-            <p id="stat-species" class="font-serif text-3xl text-amber-400">
-              0
-            </p>
-            <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mt-1">
-              Species Recorded
-            </p>
+            <p id="stat-species" class="font-serif text-3xl text-amber-400">0</p>
+            <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mt-1">Species Recorded</p>
           </div>
 
           <div class="text-center">
-            <p id="stat-countries" class="font-serif text-3xl text-amber-400">
-              0
-            </p>
-            <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mt-1">
-              Countries Birded
-            </p>
+            <p id="stat-countries" class="font-serif text-3xl text-amber-400">0</p>
+            <p class="text-xs uppercase tracking-[0.2em] text-stone-400 mt-1">Countries Birded</p>
           </div>
         </div>
       </section>
       <section class="max-w-7xl mx-auto px-4 py-0 lg:py-16">
         <div class="max-w-6xl mx-auto">
           <!-- Real SEO H1 -->
-          <h1
-            class="font-eugene text-5xl pt-6 md:pt-0 text-center lg:text-left uppercase font-semibold"
-          >
+          <h1 class="font-eugene text-5xl pt-6 md:pt-0 text-center lg:text-left uppercase font-semibold">
             My Youtube Channel Bird List
           </h1>
 
           <!-- Heading -->
           <div class="mb-8">
             <p class="text-black max-w-2xl">
-              Follow along with my channel bird list, a record that keeps
-              getting updated after every new video, with the dates and
-              locations of each sighting. Read the full
-              <a href="/locations/" class="underline">locations</a> articles for
-              more details on where I filmed each species.
+              Follow along with my channel bird list, a record that keeps getting updated after every new video, with
+              the dates and locations of each sighting. Read the full
+              <a href="/locations/" class="underline">locations</a> articles for more details on where I filmed each
+              species.
             </p>
           </div>
 
@@ -339,22 +293,15 @@
                 </thead>
 
                 <!-- JS Entries -->
-                <tbody
-                  id="bird-tbody"
-                  class="divide-y divide-stone-100"
-                ></tbody>
+                <tbody id="bird-tbody" class="divide-y divide-stone-100"></tbody>
               </table>
             </div>
 
             <!-- Empty State -->
             <div id="empty-state" class="hidden py-24 text-center bg-stone-50">
-              <h3 class="font-serif text-2xl text-stone-800 mb-2">
-                No birds found
-              </h3>
+              <h3 class="font-serif text-2xl text-stone-800 mb-2">No birds found</h3>
 
-              <p class="text-sm text-stone-500">
-                Try adjusting your search or filter.
-              </p>
+              <p class="text-sm text-stone-500">Try adjusting your search or filter.</p>
             </div>
           </div>
         </div>
@@ -364,14 +311,10 @@
     <footer class="bg-stone-50 border-t border-black px-4 lg:px-0">
       <div class="max-w-5xl mx-auto py-12 text-center lg:text-left">
         <!-- Top Grid -->
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8"
-        >
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8">
           <!-- Left Block -->
           <div>
-            <div
-              class="group flex justify-center lg:justify-start gap-4 py-6 relative"
-            >
+            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
               <h3 class="sr-only">Birding Legend</h3>
               <img
                 src="/src/assets/images/navbar/footer-birding-legend.svg"
@@ -385,21 +328,13 @@
             </div>
 
             <p class="text-black leading-relaxed mb-2">
-              Feel free to get in touch, if you have any questions, suggestions
-              or would like to collaborate, I would love to hear from you!
+              Feel free to get in touch, if you have any questions, suggestions or would like to collaborate, I would
+              love to hear from you!
             </p>
 
-            <a
-              href="mailto:birdinglegend@gmail.com"
-              class="relative group inline-flex flex-col items-center"
-            >
-              <div
-                class="group flex justify-center lg:justify-start py-3 relative"
-              >
-                <a
-                  href="mailto:birdinglegend@gmail.com"
-                  class="relative group inline-flex flex-col"
-                >
+            <a href="mailto:birdinglegend@gmail.com" class="relative group inline-flex flex-col items-center">
+              <div class="group flex justify-center lg:justify-start py-3 relative">
+                <a href="mailto:birdinglegend@gmail.com" class="relative group inline-flex flex-col">
                   <span class="sr-only"> birdinglegend@gmail.com </span>
                   <img
                     src="/src/assets/images/navbar/footer-email-link.svg"
@@ -429,9 +364,7 @@
 
           <!-- Info -->
           <div class="mx-auto">
-            <div
-              class="group flex justify-center lg:justify-start gap-4 py-6 relative"
-            >
+            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
               <h3 class="sr-only">Info</h3>
               <img
                 src="/src/assets/images/navbar/footer-info-nav.svg"
@@ -445,9 +378,7 @@
 
             <ul class="space-y-2">
               <li>
-                <div
-                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
-                >
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
                   <a href="/about/" class="relative inline-block">
                     <span class="sr-only"> about </span>
                     <img
@@ -471,9 +402,7 @@
               </li>
 
               <li>
-                <div
-                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
-                >
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
                   <a href="/blog/" class="relative inline-block">
                     <span class="sr-only"> Blog </span>
                     <img
@@ -498,9 +427,7 @@
               </li>
 
               <li>
-                <div
-                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
-                >
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
                   <a href="/contact/" class="relative inline-block">
                     <span class="sr-only"> Contact </span>
                     <img
@@ -528,9 +455,7 @@
 
           <!-- Explore -->
           <div class="mx-auto text-right">
-            <div
-              class="group flex justify-center lg:justify-start gap-4 py-6 relative"
-            >
+            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
               <h3 class="sr-only">Explore</h3>
               <img
                 src="/src/assets/images/navbar/footer-explore-nav.svg"
@@ -544,37 +469,8 @@
 
             <ul class="space-y-1">
               <li>
-                <div
-                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
-                >
-                  <a href="/locations/" class="relative inline-block">
-                    <span class="sr-only"> Locations </span>
-                    <img
-                      src="/src/assets/images/navbar/footer-locations-nav.svg"
-                      alt=""
-                      class="w-full max-w-md h-4"
-                      loading="lazy"
-                      aria-hidden="true"
-                      decoding="async"
-                    />
-                    <!-- Custom Hover Line -->
-                    <img
-                      src="/src/assets/images/navbar/footer-locations-nav-hover.svg"
-                      alt=""
-                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
-                      loading="lazy"
-                      aria-hidden="true"
-                      decoding="async"
-                    />
-                  </a>
-                </div>
-              </li>
-
-              <li>
-                <div
-                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
-                >
-                  <a href="/safaris/" class="relative inline-block">
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                  <a href="/tours/" class="relative inline-block">
                     <span class="sr-only"> Safaris </span>
                     <img
                       src="/src/assets/images/navbar/footer-safaris-nav.svg"
@@ -598,10 +494,8 @@
               </li>
 
               <li>
-                <div
-                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
-                >
-                  <a href="/channel-list/" class="relative inline-block">
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                  <a href="/life-list/" class="relative inline-block">
                     <span class="sr-only"> Channel List </span>
                     <img
                       src="/src/assets/images/navbar/footer-channel-list.svg"
@@ -625,9 +519,7 @@
               </li>
 
               <li>
-                <div
-                  class="group flex justify-center lg:justify-start gap-4 py-3 relative"
-                >
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
                   <a href="/gear/" class="relative inline-block">
                     <span class="sr-only"> Gear </span>
                     <img
