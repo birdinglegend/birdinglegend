@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" href="/src/assets/images/icon/navicon.webp" type="image/svg+xml" />
+    <link rel="alternate icon" href="/src/assets/images/icon/navicon.webp" />
+    <!-- SEO -->
+    <title>there is only one</title>
+    <meta
+      name="description"
+      content="Come along and embrace the wonders of birds, let me be your guide and come birding with Eugene Booysen."
+    />
+    <link rel="canonical" href="https://birdinglegend.com/" />
+
+    <!-- Open Graph (for sharing later) -->
+    <meta property="og:title" content="Birding Legend" />
+    <meta property="og:description" content="Learn, Explore & Master Birding" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://birdinglegend.com/support/" />
+  </head>
+  <body class="antialiased bg-neutral-800">
+    <!-- #region Navbar -->
+    <header class="absolute inset-x-0 top-0 z-50 h-25">
+      <nav
+        class="mx-auto grid h-full max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center px-6 md:px-10"
+        aria-label="Main"
+      >
+        <!-- Left: hamburger / close toggle -->
+        <button
+          id="menu-toggle"
+          type="button"
+          class="col-start-3 row-start-1 justify-self-end rounded-md p-2 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white transition-transform duration-150 hover:scale-105 active:scale-95 md:col-start-1 md:justify-self-start lg:cursor-pointer"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="side-menu"
+        >
+          <img
+            id="menu-icon"
+            src="/images/navbar/hamburger-closed-white.svg"
+            data-closed="/images/navbar/hamburger-closed-white.svg"
+            data-open="/images/navbar/hamburger-open-white.svg"
+            alt=""
+            class="h-7 lg:h-8 w-auto transition-transform duration-150"
+          />
+        </button>
+
+        <!-- Center: logo -->
+        <a
+          href="/"
+          class="col-start-2 row-start-1 justify-self-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          aria-label="Home"
+        >
+          <img
+            src="/images/navbar/header-birding-legend-white.svg"
+            alt="Your brand"
+            class="h-6 w-auto max-w-none lg:h-7"
+          />
+        </a>
+
+        <!-- Right: support button -->
+
+        <div class="col-start-3 row-start-1 hidden justify-self-end relative md:block">
+          <a href="/contact/" class="group relative inline-block">
+            <span class="sr-only">contact</span>
+            <img
+              src="/images/navbar/support-birding-legend-white.svg"
+              alt=""
+              class="w-full max-w-md h-6"
+              loading="lazy"
+              aria-hidden="true"
+            />
+            <!-- Custom Hover Line -->
+            <img
+              src="/images/navbar/support-birding-legend-white-underline.svg"
+              alt=""
+              class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              loading="lazy"
+              aria-hidden="true"
+              decoding="async"
+            />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Dim overlay: sits under the header, over the page -->
+    <div
+      id="menu-overlay"
+      class="pointer-events-none fixed inset-0 z-30 bg-black/30 opacity-0 transition-opacity duration-300 motion-reduce:transition-none data-open:pointer-events-auto data-open:opacity-100"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Side menu: slides in from the left, under the header so the toggle stays visible -->
+    <aside
+      id="side-menu"
+      inert
+      class="fixed inset-y-0 left-0 z-40 w-[85%] max-w-sm -translate-x-full bg-neutral-800 pt-25 shadow-2xl transition-transform duration-300 ease-out motion-reduce:transition-none max-md:left-auto max-md:right-0 max-md:translate-x-full data-open:translate-x-0 border-r-2 border-white"
+      aria-label="Site menu"
+    >
+      <ul class="flex flex-col gap-2 px-6 py-6 md:px-10">
+        <li>
+          <a
+            href="/life-list/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >Life list</a
+          >
+        </li>
+        <li>
+          <a
+            href="/about/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="/contact/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a
+            href="/support/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >Support</a
+          >
+        </li>
+      </ul>
+    </aside>
+    <!-- #endregion -->
+    <main class="pt-25"></main>
+    <!-- Footer -->
+    <footer class="bg-neutral-800 px-4 lg:px-0">
+      <div class="max-w-5xl mx-auto py-12 text-center lg:text-left">
+        <!-- Top Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8">
+          <!-- Left Block -->
+          <div>
+            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+              <h3 class="sr-only">Birding Legend</h3>
+              <img
+                src="/images/footer/footer-birding-legend.svg"
+                alt=""
+                class="w-auto h-6 md:h-7"
+                loading="lazy"
+                aria-hidden="true"
+                width="189"
+                height="28"
+              />
+            </div>
+
+            <p class="text-olive-200 leading-relaxed mb-2">
+              Feel free to get in touch, if you have any questions, suggestions or would like to collaborate, I would
+              love to hear from you!
+            </p>
+
+            <a href="mailto:birdinglegend@gmail.com" class="relative group inline-flex flex-col items-center">
+              <div class="group flex justify-center lg:justify-start py-3 relative">
+                <a href="mailto:birdinglegend@gmail.com" class="relative group inline-flex flex-col">
+                  <span class="sr-only"> birdinglegend@gmail.com </span>
+                  <img
+                    src="/images/footer/footer-email-link.svg"
+                    alt=""
+                    class="w-full max-w-md h-8"
+                    loading="lazy"
+                    aria-hidden="true"
+                    decoding="async"
+                    width="228"
+                    height="32"
+                  />
+                  <!-- Custom Hover Line -->
+                  <img
+                    src="/images/footer/footer-email-link-hover.svg"
+                    alt=""
+                    class="absolute left-1/2 -translate-x-1/2 -bottom-1 opacity-0 group-hover:opacity-100 transition-all duration-200"
+                    loading="lazy"
+                    aria-hidden="true"
+                    decoding="async"
+                    width="228"
+                    height="11"
+                  />
+                </a>
+              </div>
+            </a>
+          </div>
+
+          <!-- Info -->
+          <div class="mx-auto">
+            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+              <h3 class="sr-only">Info</h3>
+              <img
+                src="/images/footer/footer-info-nav.svg"
+                alt=""
+                class="max-w-md h-6"
+                loading="lazy"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </div>
+
+            <ul class="space-y-2">
+              <li>
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                  <a href="/about/" class="relative inline-block">
+                    <span class="sr-only"> about </span>
+                    <img
+                      src="/images/footer/footer-about-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/images/footer/footer-about-nav-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                  <a href="/contact/" class="relative inline-block">
+                    <span class="sr-only"> Contact </span>
+                    <img
+                      src="/images/footer/footer-contact-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/images/footer/footer-contact-nav-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Explore -->
+          <div class="mx-auto text-right">
+            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+              <h3 class="sr-only">Explore</h3>
+              <img
+                src="/images/footer/footer-explore-nav.svg"
+                alt=""
+                class="max-w-md h-6"
+                loading="lazy"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </div>
+
+            <ul class="space-y-1">
+              <li>
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                  <a href="/life-list/" class="relative inline-block">
+                    <span class="sr-only"> Life List </span>
+                    <img
+                      src="/images/footer/footer-channel-list.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/images/footer/footer-channel-list-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                  <a href="/gear/" class="relative inline-block">
+                    <span class="sr-only"> Gear </span>
+                    <img
+                      src="/images/footer/footer-gear-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/images/footer/footer-gear-nav-hover.svg"
+                      alt=""
+                      aria-hidden="true"
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Full Width Bottom Bar -->
+      <div>
+        <div class="px-6">
+          <p class="text-sm text-olive-200 text-center sm:text-right py-6">
+            © 2026 BirdingLegend. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script type="module" src="/src/main.js"></script>
+</html>

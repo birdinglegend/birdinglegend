@@ -1,3 +1,4 @@
-import './style.css';
-import './counter.js';
-import './nav.js';
+import "./style.css";
+import "./nav.js";
+import "./life-list.js";
+import "./birds.js";
