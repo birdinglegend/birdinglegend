@@ -9,7 +9,7 @@
     <link rel="icon" href="/assets/navicon-Cd-GMoD_.webp" type="image/svg+xml" />
     <link rel="alternate icon" href="/assets/navicon-Cd-GMoD_.webp" />
     <!-- SEO -->
-    <title>The Gear I use in the field - Birding Legend</title>
+    <title>Gear</title>
     <meta
       name="description"
       content="Gear plays an important part in making quality content, and here is what I use in the field when making my videos."
@@ -21,153 +21,122 @@
     <meta property="og:description" content="Learn, Explore & Master Birding" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://birdinglegend.com" />
-    <script type="module" crossorigin src="/assets/main-DpOY-Qrl.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-D6fPpnDP.css">
+    <script type="module" crossorigin src="/assets/main-DXWvrJA1.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-BMsJKC9Q.css">
   </head>
 
-  <body class="antialiased bg-[#f8f5ee]">
-    <!-- #region Mobile Header -->
-    <header class="lg:hidden fixed top-0 inset-x-0 z-50 bg-[#f8f5ee] border-b border-black">
-      <div class="relative h-20">
-        <!-- Hamburger -->
-        <button id="menuBtn" class="absolute left-5 top-1/2 -translate-y-1/2">
-          <img
-            id="mobileMenuIcon"
-            src="/images/navbar/hamburger-closed.svg"
-            alt="Open menu"
-            class="h-8 w-auto"
-            loading="eager"
-          />
-        </button>
-
-        <!-- Logo -->
-        <a href="/" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <img src="/images/navbar/header-birding-legend.svg" alt="Birding Legend" class="h-8 w-auto" loading="eager" />
-        </a>
-
-        <!-- Mail -->
-        <a
-          href="mailto:birdinglegend@gmail.com"
-          class="absolute right-5 top-1/2 -translate-y-1/2 group"
-          aria-label="Send email to Birding Legend"
-        >
-          <img src="/images/navbar/mail-letter-closed.svg" class="block h-8" alt="send email button" loading="eager" />
-        </a>
-      </div>
-    </header>
-    <aside
-      id="mobilePanel"
-      class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 bg-[#f8f5ee] -transform -translate-x-full transition-transform duration-300 z-40 border-r border-black"
-    >
-      <nav class="pt-10 px-8">
-        <ul class="space-y-8 text-2xl font-bird">
-          <li><a href="/">Home</a></li>
-
-          <li><a href="/locations/">Locations</a></li>
-
-          <li><a href="/channel-list/">Channel List</a></li>
-
-          <li><a href="/contact/">Contact</a></li>
-        </ul>
-      </nav>
-    </aside>
-    <!-- #endregion -->
-    <!-- #region Desktop Header -->
-    <header
-      id="desktopHeader"
-      class="hidden lg:block fixed top-0 inset-x-0 z-50 bg-[#f8f5ee] transition-all duration-300 border-b border-black"
-    >
-      <div id="desktopHeaderInner" class="relative h-24 transition-all duration-300">
-        <!-- Left -->
+  <body class="antialiased bg-neutral-800">
+    <!-- #region Navbar -->
+    <header class="absolute inset-x-0 top-0 z-50 h-25">
+      <nav
+        class="mx-auto grid h-full max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center px-6 md:px-10"
+        aria-label="Main"
+      >
+        <!-- Left: hamburger / close toggle -->
         <button
-          id="desktopMenuBtn"
-          class="absolute left-28 top-1/2 -translate-y-1/2 transition-transform duration-150 hover:scale-105 active:scale-95"
+          id="menu-toggle"
+          type="button"
+          class="col-start-3 row-start-1 justify-self-end rounded-md p-2 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white transition-transform duration-150 hover:scale-105 active:scale-95 md:col-start-1 md:justify-self-start lg:cursor-pointer"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="side-menu"
         >
           <img
-            id="menuIcon"
-            src="/images/navbar/hamburger-closed.svg"
-            alt="Open menu"
-            class="h-8 w-auto transition-all duration-200"
-            loading="eager"
+            id="menu-icon"
+            src="/images/navbar/hamburger-closed-white.svg"
+            data-closed="/images/navbar/hamburger-closed-white.svg"
+            data-open="/images/navbar/hamburger-open-white.svg"
+            alt=""
+            class="h-7 lg:h-8 w-auto transition-transform duration-150"
           />
         </button>
 
-        <!-- Center -->
-        <a href="/" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <!-- Center: logo -->
+        <a
+          href="/"
+          class="col-start-2 row-start-1 justify-self-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          aria-label="Home"
+        >
           <img
-            id="desktopLogo"
-            src="/images/navbar/header-birding-legend.svg"
-            alt="Birding Legend"
-            class="h-8 w-auto transition-all duration-300 ease-in-out"
-            loading="eager"
+            src="/images/navbar/header-birding-legend-white.svg"
+            alt="Your brand"
+            class="h-6 w-auto max-w-none lg:h-7"
           />
         </a>
 
-        <!-- Right -->
-        <div class="absolute right-28 top-1/2 -translate-y-1/2 flex items-center gap-6">
-          <!-- Contact Button -->
-          <a
-            id="contactButton"
-            href="/contact/"
-            class="group relative flex items-center justify-center w-[110px] h-auto transition-transform duration-200 active:scale-95"
-          >
-            <!-- Ring -->
+        <!-- Right: support button -->
+
+        <div class="col-start-3 row-start-1 hidden justify-self-end relative md:block">
+          <a href="/contact/" class="group relative inline-block">
+            <span class="sr-only">contact</span>
             <img
-              src="/images/navbar/button-ring.svg"
+              src="/images/navbar/support-birding-legend-white.svg"
               alt=""
+              class="w-full max-w-md h-6"
+              loading="lazy"
               aria-hidden="true"
-              class="absolute w-[110px] h-auto opacity-0 scale-95 transition-all duration-200 group-hover:opacity-100 group-hover:scale-100"
-              loading="eager"
             />
-
-            <!-- Button -->
+            <!-- Custom Hover Line -->
             <img
-              src="/images/navbar/button.svg"
+              src="/images/navbar/support-birding-legend-white-underline.svg"
               alt=""
+              class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              loading="lazy"
               aria-hidden="true"
-              class="absolute w-[100px] h-auto"
-              loading="eager"
-            />
-
-            <!-- Text -->
-            <span class="relative z-10 text-lg font-eugene"> CONTACT </span>
-          </a>
-
-          <!-- Mail -->
-          <a href="mailto:birdinglegend@gmail.com" aria-label="Send email to Birding Legend">
-            <img
-              id="desktopMail"
-              src="/images/navbar/mail-letter-closed.svg"
-              class="h-10 w-auto transition-all duration-300 hover:scale-105 hover:-rotate-6"
-              loading="eager"
-              alt="send email button"
+              decoding="async"
             />
           </a>
         </div>
-      </div>
-    </header>
-    <div
-      id="sidebarOverlay"
-      class="fixed inset-0 bg-black/10 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-40"
-    ></div>
-    <aside
-      id="desktopSidebar"
-      class="fixed left-0 top-0 pt-24 h-screen w-80 bg-[#f8f5ee] -transform -translate-x-full transition-all duration-300 z-40 border-r border-black"
-    >
-      <nav class="pt-32 px-10">
-        <ul class="space-y-8 text-3xl font-bird">
-          <li><a href="/">Home</a></li>
-
-          <li><a href="/locations/">Locations</a></li>
-
-          <li><a href="/channel-list/">Channel List</a></li>
-
-          <li><a href="/contact/">Contact</a></li>
-        </ul>
       </nav>
+    </header>
+
+    <!-- Dim overlay: sits under the header, over the page -->
+    <div
+      id="menu-overlay"
+      class="pointer-events-none fixed inset-0 z-30 bg-black/30 opacity-0 transition-opacity duration-300 motion-reduce:transition-none data-open:pointer-events-auto data-open:opacity-100"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Side menu: slides in from the left, under the header so the toggle stays visible -->
+    <aside
+      id="side-menu"
+      inert
+      class="fixed inset-y-0 left-0 z-40 w-[85%] max-w-sm -translate-x-full bg-neutral-800 pt-25 shadow-2xl transition-transform duration-300 ease-out motion-reduce:transition-none max-md:left-auto max-md:right-0 max-md:translate-x-full data-open:translate-x-0 border-r-2 border-white"
+      aria-label="Site menu"
+    >
+      <ul class="flex flex-col gap-2 px-6 py-6 md:px-10">
+        <li>
+          <a
+            href="/life-list/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >Life list</a
+          >
+        </li>
+        <li>
+          <a
+            href="/about/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="/contact/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a
+            href="/support/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >Support</a
+          >
+        </li>
+      </ul>
     </aside>
     <!-- #endregion -->
-    <main class="pt-24">
+    <main class="pt-25">
       <section class="mx-auto text-left max-w-3xl">
         <div>
           <div class="relative pb-12 lg:pb-16">

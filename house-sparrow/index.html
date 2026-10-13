@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" href="/src/assets/images/icon/navicon.webp" type="image/svg+xml" />
+    <link rel="alternate icon" href="/src/assets/images/icon/navicon.webp" />
+    <!-- SEO -->
+    <title>House Sparrow</title>
+    <meta
+      name="description"
+      content="Come along and embrace the wonders of birds, let me be your guide and come birding with Eugene Booysen."
+    />
+    <link rel="canonical" href="https://birdinglegend.com/house-sparrow/" />
+
+    <!-- Open Graph (for sharing later) -->
+    <meta property="og:title" content="House Sparrow" />
+    <meta property="og:description" content="Learn, Explore & Master Birding" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://birdinglegend.com/house-sparrow/" />
+  </head>
+  <body class="antialiased bg-neutral-800">
+    <!-- #region Navbar -->
+    <header class="absolute inset-x-0 top-0 z-50 h-25">
+      <nav
+        class="mx-auto grid h-full max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center px-6 md:px-10"
+        aria-label="Main"
+      >
+        <!-- Left: hamburger / close toggle -->
+        <button
+          id="menu-toggle"
+          type="button"
+          class="col-start-3 row-start-1 justify-self-end rounded-md p-2 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white transition-transform duration-150 hover:scale-105 active:scale-95 md:col-start-1 md:justify-self-start lg:cursor-pointer"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="side-menu"
+        >
+          <img
+            id="menu-icon"
+            src="/images/navbar/hamburger-closed-white.svg"
+            data-closed="/images/navbar/hamburger-closed-white.svg"
+            data-open="/images/navbar/hamburger-open-white.svg"
+            alt=""
+            class="h-7 lg:h-8 w-auto transition-transform duration-150"
+          />
+        </button>
+
+        <!-- Center: logo -->
+        <a
+          href="/"
+          class="col-start-2 row-start-1 justify-self-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          aria-label="Home"
+        >
+          <img
+            src="/images/navbar/header-birding-legend-white.svg"
+            alt="Your brand"
+            class="h-6 w-auto max-w-none lg:h-7"
+          />
+        </a>
+
+        <!-- Right: support button -->
+
+        <div class="col-start-3 row-start-1 hidden justify-self-end relative md:block">
+          <a href="/contact/" class="group relative inline-block">
+            <span class="sr-only">contact</span>
+            <img
+              src="/images/navbar/support-birding-legend-white.svg"
+              alt=""
+              class="w-full max-w-md h-6"
+              loading="lazy"
+              aria-hidden="true"
+            />
+            <!-- Custom Hover Line -->
+            <img
+              src="/images/navbar/support-birding-legend-white-underline.svg"
+              alt=""
+              class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              loading="lazy"
+              aria-hidden="true"
+              decoding="async"
+            />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Dim overlay: sits under the header, over the page -->
+    <div
+      id="menu-overlay"
+      class="pointer-events-none fixed inset-0 z-30 bg-black/30 opacity-0 transition-opacity duration-300 motion-reduce:transition-none data-open:pointer-events-auto data-open:opacity-100"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Side menu: slides in from the left, under the header so the toggle stays visible -->
+    <aside
+      id="side-menu"
+      inert
+      class="fixed inset-y-0 left-0 z-40 w-[85%] max-w-sm -translate-x-full bg-neutral-800 pt-25 shadow-2xl transition-transform duration-300 ease-out motion-reduce:transition-none max-md:left-auto max-md:right-0 max-md:translate-x-full data-open:translate-x-0 border-r-2 border-white"
+      aria-label="Site menu"
+    >
+      <ul class="flex flex-col gap-2 px-6 py-6 md:px-10">
+        <li>
+          <a
+            href="/life-list/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >Life list</a
+          >
+        </li>
+        <li>
+          <a
+            href="/about/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="/contact/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a
+            href="/support/"
+            class="block rounded-md px-2 py-3 text-2xl font-medium text-white transition-colors hover:text-mist-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >Support</a
+          >
+        </li>
+      </ul>
+    </aside>
+    <!-- #endregion -->
+    <main class="pt-25">
+      <section class="text-olive-200">
+        <div class="mx-auto flex min-h-[calc(100svh-4rem)] max-w-6xl items-center px-5 py-8 sm:px-8">
+          <div class="grid w-full gap-x-4 gap-y-8 lg:grid-cols-[minmax(0,6fr)_minmax(0,5fr)]">
+            <!-- LEFT: identity -->
+            <div>
+              <nav aria-label="Classification" class="mb-5 text-sm text-olive-200">
+                Passeriformes <span aria-hidden="true" class="mx-1.5 text-olive-200">/</span> Passeridae
+              </nav>
+
+              <div class="flex items-start gap-5 sm:gap-8">
+                <!-- Arch-shaped photo: nest-hole window -->
+                <figure class="w-36 shrink-0 sm:w-56">
+                  <img
+                    src="/images/birds/house-sparrow/house-sparrow-male.jpg"
+                    alt="Male house sparrow with grey crown, chestnut nape and black bib"
+                    width="800"
+                    height="1000"
+                    fetchpriority="high"
+                    class="aspect-4/5 w-full bg-olive-200 object-cover shadow-[0_18px_30px_-18px_rgba(42,37,34,0.55)]"
+                  />
+                </figure>
+
+                <div class="min-w-0 pt-2 sm:pt-6">
+                  <h1
+                    class="font-['Bricolage_Grotesque',ui-sans-serif,system-ui,sans-serif] text-4xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl"
+                  >
+                    House Sparrow
+                  </h1>
+                  <p class="mt-2 text-lg italic text-olive-200 sm:text-xl">Passer domesticus</p>
+
+                  <!-- Conservation status with the IUCN scale -->
+                  <a
+                    href="https://www.iucnredlist.org/species/103818789/155522130"
+                    class="group mt-5 inline-flex items-center gap-3 rounded-full bg-olive-400 py-1.5 pl-1.5 pr-4 text-sm font-medium focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-[#7B4326]"
+                    title="IUCN Red List category"
+                  >
+                    <span class="grid h-7 w-7 place-items-center rounded-full bg-[#3F7D4E] text-xs font-bold text-white"
+                      >LC</span
+                    >
+                    Least Concern
+                  </a>
+                  <div
+                    class="mt-3 flex w-44 gap-1"
+                    role="img"
+                    aria-label="IUCN scale: Least Concern is the safest of five categories"
+                  >
+                    <span class="h-1.5 flex-1 rounded-full bg-[#3F7D4E]"></span>
+                    <span class="h-1.5 flex-1 rounded-full bg-[#C9CCC4]"></span>
+                    <span class="h-1.5 flex-1 rounded-full bg-[#C9CCC4]"></span>
+                    <span class="h-1.5 flex-1 rounded-full bg-[#C9CCC4]"></span>
+                    <span class="h-1.5 flex-1 rounded-full bg-[#C9CCC4]"></span>
+                    <span class="h-1.5 flex-1 rounded-full bg-[#C9CCC4]"></span>
+                    <span class="h-1.5 flex-1 rounded-full bg-[#C9CCC4]"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Call player: the one memorable element -->
+              <div class="mt-8 flex flex-wrap items-center gap-4">
+                <button
+                  id="call-btn"
+                  type="button"
+                  aria-pressed="false"
+                  class="group inline-flex items-center gap-3 rounded-full bg-[#2A2522] py-2.5 pl-2.5 pr-6 text-base font-semibold text-white transition-colors hover:bg-[#7B4326] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7B4326]"
+                >
+                  <span class="grid h-10 w-10 place-items-center rounded-full bg-white text-[#2A2522]">
+                    <svg id="icon-play" viewBox="0 0 24 24" class="ml-0.5 h-5 w-5 fill-current" aria-hidden="true">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                    <svg id="icon-stop" viewBox="0 0 24 24" class="hidden h-5 w-5 fill-current" aria-hidden="true">
+                      <rect x="6" y="6" width="12" height="12" rx="2" />
+                    </svg>
+                  </span>
+                  <span id="call-label">Play call</span>
+                </button>
+
+                <!-- waveform: still bars at rest, bouncing while playing -->
+                <div id="wave" class="flex h-8 items-center gap-1" aria-hidden="true">
+                  <i class="block h-3 w-1 rounded-full bg-[#7B4326]"></i>
+                  <i class="block h-6 w-1 rounded-full bg-[#7B4326]"></i>
+                  <i class="block h-4 w-1 rounded-full bg-[#7B4326]"></i>
+                  <i class="block h-7 w-1 rounded-full bg-[#7B4326]"></i>
+                  <i class="block h-3 w-1 rounded-full bg-[#7B4326]"></i>
+                  <i class="block h-5 w-1 rounded-full bg-[#7B4326]"></i>
+                  <i class="block h-2 w-1 rounded-full bg-[#7B4326]"></i>
+                </div>
+                <span class="text-xs text-[#5E5A54]">Recording: your credit here</span>
+              </div>
+              <audio id="call-audio" src="/audio/house-sparrow-call.mp3" preload="none"></audio>
+            </div>
+
+            <!-- RIGHT: facts + quick ID -->
+            <div class="flex flex-col gap-4">
+              <dl class="grid grid-cols-2 gap-3">
+                <div class="rounded-2xl bg-white/70 p-4">
+                  <dt class="text-sm text-[#5E5A54]">Length</dt>
+                  <dd class="mt-1 text-2xl font-bold">
+                    14–18 <span class="text-base font-medium text-[#5E5A54]">cm</span>
+                  </dd>
+                </div>
+                <div class="rounded-2xl bg-white/70 p-4">
+                  <dt class="text-sm text-[#5E5A54]">Weight</dt>
+                  <dd class="mt-1 text-2xl font-bold">
+                    24–40 <span class="text-base font-medium text-[#5E5A54]">g</span>
+                  </dd>
+                </div>
+                <div class="rounded-2xl bg-white/70 p-4">
+                  <dt class="text-sm text-[#5E5A54]">Wingspan</dt>
+                  <dd class="mt-1 text-2xl font-bold">
+                    19–25 <span class="text-base font-medium text-[#5E5A54]">cm</span>
+                  </dd>
+                </div>
+                <div class="rounded-2xl bg-white/70 p-4">
+                  <dt class="text-sm text-[#5E5A54]">Diet</dt>
+                  <dd class="mt-1 text-lg font-bold leading-tight">Seeds, grain, scraps</dd>
+                </div>
+              </dl>
+
+              <!-- Quick ID -->
+              <div class="rounded-2xl bg-[#2A2522] p-5 text-white">
+                <h2 class="text-base font-bold">Quick ID</h2>
+                <ul class="mt-3 space-y-2.5 text-[15px] leading-snug text-white/90">
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#C9824F]"></span
+                    ><span><b class="text-white">Male:</b> grey crown, chestnut nape, black bib</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#B9B3A8]"></span
+                    ><span><b class="text-white">Female:</b> plain buff-brown with a pale stripe behind the eye</span>
+                  </li>
+                  <li class="flex gap-3">
+                    <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#B9B3A8]"></span
+                    ><span><b class="text-white">Where:</b> noisy flocks around houses, cafés and farms</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-neutral-800 px-4 lg:px-0">
+      <div class="max-w-5xl mx-auto py-12 text-center lg:text-left">
+        <!-- Top Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-8">
+          <!-- Left Block -->
+          <div>
+            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+              <h3 class="sr-only">Birding Legend</h3>
+              <img
+                src="/images/footer/footer-birding-legend.svg"
+                alt=""
+                class="w-auto h-6 md:h-7"
+                loading="lazy"
+                aria-hidden="true"
+                width="189"
+                height="28"
+              />
+            </div>
+
+            <p class="text-olive-200 leading-relaxed mb-2">
+              Feel free to get in touch, if you have any questions, suggestions or would like to collaborate, I would
+              love to hear from you!
+            </p>
+
+            <a href="mailto:birdinglegend@gmail.com" class="relative group inline-flex flex-col items-center">
+              <div class="group flex justify-center lg:justify-start py-3 relative">
+                <a href="mailto:birdinglegend@gmail.com" class="relative group inline-flex flex-col">
+                  <span class="sr-only"> birdinglegend@gmail.com </span>
+                  <img
+                    src="/images/footer/footer-email-link.svg"
+                    alt=""
+                    class="w-full max-w-md h-8"
+                    loading="lazy"
+                    aria-hidden="true"
+                    decoding="async"
+                    width="228"
+                    height="32"
+                  />
+                  <!-- Custom Hover Line -->
+                  <img
+                    src="/images/footer/footer-email-link-hover.svg"
+                    alt=""
+                    class="absolute left-1/2 -translate-x-1/2 -bottom-1 opacity-0 group-hover:opacity-100 transition-all duration-200"
+                    loading="lazy"
+                    aria-hidden="true"
+                    decoding="async"
+                    width="228"
+                    height="11"
+                  />
+                </a>
+              </div>
+            </a>
+          </div>
+
+          <!-- Info -->
+          <div class="mx-auto">
+            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+              <h3 class="sr-only">Info</h3>
+              <img
+                src="/images/footer/footer-info-nav.svg"
+                alt=""
+                class="max-w-md h-6"
+                loading="lazy"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </div>
+
+            <ul class="space-y-2">
+              <li>
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                  <a href="/about/" class="relative inline-block">
+                    <span class="sr-only"> about </span>
+                    <img
+                      src="/images/footer/footer-about-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/images/footer/footer-about-nav-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                  <a href="/contact/" class="relative inline-block">
+                    <span class="sr-only"> Contact </span>
+                    <img
+                      src="/images/footer/footer-contact-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/images/footer/footer-contact-nav-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Explore -->
+          <div class="mx-auto text-right">
+            <div class="group flex justify-center lg:justify-start gap-4 py-6 relative">
+              <h3 class="sr-only">Explore</h3>
+              <img
+                src="/images/footer/footer-explore-nav.svg"
+                alt=""
+                class="max-w-md h-6"
+                loading="lazy"
+                aria-hidden="true"
+                decoding="async"
+              />
+            </div>
+
+            <ul class="space-y-1">
+              <li>
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                  <a href="/life-list/" class="relative inline-block">
+                    <span class="sr-only"> Life List </span>
+                    <img
+                      src="/images/footer/footer-channel-list.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/images/footer/footer-channel-list-hover.svg"
+                      alt=""
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="group flex justify-center lg:justify-start gap-4 py-3 relative">
+                  <a href="/gear/" class="relative inline-block">
+                    <span class="sr-only"> Gear </span>
+                    <img
+                      src="/images/footer/footer-gear-nav.svg"
+                      alt=""
+                      class="w-full max-w-md h-4"
+                      loading="lazy"
+                      aria-hidden="true"
+                      decoding="async"
+                    />
+                    <!-- Custom Hover Line -->
+                    <img
+                      src="/images/footer/footer-gear-nav-hover.svg"
+                      alt=""
+                      aria-hidden="true"
+                      class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-full opacity-0 group-hover:opacity-100 transition-all duration-200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Full Width Bottom Bar -->
+      <div>
+        <div class="px-6">
+          <p class="text-sm text-olive-200 text-center sm:text-right py-6">
+            © 2026 BirdingLegend. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script type="module">
+    const audio = document.getElementById("call-audio");
+    const btn = document.getElementById("call-btn");
+    const label = document.getElementById("call-label");
+    const play = document.getElementById("icon-play");
+    const stop = document.getElementById("icon-stop");
+    const bars = document.querySelectorAll("#wave i");
+
+    // Staggered bounce, only for people who haven't asked for reduced motion
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const anims = reduce
+      ? []
+      : [...bars].map((bar, i) =>
+          bar.animate(
+            [
+              { transform: "scaleY(1)" },
+              { transform: "scaleY(0.35)" },
+              { transform: "scaleY(1.25)" },
+              { transform: "scaleY(1)" },
+            ],
+            { duration: 700 + i * 90, iterations: Infinity, delay: i * 60 },
+          ),
+        );
+    anims.forEach((a) => a.pause());
+
+    function setPlaying(on) {
+      btn.setAttribute("aria-pressed", String(on));
+      label.textContent = on ? "Stop" : "Play call";
+      play.classList.toggle("hidden", on);
+      stop.classList.toggle("hidden", !on);
+      anims.forEach((a) => (on ? a.play() : a.pause()));
+    }
+
+    btn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.currentTime = 0;
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+    audio.addEventListener("play", () => setPlaying(true));
+    audio.addEventListener("pause", () => setPlaying(false));
+    audio.addEventListener("ended", () => setPlaying(false));
+  </script>
+  <script type="module" src="/src/main.js"></script>
+</html>
