@@ -22,12 +22,12 @@
     <meta property="og:description" content="Learn, Explore & Master Birding" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://birdinglegend.com/support/" />
-    <script type="module" crossorigin src="/assets/main-DXWvrJA1.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-BMsJKC9Q.css">
+    <script type="module" crossorigin src="/assets/main-CVFtzYEX.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CioBx4ET.css">
   </head>
   <body class="antialiased bg-neutral-800">
     <!-- #region Navbar -->
-    <header class="absolute inset-x-0 top-0 z-50 h-25">
+    <header class="absolute inset-x-0 top-0 h-25">
       <nav
         class="mx-auto grid h-full max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center px-6 md:px-10"
         aria-label="Main"
@@ -36,7 +36,7 @@
         <button
           id="menu-toggle"
           type="button"
-          class="col-start-3 row-start-1 justify-self-end rounded-md p-2 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white transition-transform duration-150 hover:scale-105 active:scale-95 md:col-start-1 md:justify-self-start lg:cursor-pointer"
+          class="relative z-50 col-start-3 row-start-1 justify-self-end rounded-md p-2 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white transition-transform duration-150 hover:scale-105 active:scale-95 md:col-start-1 md:justify-self-start lg:cursor-pointer"
           aria-label="Open menu"
           aria-expanded="false"
           aria-controls="side-menu"
@@ -54,7 +54,7 @@
         <!-- Center: logo -->
         <a
           href="/"
-          class="col-start-2 row-start-1 justify-self-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          class="relative z-20 col-start-2 row-start-1 justify-self-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           aria-label="Home"
         >
           <img
@@ -66,8 +66,8 @@
 
         <!-- Right: support button -->
 
-        <div class="col-start-3 row-start-1 hidden justify-self-end relative md:block">
-          <a href="/contact/" class="group relative inline-block">
+        <div class="relative z-20 col-start-3 row-start-1 hidden justify-self-end md:block">
+          <a href="/support/" class="group relative inline-block">
             <span class="sr-only">contact</span>
             <img
               src="/images/navbar/support-birding-legend-white.svg"
@@ -178,7 +178,7 @@
       <section id="subscribe" class="relative mx-auto max-w-3xl px-6 sm:px-10">
         <div class="relative px-7 py-12 text-center sm:px-14 sm:py-16">
           <!-- Main heading -->
-          <h2 class="text-4xl font-normal tracking-tight text-olive-200 sm:text-5xl">follow the chirps</h2>
+          <h2 class="text-2xl font-normal tracking-tight text-olive-200 md:text-3xl lg:text-4xl">follow the chirps</h2>
 
           <p class="mx-auto mt-6 max-w-lg text-base leading-8 text-olive-200 sm:text-lg">
             The simplest way to support the Birding Legend is to subscribe and watch the videos. It costs nothing, but
@@ -220,8 +220,103 @@
 
           <!-- Closing note -->
           <div class="mx-auto mt-10 max-w-md border-t border-stone-300/80 pt-6">
-            <p class="font-serif text-lg italic text-olive-200">Thank you for being part of the flock.</p>
+            <p class="font-serif text-lg italic text-olive-200">the subscription is more than enough.</p>
           </div>
+        </div>
+      </section>
+
+      <!--Buy Me a Coffee -->
+      <section class="relative mx-auto max-w-3xl px-6 pt-16 pb-12 sm:px-10 lg:pt-20 lg:pb-16">
+        <div class="flex flex-col items-center text-center">
+          <h2 class="text-2xl font-normal tracking-tight text-olive-200 sm:text-3xl lg:text-4xl">
+            want to do a little more?
+          </h2>
+
+          <p class="mx-auto mt-5 max-w-lg text-base leading-8 text-olive-200 sm:mt-6 sm:text-lg">
+            Do a little more and buy me a coffee, all coffees go into new adventures.
+          </p>
+
+          <a
+            href="https://buymeacoffee.com/birdinglegend"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group mt-7 inline-flex items-center gap-2 border border-olive-200/40 px-5 py-3 text-sm font-medium text-olive-200 transition-all duration-300 hover:border-olive-200 hover:bg-olive-200/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-olive-200"
+          >
+            <!-- Coffee icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-4 w-4 transition-transform duration-300 group-hover:-rotate-6"
+              aria-hidden="true"
+            >
+              <path d="M10 2v2" />
+              <path d="M14 2v2" />
+              <path d="M4 8h13v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8Z" />
+              <path d="M17 10h1a3 3 0 0 1 0 6h-2" />
+              <path d="M2 22h18" />
+            </svg>
+
+            <span>Buy me a coffee</span>
+
+            <span
+              class="text-olive-200/60 transition-transform duration-300 group-hover:translate-x-1"
+              aria-hidden="true"
+            >
+              →
+            </span>
+          </a>
+
+          <p class="mt-4 max-w-sm text-center text-xs leading-6 text-olive-200">
+            If you'd like to help support my filming and future birding adventures, you can buy me a coffee. Thank you!
+          </p>
+          <!-- Closing note -->
+          <div class="mx-auto mt-10 max-w-md border-t border-stone-300/80 pt-6">
+            <p class="font-serif text-lg italic text-olive-200">Thank you.</p>
+          </div>
+        </div>
+      </section>
+      <section class="py-10">
+        <img
+          src="/images/support/feather-divider.svg"
+          alt=""
+          aria-hidden="true"
+          class="relative mx-auto h-10 w-full max-w-md"
+          width="450"
+          height="40"
+          loading="eager"
+        />
+      </section>
+
+      <!-- Patreon -->
+      <section class="relative mx-auto max-w-3xl px-6 pt-12 pb-16 sm:px-10 lg:pt-16 lg:pb-20">
+        <div class="flex flex-col items-center text-center">
+          <h2 class="text-2xl font-normal tracking-tight text-olive-200 sm:text-3xl lg:text-4xl">join the flock</h2>
+
+          <p class="mx-auto mt-5 max-w-lg text-base leading-8 text-olive-200 sm:mt-6 sm:text-lg">
+            For those who would like to follow the flight a little more closely, Patreon is another way to be part of
+            Birding Legend. It's a place to share more of the stories, work behind the camera and moments that happen
+            along the way.
+          </p>
+
+          <a
+            href="https://www.patreon.com/birdinglegend"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group mt-7 inline-flex items-center gap-3 border border-olive-200/40 px-6 py-3 text-sm font-medium text-olive-200 transition-all duration-300 hover:border-olive-200 hover:bg-olive-200/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-olive-200"
+          >
+            <span>Explore Patreon</span>
+
+            <span aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1"> → </span>
+          </a>
+
+          <p class="mt-4 max-w-sm text-xs leading-6 text-olive-200/80">
+            Completely optional. Watching, subscribing and sharing the videos already means a lot.
+          </p>
         </div>
       </section>
     </main>

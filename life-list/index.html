@@ -29,7 +29,7 @@
   </head>
   <body class="antialiased bg-neutral-800">
     <!-- #region Navbar -->
-    <header class="absolute inset-x-0 top-0 z-50 h-25">
+    <header class="absolute inset-x-0 top-0 h-25">
       <nav
         class="mx-auto grid h-full max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center px-6 md:px-10"
         aria-label="Main"
@@ -38,7 +38,7 @@
         <button
           id="menu-toggle"
           type="button"
-          class="col-start-3 row-start-1 justify-self-end rounded-md p-2 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white transition-transform duration-150 hover:scale-105 active:scale-95 md:col-start-1 md:justify-self-start lg:cursor-pointer"
+          class="relative z-50 col-start-3 row-start-1 justify-self-end rounded-md p-2 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white transition-transform duration-150 hover:scale-105 active:scale-95 md:col-start-1 md:justify-self-start lg:cursor-pointer"
           aria-label="Open menu"
           aria-expanded="false"
           aria-controls="side-menu"
@@ -56,7 +56,7 @@
         <!-- Center: logo -->
         <a
           href="/"
-          class="col-start-2 row-start-1 justify-self-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          class="relative z-20 col-start-2 row-start-1 justify-self-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           aria-label="Home"
         >
           <img
@@ -68,8 +68,8 @@
 
         <!-- Right: support button -->
 
-        <div class="col-start-3 row-start-1 hidden justify-self-end relative md:block">
-          <a href="/contact/" class="group relative inline-block">
+        <div class="relative z-20 col-start-3 row-start-1 hidden justify-self-end md:block">
+          <a href="/support/" class="group relative inline-block">
             <span class="sr-only">contact</span>
             <img
               src="/images/navbar/support-birding-legend-white.svg"
